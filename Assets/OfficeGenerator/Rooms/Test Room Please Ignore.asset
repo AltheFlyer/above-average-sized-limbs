@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ff7d08a9b549640b55683af8781272, type: 3}
   m_Name: Test Room Please Ignore
   m_EditorClassIdentifier: 
-  roomPrefab: {fileID: 0}
+  roomPrefab: {fileID: 8163762143355029383, guid: 9a20961758230ca438cb69b77203260e, type: 3}
+  doors:
+  - {x: 0, y: 1}
+  - {x: 1, y: 0}
+  - {x: 0, y: -1}
+  - {x: -1, y: 0}
