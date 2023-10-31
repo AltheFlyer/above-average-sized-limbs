@@ -6,13 +6,13 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Collider2D))]
 public class Damageable : MonoBehaviour
 {
-    [Header("Damageable: Health")]
+    [Header("Health")]
     [SerializeField]
     protected int maxHP;
     [SerializeField]
     protected int hp;
 
-    [Header("Damageable: Effects")]
+    [Header("Effects")]
     public UnityEvent onDamage;
 
     protected virtual void Start()
@@ -20,7 +20,7 @@ public class Damageable : MonoBehaviour
         hp = maxHP;
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (Input.GetKeyDown(KeyCode.F)) TakeDamage(1);
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpriteFlicker : MonoBehaviour
 {
-    public static Material flickerMaterial;
+    public Material flickerMaterial;
     Material originalMaterial;
 
     public float flickerTime = 0.2f;
