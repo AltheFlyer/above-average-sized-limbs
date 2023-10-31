@@ -6,18 +6,23 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Collider2D))]
 public class Damageable : MonoBehaviour
 {
-    [Header("Health")]
+    [Header("Damageable: Health")]
     [SerializeField]
     protected int maxHP;
     [SerializeField]
     protected int hp;
 
-    [Header("Effects")]
+    [Header("Damageable: Effects")]
     public UnityEvent onDamage;
 
     protected virtual void Start()
     {
         hp = maxHP;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F)) TakeDamage(1);
     }
 
     ///<summary>Call by OnCollision2D of the attacking gameobject after checking layer or type of Damageable</summary>
