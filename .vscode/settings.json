@@ -1,4 +1,7 @@
-﻿{
+{
+    "[csharp]": {
+        "editor.formatOnSave": true
+    },
     "files.exclude":
     {
         "**/.DS_Store":true,
