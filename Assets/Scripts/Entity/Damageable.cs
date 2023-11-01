@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Collider2D))]
 public class Damageable : MonoBehaviour
 {
     [Header("Health")]
@@ -14,6 +13,11 @@ public class Damageable : MonoBehaviour
 
     [Header("Effects")]
     public UnityEvent onDamage;
+
+    protected virtual void Awake()
+    {
+
+    }
 
     protected virtual void Start()
     {
