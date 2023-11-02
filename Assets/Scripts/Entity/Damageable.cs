@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Collider2D))]
 public class Damageable : MonoBehaviour
 {
     [Header("Health")]
@@ -10,6 +12,9 @@ public class Damageable : MonoBehaviour
     protected int maxHP;
     [SerializeField]
     protected int hp;
+    protected float invincibleTime;
+    [SerializeField]
+    protected float onDamagedInvincibleTime;
 
     [Header("Effects")]
     public UnityEvent onDamage;
@@ -26,20 +31,34 @@ public class Damageable : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)) TakeDamage(1);
+        invincibleTime -= Time.deltaTime;
     }
 
-    ///<summary>Call by OnCollision2D of the attacking gameobject after checking layer or type of Damageable</summary>
-    public virtual bool TakeDamage(int damage)
+    public virtual bool IsInvincible()
     {
-        bool killShot = false;
+        return invincibleTime > 0;
+    }
 
-        if (hp - damage <= 0) killShot = true;
+    ///<summary>Call by OnCollision2D of the attacking gameobject after checking layer or type of Damageable. Will return false if the target is invincible</summary>
+    public virtual bool TakeDamage(int damage, Action onKillShot = null)
+    {
+        // check if is invincible
+        if (IsInvincible()) return false;
 
+        // check if is a kill shot
+        if (hp - damage <= 0 && onKillShot != null) onKillShot();
+
+        // apply damage
         ApplyHP(-damage);
         onDamage.Invoke();
 
-        return killShot;
+        // set damage invisible time
+        if (onDamagedInvincibleTime > 0)
+        {
+            invincibleTime = onDamagedInvincibleTime;
+        }
+
+        return true;
     }
 
     public virtual void ApplyHP(int change)

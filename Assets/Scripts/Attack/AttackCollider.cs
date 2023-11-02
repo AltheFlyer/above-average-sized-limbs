@@ -45,7 +45,7 @@ public class AttackCollider : MonoBehaviour
         }
     }
 
-    protected virtual void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnTriggerStay2D(Collider2D collision)
     {
         // Check if the collision is with a Damageable
         Damageable d;
@@ -56,9 +56,9 @@ public class AttackCollider : MonoBehaviour
         if (!IsMaskMatched(targetMask, collision.gameObject)) return;
 
         // Apply damage
-        d.TakeDamage(damage);
+        bool hit = d.TakeDamage(damage);
 
-        OnHit();
+        if (hit) OnHit();
     }
 
     public virtual bool IsMaskMatched(LayerMask mask, GameObject target)
