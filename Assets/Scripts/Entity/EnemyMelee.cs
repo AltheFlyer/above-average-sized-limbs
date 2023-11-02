@@ -31,8 +31,20 @@ public class EnemyMelee : Damageable
         StartCoroutine(StateMoveIE());
     }
 
+    protected override void Update()
+    {
+        base.Update();
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            TakeDamage(1);
+        }
+    }
+
     IEnumerator StateMoveIE()
     {
+        if (player == null) yield break;
+
         Vector2 deltaToPlayer = player.transform.position - transform.position;
 
         while (deltaToPlayer.sqrMagnitude > attackRange * attackRange)
