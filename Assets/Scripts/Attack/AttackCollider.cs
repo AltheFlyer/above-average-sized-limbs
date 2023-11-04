@@ -15,13 +15,6 @@ public class AttackCollider : MonoBehaviour
     [Header("Self")]
     public float lifetime = 10f;
     protected float time;
-    public enum HitMode
-    {
-        Destroy,
-        Disable,
-        Nothing
-    };
-    public HitMode hitMode;
     public enum ExpireMode
     {
         Destroy,
@@ -29,13 +22,22 @@ public class AttackCollider : MonoBehaviour
         Nothing
     };
     public ExpireMode expireMode;
+    public UnityEvent onExpiredEvent;
+    public enum HitMode
+    {
+        Destroy,
+        Disable,
+        Nothing
+    };
+    public HitMode hitMode;
+    public UnityEvent onHitEvent;
 
     protected virtual void OnEnable()
     {
         time = 0;
     }
 
-    protected void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         if (expireMode != ExpireMode.Nothing)
         {
@@ -68,6 +70,7 @@ public class AttackCollider : MonoBehaviour
 
     protected virtual void OnHit()
     {
+        onHitEvent.Invoke();
         switch (hitMode)
         {
             case HitMode.Destroy:
@@ -83,6 +86,7 @@ public class AttackCollider : MonoBehaviour
 
     protected virtual void OnExpired()
     {
+        onExpiredEvent.Invoke();
         switch (expireMode)
         {
             case ExpireMode.Destroy:
