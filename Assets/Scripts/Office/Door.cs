@@ -15,11 +15,10 @@ public class Door : MonoBehaviour
     private bool isOpen;
 
     // Internal components
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
     public void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer == null)
         {
             Debug.LogError("You didn't attach a sprite to the door!");

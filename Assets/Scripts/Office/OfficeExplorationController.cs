@@ -40,6 +40,7 @@ public class OfficeExplorationController : MonoBehaviour
                 GameObject loadedRoom = Instantiate(room.GetRoomPrefab());
 
                 room.SetLoadedRoom(loadedRoom);
+                loadedRoom.GetComponent<RoomController>()?.Init(room);
 
                 loadedRoom.transform.Translate(new Vector3(x * 13 - 5 * 13, y * 7 - 5 * 7, 0));
 
@@ -70,11 +71,11 @@ public class OfficeExplorationController : MonoBehaviour
     {
         Debug.Log($"Moving to room at {newPos}");
         // Deactivate current room
-        // currentRoom.Deactivate();
+        currentRoom.Deactivate();
 
         // Activate new room
         currentRoom = officeMap.GetRoom(newPos);
-        // currentRoom.Activate();
+        currentRoom.Activate();
 
         // Prepare doors
         for (int i = 0; i < doors.Length; ++i)
