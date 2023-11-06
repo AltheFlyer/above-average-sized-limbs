@@ -42,8 +42,9 @@ public class Damageable : MonoBehaviour
     ///<summary>Call by OnCollision2D of the attacking gameobject after checking layer or type of Damageable. Will return false if the target is invincible</summary>
     public virtual bool TakeDamage(int damage, Action onKillShot = null)
     {
-        // check if is invincible
+        // check if can take damage
         if (IsInvincible()) return false;
+        if (hp <= 0) return false;
 
         // check if is a kill shot
         if (hp - damage <= 0 && onKillShot != null) onKillShot();

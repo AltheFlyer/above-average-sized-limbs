@@ -750,6 +750,11 @@ Transform:
   - {fileID: 1490941260}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1423753113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6873380632955924401, guid: 66c12a45663864266b77715aa94c3e6a, type: 3}
+  m_PrefabInstance: {fileID: 353576290113929770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1490941259
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,6 +1382,18 @@ PrefabInstance:
     - target: {fileID: 6873380632955924401, guid: 66c12a45663864266b77715aa94c3e6a, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612415375714010208, guid: 66c12a45663864266b77715aa94c3e6a, type: 3}
+      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612415375714010208, guid: 66c12a45663864266b77715aa94c3e6a, type: 3}
+      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1423753113}
+    - target: {fileID: 8612415375714010208, guid: 66c12a45663864266b77715aa94c3e6a, type: 3}
+      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

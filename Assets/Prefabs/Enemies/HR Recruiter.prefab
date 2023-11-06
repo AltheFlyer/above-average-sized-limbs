@@ -19967,7 +19967,7 @@ MonoBehaviour:
   maxHP: 5
   hp: 5
   onDamagedInvincibleTime: 0
-  onDamaged:
+  onDamage:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8355383395911448511}
