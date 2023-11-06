@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,32 +7,34 @@ using UnityEngine.InputSystem;
 public class ActionManager : MonoBehaviour
 {
     public UnityEvent<Vector2> moveCheck;
-    public UnityEvent<Vector2> handDirectionCheck;
+    public UnityEvent<Vector2> attackCheck;
     public UnityEvent dash;
     public UnityEvent<Collider2D> pickUpItem;
 
-    public void OnHandAction(InputAction.CallbackContext context)
+    public void OnAttackAction(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            Vector2 movementInput = context.ReadValue<Vector2>();
+            Vector2 attackDirectionInput = context.ReadValue<Vector2>();
 
-            float horizontalInput = movementInput.x;
+            float horizontalInput = attackDirectionInput.x;
 
-            float verticalInput = movementInput.y;
+            float verticalInput = attackDirectionInput.y;
 
-            // Determine the direction the player should move in
-            Vector2 moveDirection = new Vector2(horizontalInput, verticalInput).normalized;
+            Vector2 attackDirection = new Vector2(horizontalInput, verticalInput).normalized;
 
-            // Invoke the UnityEvent with the movement direction
-            handDirectionCheck.Invoke(moveDirection);
-
+            attackCheck.Invoke(attackDirection);
         }
         if (context.canceled)
         {
-            //Debug.Log("move stopped");
-            handDirectionCheck.Invoke(Vector2.zero);
+            attackCheck.Invoke(Vector2.zero);
         }
+
+        // if (context.control.name == "upArrow")
+        // {
+        //     attackCheck.Invoke(context.control.name);
+        // }
+
     }
     public void OnMoveAction(InputAction.CallbackContext context)
     {

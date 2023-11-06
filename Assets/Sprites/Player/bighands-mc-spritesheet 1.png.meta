@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1361bd3f08b674b0a85c37f7b0e480cd
+guid: 1c5b535d6d0fd62478c86ae0a44e8736
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bighands-mc-spritesheet_0
+      name: bighands-mc-spritesheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cb2a441288c04a2d88f3123d516bf62
-      internalID: -856963103
+      spriteID: f28d904cd40daf144af6024744b72760
+      internalID: -187809394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bighands-mc-spritesheet_1
+      name: bighands-mc-spritesheet 1_1
       rect:
         serializedVersion: 2
         x: 16
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 539f4b0d6051c4730b9baccef58155c2
-      internalID: -801498272
+      spriteID: 3586f13ed4e23a54885bb64fdbdcb071
+      internalID: -1946894257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bighands-mc-spritesheet_2
+      name: bighands-mc-spritesheet 1_2
       rect:
         serializedVersion: 2
         x: 32
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d6a189082f35406a9a6b5c047bb6e95
-      internalID: -1550498387
+      spriteID: 4df8f3c7b3ad9184c98815bd87fe9895
+      internalID: 1593703899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bighands-mc-spritesheet_3
+      name: bighands-mc-spritesheet 1_3
       rect:
         serializedVersion: 2
         x: 48
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97d61771b493c40a6b87376ad46dc9ae
-      internalID: 1745998957
+      spriteID: 038a2b0aa21f15b40a02753aed1b57c5
+      internalID: -1211619756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bighands-mc-spritesheet_4
+      name: bighands-mc-spritesheet 1_4
       rect:
         serializedVersion: 2
         x: 0
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de8a3183d0ae74805ad8be40cf350826
-      internalID: 218796449
+      spriteID: 4cea876d242db0244bf422ba2e42180e
+      internalID: 1749236960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bighands-mc-spritesheet_5
+      name: bighands-mc-spritesheet 1_5
       rect:
         serializedVersion: 2
         x: 16
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1aea4b3b1cf54561b797a838272c3a0
-      internalID: 1243608282
+      spriteID: faa2a9f53d449e14e85ceaf0e1ae8700
+      internalID: -1385177736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bighands-mc-spritesheet_6
+      name: bighands-mc-spritesheet 1_6
       rect:
         serializedVersion: 2
         x: 32
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4886386f485da4e5896888d3e9af0f49
-      internalID: -2132984234
+      spriteID: a45441e39d21e9e49b12fcafed587f2b
+      internalID: 1426058480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bighands-mc-spritesheet_7
+      name: bighands-mc-spritesheet 1_7
       rect:
         serializedVersion: 2
         x: 48
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 031eac122a30f42439e906d157fc9053
-      internalID: 1540107280
+      spriteID: bded4218024017c4cbbd3be9bd45950d
+      internalID: 829184792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bighands-mc-spritesheet_8
+      name: bighands-mc-spritesheet 1_8
       rect:
         serializedVersion: 2
         x: 0
@@ -292,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52bc9f919fd544ebda8192427d15a682
-      internalID: 844178758
+      spriteID: 36884fc1dd1ee234eb8da6da1b31feed
+      internalID: -143996787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bighands-mc-spritesheet_9
+      name: bighands-mc-spritesheet 1_9
       rect:
         serializedVersion: 2
         x: 16
@@ -313,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1d2d3c8263e944d8bb0ab23ea577cb3
-      internalID: -362407165
+      spriteID: 7c3c1396252976942ad90bce22b0fa53
+      internalID: 8891273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bighands-mc-spritesheet_10
+      name: bighands-mc-spritesheet 1_10
       rect:
         serializedVersion: 2
         x: 32
@@ -334,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ad8a67f2d79648e28fdbf99c49b8958
-      internalID: -812146332
+      spriteID: 68940b9ac5f516f41adc63e15b5bd172
+      internalID: -554097798
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bighands-mc-spritesheet_11
+      name: bighands-mc-spritesheet 1_11
       rect:
         serializedVersion: 2
         x: 48
@@ -355,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efc49982185104961b8766c9be1bcf51
-      internalID: -616699031
+      spriteID: dd1da4d92fd3435459be8896b9fbdbcd
+      internalID: 280813705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bighands-mc-spritesheet_12
+      name: bighands-mc-spritesheet 1_12
       rect:
         serializedVersion: 2
         x: 0
@@ -376,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44850441ef8eb438292db263aa5706ba
-      internalID: -1462906374
+      spriteID: a002fb55584da5e4981e872a97813a8a
+      internalID: -813064365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bighands-mc-spritesheet_13
+      name: bighands-mc-spritesheet 1_13
       rect:
         serializedVersion: 2
         x: 16
@@ -397,14 +397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5554fa15b7f364cc5b706ee5e6e22a60
-      internalID: 1462279877
+      spriteID: f7cd2d860e69d8c41ba79ee278523613
+      internalID: -1741089399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bighands-mc-spritesheet_14
+      name: bighands-mc-spritesheet 1_14
       rect:
         serializedVersion: 2
         x: 32
@@ -418,14 +418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c813a1cec5e2142649be7cade0b33510
-      internalID: -36887606
+      spriteID: 9d7ad1c4d85b93b4fa4944921524af80
+      internalID: -1677844278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bighands-mc-spritesheet_15
+      name: bighands-mc-spritesheet 1_15
       rect:
         serializedVersion: 2
         x: 48
@@ -439,8 +439,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 174f999b45cda4996b19e991e423e435
-      internalID: -2075914295
+      spriteID: 17f8398896ad93f4b89b5837a849224c
+      internalID: 719867017
       vertices: []
       indices: 
       edges: []
@@ -456,22 +456,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bighands-mc-spritesheet_0: -856963103
-      bighands-mc-spritesheet_1: -801498272
-      bighands-mc-spritesheet_10: -812146332
-      bighands-mc-spritesheet_11: -616699031
-      bighands-mc-spritesheet_12: -1462906374
-      bighands-mc-spritesheet_13: 1462279877
-      bighands-mc-spritesheet_14: -36887606
-      bighands-mc-spritesheet_15: -2075914295
-      bighands-mc-spritesheet_2: -1550498387
-      bighands-mc-spritesheet_3: 1745998957
-      bighands-mc-spritesheet_4: 218796449
-      bighands-mc-spritesheet_5: 1243608282
-      bighands-mc-spritesheet_6: -2132984234
-      bighands-mc-spritesheet_7: 1540107280
-      bighands-mc-spritesheet_8: 844178758
-      bighands-mc-spritesheet_9: -362407165
+      bighands-mc-spritesheet 1_0: -187809394
+      bighands-mc-spritesheet 1_1: -1946894257
+      bighands-mc-spritesheet 1_10: -554097798
+      bighands-mc-spritesheet 1_11: 280813705
+      bighands-mc-spritesheet 1_12: -813064365
+      bighands-mc-spritesheet 1_13: -1741089399
+      bighands-mc-spritesheet 1_14: -1677844278
+      bighands-mc-spritesheet 1_15: 719867017
+      bighands-mc-spritesheet 1_2: 1593703899
+      bighands-mc-spritesheet 1_3: -1211619756
+      bighands-mc-spritesheet 1_4: 1749236960
+      bighands-mc-spritesheet 1_5: -1385177736
+      bighands-mc-spritesheet 1_6: 1426058480
+      bighands-mc-spritesheet 1_7: 829184792
+      bighands-mc-spritesheet 1_8: -143996787
+      bighands-mc-spritesheet 1_9: 8891273
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
