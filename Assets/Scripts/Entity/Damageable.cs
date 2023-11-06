@@ -50,6 +50,7 @@ public class Damageable : MonoBehaviour
 
         // apply damage
         ApplyHP(-damage);
+
         onDamage.Invoke();
 
         // set damage invisible time
@@ -64,7 +65,6 @@ public class Damageable : MonoBehaviour
     public virtual void ApplyHP(int change)
     {
         hp += change;
-
         if (hp <= 0) OnDead();
     }
 

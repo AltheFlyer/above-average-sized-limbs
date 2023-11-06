@@ -74,6 +74,7 @@ public class EnemyMelee : Damageable
 
     private void Attack()
     {
+        //Debug.Log("Enemy attacking");
 
     }
 }
