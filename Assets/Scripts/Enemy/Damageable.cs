@@ -17,7 +17,7 @@ public class Damageable : MonoBehaviour
     protected float onDamagedInvincibleTime;
 
     [Header("Effects")]
-    public UnityEvent onDamage;
+    public UnityEvent onDamaged;
 
     protected virtual void Awake()
     {
@@ -50,7 +50,7 @@ public class Damageable : MonoBehaviour
 
         // apply damage
         ApplyHP(-damage);
-        onDamage.Invoke();
+        onDamaged.Invoke();
 
         // set damage invisible time
         if (onDamagedInvincibleTime > 0)

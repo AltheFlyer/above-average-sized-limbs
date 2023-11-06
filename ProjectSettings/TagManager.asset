@@ -16,7 +16,7 @@ TagManager:
   - Attack
   - Enemy
   - Player
-  - 
+  - Wall
   - 
   - 
   - 
@@ -47,4 +47,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1841217055
+    locked: 0
+  - name: Top Effects
+    uniqueID: 38850459
     locked: 0
