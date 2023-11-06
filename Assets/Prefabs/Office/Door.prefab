@@ -96,6 +96,7 @@ MonoBehaviour:
   onEnterCallback:
     m_PersistentCalls:
       m_Calls: []
+  spriteRenderer: {fileID: 2104357419265839097}
 --- !u!212 &2104357419265839097
 SpriteRenderer:
   m_ObjectHideFlags: 0

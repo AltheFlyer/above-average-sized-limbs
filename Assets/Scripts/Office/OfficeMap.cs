@@ -68,7 +68,7 @@ public class Room
     GameObject roomObject;
 
 
-    bool isVisited;
+    public bool isVisited;
 
     public Room(RoomData roomBase)
     {
@@ -89,10 +89,13 @@ public class Room
     public void Activate()
     {
         roomObject.SetActive(true);
+        Debug.Log(roomObject.GetComponent<RoomController>());
+        roomObject.GetComponent<RoomController>()?.LoadRoom();
     }
 
     public void Deactivate()
     {
+        roomObject.GetComponent<RoomController>()?.UnloadRoom();
         roomObject.SetActive(false);
     }
 }
