@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebfb058a6467ec64493750615b8bf037, type: 3}
+  m_Name: New Super Office Generator 2
+  m_EditorClassIdentifier: 
+  numRooms: 20
+  startingRoom: {fileID: 11400000, guid: dfbf4a7f760f87e4099d7712d2ba13b1, type: 2}
+  itemRoom: {fileID: 11400000, guid: b019b711fe1fd38478c9c00afb08c4b1, type: 2}
+  bossRoom: {fileID: 11400000, guid: beed0cf44b8131f4dbc94699d3211c35, type: 2}
+  normalRoomPool: {fileID: 11400000, guid: b6e83970757d2354191deddb821aae68, type: 2}

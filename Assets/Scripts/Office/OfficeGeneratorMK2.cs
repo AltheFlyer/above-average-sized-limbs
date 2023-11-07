@@ -3,31 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// 
+/// Modified OfficeGenerator that accounts for rooms that cannot have all four doors.
 /// </summary>
 [CreateAssetMenu(menuName = "Office/Office Generator MK2")]
 public class OfficeGeneratorMK2 : OfficeGenerator
 {
-
-    public int numRooms;
-
-    [Header("Special, predefined rooms")]
-    // For now, the special rooms are fixed for simplicity, 
-    // but feel free to change the type to RoomPool(s) to allow for some more variance.
-    public RoomData startingRoom;
-
-    // Currently unused
-    // Intention: at some point, we'll use these to 
-    // generate the specified item and boss rooms
-    public RoomData itemRoom;
-    public RoomData bossRoom;
-
-    [Header("Normal Rooms")]
-    public RoomPool normalRoomPool;
-
-
     // Generates an OfficeMap object, containing a grid of rooms
-    public OfficeMap GenerateMap()
+    public override OfficeMap GenerateMap()
     {
         // Basically an 11 by 11 grid of room info
         OfficeMap map = new OfficeMap(startingRoom);
@@ -38,19 +20,11 @@ public class OfficeGeneratorMK2 : OfficeGenerator
         // The starting room is put at the center of the grid
         map.PlaceRoom(startingRoom, center);
 
-        // Also hardcoded constant, just vectors for each cardinal direction
-        Vector2Int[] cardinalDirections = new Vector2Int[]{
-            Vector2Int.up,
-            Vector2Int.right,
-            Vector2Int.down,
-            Vector2Int.left,
-        };
-
         // List to store positions that rooms can be placed in.
         // Rooms will only be placed next to other preexisting rooms.
         List<Vector2Int> placeable = new List<Vector2Int>();
         // Add the positions adjacent to the center (starting) room to the placeable list
-        foreach (Vector2Int dir in cardinalDirections)
+        foreach (Vector2Int dir in startingRoom.doorLocations)
         {
             placeable.Add(center + dir);
         }
@@ -81,20 +55,23 @@ public class OfficeGeneratorMK2 : OfficeGenerator
 
             // Add the room to the map (or try to at least)
 
-            // Avoid clumping - count the number of rooms adjacent to our 
-            // placement loction.
-            int numNearbyRooms = 0;
+            // Check if the new room can actually have a door connecting to the room beside it.
+            // This assumes we always place new rooms beside an existing one.
+            bool canPlaceFlag = true;
             foreach (Vector2Int dir in cardinalDirections)
             {
-                Vector2Int newPos = pos + dir;
-                if (map.HasRoom(newPos))
+                if (map.HasRoom(dir + pos))
                 {
-                    ++numNearbyRooms;
+                    if (!randomRoom.doorLocations.Contains(dir))
+                    {
+                        canPlaceFlag = false;
+                    }
                 }
             }
 
-
-            if (numNearbyRooms <= 1)
+            // Avoid clumping; don't place the room if it would be beside 
+            // two or more other rooms.
+            if (canPlaceFlag && NumNeighbours(map, pos) <= 1)
             {
                 // If room clumping isn't a problem, add the room to the map
                 map.PlaceRoom(randomRoom, pos);
@@ -104,22 +81,14 @@ public class OfficeGeneratorMK2 : OfficeGenerator
                 // - The position is not already occupied by a room
                 // - The position is not adjacent to two or more rooms
                 // Consequence: We will never place a new room so that it is 
-                // beside two or more preexisting rooms, but we may allow more than two rooms 
-                // to be placed beside a preexisting one.
-                foreach (Vector2Int dir in cardinalDirections)
+                // beside two or more preexisting rooms, but we may allow more than two 
+                // new rooms to be placed beside a preexisting one.
+                foreach (Vector2Int dir in randomRoom.doorLocations)
                 {
                     Vector2Int newPos = pos + dir;
                     if (!map.HasRoom(newPos) && map.InBounds(newPos))
                     {
-                        numNearbyRooms = 0;
-                        foreach (Vector2Int dir2 in cardinalDirections)
-                        {
-                            if (map.HasRoom(dir2))
-                            {
-                                ++numNearbyRooms;
-                            }
-                        }
-                        if (numNearbyRooms <= 1)
+                        if (NumNeighbours(map, newPos) <= 1)
                         {
                             placeable.Add(newPos);
                         }
@@ -136,8 +105,25 @@ public class OfficeGeneratorMK2 : OfficeGenerator
             placeable.RemoveAt(randomPosIndex);
         }
 
+        PlaceSpecialRooms(map);
+
         Debug.Log($"Map Generation completed. {iterations} iterations needed.");
 
         return map;
+    }
+
+    /// <summary>
+    /// Replaces the furthest dead-end room from the center with the boss room.
+    /// Replaces the second-furthest dead-end room from the center with the item room.
+    /// A dead-end room is a room with only one neighbour.
+    /// </summary>
+    public override void PlaceSpecialRooms(OfficeMap map)
+    {
+        if (bossRoom.doorLocations.Count < 4 || itemRoom.doorLocations.Count < 4)
+        {
+            Debug.LogWarning("WARNING! Map Generator currently requires the item and boss room to support doors in any direction!" +
+                "(Yell at Allen to fix this is you want this changed).");
+        }
+        base.PlaceSpecialRooms(map);
     }
 }

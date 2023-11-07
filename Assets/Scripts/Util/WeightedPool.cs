@@ -12,23 +12,22 @@ public class WeightedPool<T> : ScriptableObject, IRandomPool<T>
     [SerializeField]
     private WeightedPoolEntry<T>[] items;
 
-    // Only used to cache the sum of weights
-    private int _weightSum = 0;
-
     public T GetItem()
     {
-        float rand = UnityEngine.Random.Range(0, GetWeightSum());
+        int rand = UnityEngine.Random.Range(0, GetWeightSum());
 
+        int currSum = 0;
         for (int i = 0; i < items.Length; ++i)
         {
-            rand -= items[i].weight;
-            if (rand < 0)
+            currSum += items[i].weight;
+            if (rand < currSum)
             {
                 return items[i].item;
             }
         }
 
         // Should be unreachable
+        Debug.LogWarning($"Could not generate item with random value {rand}. Pool sum {GetWeightSum()}");
         throw new InvalidOperationException("Random pool generation failed");
     }
 
@@ -38,14 +37,12 @@ public class WeightedPool<T> : ScriptableObject, IRandomPool<T>
     /// </summary>
     private int GetWeightSum()
     {
-        if (_weightSum == 0)
+        int weightSum = 0;
+        foreach (WeightedPoolEntry<T> entry in items)
         {
-            foreach (WeightedPoolEntry<T> entry in items)
-            {
-                _weightSum += entry.weight;
-            }
+            weightSum += entry.weight;
         }
-        return _weightSum;
+        return weightSum;
     }
 }
 

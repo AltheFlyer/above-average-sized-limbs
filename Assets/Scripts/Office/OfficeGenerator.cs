@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// 
+/// ScriptableObject containing information to generate a office map.
+/// (Basically, the map of rooms the player will have to go through).
+/// The player begins in a starting room, and other rooms are generated based 
+/// on the provided normalRoomPool. 
+/// A single item and boss room are also placed within the map.
 /// </summary>
 [CreateAssetMenu(menuName = "Office/Office Generator")]
 public class OfficeGenerator : ScriptableObject
@@ -26,7 +30,7 @@ public class OfficeGenerator : ScriptableObject
     public RoomPool normalRoomPool;
 
 
-    private Vector2Int[] cardinalDirections = new Vector2Int[]{
+    protected Vector2Int[] cardinalDirections = new Vector2Int[]{
             Vector2Int.up,
             Vector2Int.right,
             Vector2Int.down,

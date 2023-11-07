@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f2a8c87b189cf42b75b78527b268ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generator: {fileID: 11400000, guid: 881f02ad7358a734f9d74cfc8894ae28, type: 2}
+  generator: {fileID: 11400000, guid: b183eca3e0a82fe448988e7648e858e0, type: 2}
   doors:
   - {fileID: 406280338}
   - {fileID: 797660678}
