@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1397a8a73392d341a59436856158465, type: 3}
   m_Name: PlayerConstants
   m_EditorClassIdentifier: 
-  playerSpeed: 4
-  maxSpeed: 10
-  dashSpeed: 8
+  playerSpeed: 5
+  maxSpeed: 2
+  dashSpeed: 2
   maxHealth: 6
   enemySpeed: 1
