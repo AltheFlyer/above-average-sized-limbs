@@ -15,4 +15,3 @@ MonoBehaviour:
   roomPrefab: {fileID: 8163762143355029383, guid: afba8be35990fd948acbd1179f72f5e9, type: 3}
   doorLocations:
   - {x: -1, y: 0}
-  - {x: 1, y: 0}

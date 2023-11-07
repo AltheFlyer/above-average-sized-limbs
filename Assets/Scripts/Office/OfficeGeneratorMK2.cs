@@ -62,6 +62,7 @@ public class OfficeGeneratorMK2 : OfficeGenerator
             {
                 if (map.HasRoom(dir + pos))
                 {
+                    // Check if the new room can have a door there
                     if (!randomRoom.doorLocations.Contains(dir))
                     {
                         canPlaceFlag = false;
@@ -69,40 +70,35 @@ public class OfficeGeneratorMK2 : OfficeGenerator
                 }
             }
 
+            int neighbours = NumNeighbours(map, pos);
             // Avoid clumping; don't place the room if it would be beside 
             // two or more other rooms.
-            if (canPlaceFlag && NumNeighbours(map, pos) <= 1)
+            if (canPlaceFlag && neighbours <= 1)
             {
                 // If room clumping isn't a problem, add the room to the map
                 map.PlaceRoom(randomRoom, pos);
 
-                // Add new placeable positions, only if they satisfy some conditions:
-                // - The position is in the 11 by 11 grid
-                // - The position is not already occupied by a room
-                // - The position is not adjacent to two or more rooms
-                // Consequence: We will never place a new room so that it is 
-                // beside two or more preexisting rooms, but we may allow more than two 
-                // new rooms to be placed beside a preexisting one.
                 foreach (Vector2Int dir in randomRoom.doorLocations)
                 {
                     Vector2Int newPos = pos + dir;
-                    if (!map.HasRoom(newPos) && map.InBounds(newPos))
+                    if (!map.HasRoom(newPos) && map.InBounds(newPos) && NumNeighbours(map, newPos) <= 1)
                     {
-                        if (NumNeighbours(map, newPos) <= 1)
-                        {
-                            placeable.Add(newPos);
-                        }
+                        placeable.Add(newPos);
                     }
                 }
+                placeable.RemoveAt(randomPosIndex);
             }
             else
             {
                 // Jank, modify the iterator variable since we didn't actually place a room
                 --i;
+                // Remove position from the placeable list if they fail to satisfy anti-clumping measures
+                // This is in case there's another room we could've chosen that could be validly placed.
+                if (neighbours > 1)
+                {
+                    placeable.RemoveAt(randomPosIndex);
+                }
             }
-
-            // Remove position from the placeable list
-            placeable.RemoveAt(randomPosIndex);
         }
 
         PlaceSpecialRooms(map);

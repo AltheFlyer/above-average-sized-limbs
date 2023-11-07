@@ -85,6 +85,11 @@ public class Room
         isVisited = false;
     }
 
+    public RoomData GetRoomData()
+    {
+        return roomBase;
+    }
+
     public GameObject GetRoomPrefab()
     {
         return roomBase.roomPrefab;
