@@ -7,6 +7,7 @@ public class SpawnOnRoomEnter : RoomActivatable
 
     public override void OnRoomFirstEnter()
     {
+        // Spawns an enemy as a child of the spawner object
         Instantiate(spawningPrefab, transform.position, Quaternion.identity, transform);
     }
 }

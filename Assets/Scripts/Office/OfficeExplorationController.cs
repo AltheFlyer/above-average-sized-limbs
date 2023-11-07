@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// Component that generates a map on scene start.
+/// </summary>
 public class OfficeExplorationController : MonoBehaviour
 {
 
@@ -17,10 +20,17 @@ public class OfficeExplorationController : MonoBehaviour
 
     public Camera camera;
 
+    public bool isDebugMode = true;
+
     public void Start()
     {
+        if (generator == null)
+        {
+            Debug.LogError("You forgot to set the OfficeExplorationController's generator!");
+        }
         officeMap = generator.GenerateMap();
 
+        // Initialize doors
         for (int i = 0; i < doors.Length; ++i)
         {
             doors[i].onEnterCallback = onRoomChange;
@@ -42,31 +52,28 @@ public class OfficeExplorationController : MonoBehaviour
                 room.SetLoadedRoom(loadedRoom);
                 loadedRoom.GetComponent<RoomController>()?.Init(room);
 
+                // Move rooms to where they should be in game world space
                 loadedRoom.transform.Translate(new Vector3(x * 13 - 5 * 13, y * 7 - 5 * 7, 0));
 
-                // loadedRoom.SetActive(false);
+                // When debugging, it's easier to not disable every room so you can see how the map gen looks.
+                // In actual gameplay, we probably want to hide every room but the one the player is currently in.
+                if (!isDebugMode)
+                {
+                    loadedRoom.SetActive(false);
+                }
             }
         }
 
+        // Assume the starting room is at the center position (5, 5), and activate it.
         currentRoom = officeMap.GetRoom(new Vector2Int(5, 5));
-
         currentRoom.Activate();
 
-        for (int i = 0; i < doors.Length; ++i)
-        {
-            if (officeMap.HasRoom(new Vector2Int(5, 5) + doors[i].direction))
-            {
-                doors[i].gameObject.SetActive(true);
-                doors[i].destination = new Vector2Int(5, 5) + doors[i].direction;
-                doors[i].SetOpenState(true);
-            }
-            else
-            {
-                doors[i].SetOpenState(false);
-            }
-        }
+
+        ResetDoors(new Vector2Int(5, 5));
     }
 
+    // Called whenever a new room is entered from a given direction.
+    // Should be invoked by the onRoomChange event, which should be triggered whenever a door is entered.
     public void ChangeRoom(Vector2Int newPos, Vector2Int direction)
     {
         Debug.Log($"Moving to room at {newPos}");
@@ -78,26 +85,13 @@ public class OfficeExplorationController : MonoBehaviour
         currentRoom.Activate();
 
         // Prepare doors
-        for (int i = 0; i < doors.Length; ++i)
-        {
-            if (officeMap.HasRoom(newPos + doors[i].direction))
-            {
-                doors[i].destination = newPos + doors[i].direction;
-                doors[i].SetOpenState(true);
-            }
-            else
-            {
-                doors[i].SetOpenState(false);
-            }
-        }
+        ResetDoors(newPos);
 
         // Move everything important to the next room
-        // Move the player to the appropriate entrance
-        GameObject.FindObjectOfType<PlayerManager>().transform.position += new Vector3(
-            0,
-            0,
-            0
-        );
+
+        // Turns out I put the door collider in the right place, 
+        // so the player doesn't need to be moved at all.
+
         // Move the camera
         camera.transform.position = new Vector3(
             newPos.x * 13 - 5 * 13,
@@ -112,6 +106,24 @@ public class OfficeExplorationController : MonoBehaviour
                 direction.y * 7,
                 0
             );
+        }
+    }
+
+    // Enables and disables doors for the current room.
+    // Doors are only enabled if there's a room in that direction.
+    private void ResetDoors(Vector2Int newPos)
+    {
+        for (int i = 0; i < doors.Length; ++i)
+        {
+            if (officeMap.HasRoom(newPos + doors[i].direction))
+            {
+                doors[i].destination = newPos + doors[i].direction;
+                doors[i].SetOpenState(true);
+            }
+            else
+            {
+                doors[i].SetOpenState(false);
+            }
         }
     }
 }
