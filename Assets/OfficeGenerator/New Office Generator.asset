@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numRooms: 20
   startingRoom: {fileID: 11400000, guid: dfbf4a7f760f87e4099d7712d2ba13b1, type: 2}
-  itemRoom: {fileID: 0}
-  bossRoom: {fileID: 0}
+  itemRoom: {fileID: 11400000, guid: b019b711fe1fd38478c9c00afb08c4b1, type: 2}
+  bossRoom: {fileID: 11400000, guid: beed0cf44b8131f4dbc94699d3211c35, type: 2}
   normalRoomPool: {fileID: 11400000, guid: 0dcbec8b955bccc4da377b950bf27b6d, type: 2}

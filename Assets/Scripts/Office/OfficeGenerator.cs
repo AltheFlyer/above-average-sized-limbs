@@ -26,8 +26,15 @@ public class OfficeGenerator : ScriptableObject
     public RoomPool normalRoomPool;
 
 
+    private Vector2Int[] cardinalDirections = new Vector2Int[]{
+            Vector2Int.up,
+            Vector2Int.right,
+            Vector2Int.down,
+            Vector2Int.left,
+        };
+
     // Generates an OfficeMap object, containing a grid of rooms
-    public OfficeMap GenerateMap()
+    public virtual OfficeMap GenerateMap()
     {
         // Basically an 11 by 11 grid of room info
         OfficeMap map = new OfficeMap(startingRoom);
@@ -37,14 +44,6 @@ public class OfficeGenerator : ScriptableObject
 
         // The starting room is put at the center of the grid
         map.PlaceRoom(startingRoom, center);
-
-        // Also hardcoded constant, just vectors for each cardinal direction
-        Vector2Int[] cardinalDirections = new Vector2Int[]{
-            Vector2Int.up,
-            Vector2Int.right,
-            Vector2Int.down,
-            Vector2Int.left,
-        };
 
         // List to store positions that rooms can be placed in.
         // Rooms will only be placed next to other preexisting rooms.
@@ -81,20 +80,9 @@ public class OfficeGenerator : ScriptableObject
 
             // Add the room to the map (or try to at least)
 
-            // Avoid clumping - count the number of rooms adjacent to our 
-            // placement loction.
-            int numNearbyRooms = 0;
-            foreach (Vector2Int dir in cardinalDirections)
-            {
-                Vector2Int newPos = pos + dir;
-                if (map.HasRoom(newPos))
-                {
-                    ++numNearbyRooms;
-                }
-            }
-
-
-            if (numNearbyRooms <= 1)
+            // Avoid clumping; don't place the room if it would be beside 
+            // two or more other rooms.
+            if (NumNeighbours(map, pos) <= 1)
             {
                 // If room clumping isn't a problem, add the room to the map
                 map.PlaceRoom(randomRoom, pos);
@@ -104,22 +92,14 @@ public class OfficeGenerator : ScriptableObject
                 // - The position is not already occupied by a room
                 // - The position is not adjacent to two or more rooms
                 // Consequence: We will never place a new room so that it is 
-                // beside two or more preexisting rooms, but we may allow more than two rooms 
-                // to be placed beside a preexisting one.
+                // beside two or more preexisting rooms, but we may allow more than two 
+                // new rooms to be placed beside a preexisting one.
                 foreach (Vector2Int dir in cardinalDirections)
                 {
                     Vector2Int newPos = pos + dir;
                     if (!map.HasRoom(newPos) && map.InBounds(newPos))
                     {
-                        numNearbyRooms = 0;
-                        foreach (Vector2Int dir2 in cardinalDirections)
-                        {
-                            if (map.HasRoom(dir2))
-                            {
-                                ++numNearbyRooms;
-                            }
-                        }
-                        if (numNearbyRooms <= 1)
+                        if (NumNeighbours(map, newPos) <= 1)
                         {
                             placeable.Add(newPos);
                         }
@@ -136,8 +116,117 @@ public class OfficeGenerator : ScriptableObject
             placeable.RemoveAt(randomPosIndex);
         }
 
+        PlaceSpecialRooms(map);
+
         Debug.Log($"Map Generation completed. {iterations} iterations needed.");
 
         return map;
+    }
+
+    /// <summary>
+    /// Replaces the furthest dead-end room from the center with the boss room.
+    /// Replaces the second-furthest dead-end room from the center with the item room.
+    /// A dead-end room is a room with only one neighbour.
+    /// </summary>
+    public virtual void PlaceSpecialRooms(OfficeMap map)
+    {
+        int maxDist = 0;
+        int secondMaxDist = 0;
+        Vector2Int secondFurthestDeadEnd = new Vector2Int(5, 5);
+        Vector2Int furthestDeadEnd = new Vector2Int(5, 5);
+        for (int y = 0; y < 11; ++y)
+        {
+            for (int x = 0; x < 11; ++x)
+            {
+                int dist = Mathf.Abs(y - 5) + Mathf.Abs(x - 5);
+                if (map.rooms[y][x] != null &&
+                    NumNeighbours(map, new Vector2Int(x, y)) == 1)
+                {
+                    if (dist > maxDist)
+                    {
+                        secondMaxDist = maxDist;
+                        maxDist = dist;
+                        secondFurthestDeadEnd = furthestDeadEnd;
+                        furthestDeadEnd = new Vector2Int(x, y);
+                    }
+                    else if (dist > secondMaxDist)
+                    {
+                        secondMaxDist = dist;
+                        secondFurthestDeadEnd = new Vector2Int(x, y);
+                    }
+                }
+            }
+        }
+
+        // If we couldn't place the item or boss rooms, uh... try to spawn a new room just for it
+        // I have no formal proof, but I'm pretty sure that a given map with more than one room must have 
+        // at least two dead ends, since rooms are never placed in a way that decreases the number of them.
+        // Since we only place a room if it would only be adjacent to one preexisting room, 
+        // we never allow a new room to "convert" two dead-end rooms into non-dead end rooms.
+        // Any time we remove a dead-end room, it's to place a new room, which must have exactly one neighbour, 
+        // meaning the total number of dead ends is still unchanged.
+        // However, in the degenerate case, it's possible we created a line ending at the spawn room, 
+        // which we really don't want to replace. Should this be the case, we can simply 
+        // add a room beside the spawn room to solve the problem.
+        // But just in case I screwed up, uhhh throw an exception because something really bad happened.
+        if (furthestDeadEnd.x == 5 && furthestDeadEnd.y == 5)
+        {
+            if (!TryPlaceRoomBeside(map, new Vector2Int(5, 5), bossRoom))
+            {
+                throw new System.Exception("Couldn't place boss room! Panicking!");
+            }
+        }
+        else
+        {
+            map.ForcePlaceRoom(bossRoom, furthestDeadEnd);
+        }
+        if (secondFurthestDeadEnd.x == 5 && secondFurthestDeadEnd.y == 5)
+        {
+            if (!TryPlaceRoomBeside(map, new Vector2Int(5, 5), itemRoom))
+            {
+                throw new System.Exception("Couldn't place item room! Panicking!");
+            }
+        }
+        else
+        {
+            map.ForcePlaceRoom(itemRoom, secondFurthestDeadEnd);
+        }
+    }
+
+    /// <summary>
+    /// Returns the number of neighbouring rooms to the room at position (x, y)
+    /// </summary>
+    protected virtual int NumNeighbours(OfficeMap map, Vector2Int pos)
+    {
+        int neighbours = 0;
+        foreach (Vector2Int dir in cardinalDirections)
+        {
+            Vector2Int newPos = pos + dir;
+            if (map.HasRoom(newPos))
+            {
+                ++neighbours;
+            }
+        }
+        return neighbours;
+    }
+
+    /// <summary>
+    /// Tries to place a specified room beside a specific position in the map.
+    /// Assuming the provided pos contains a room already, this will only try to place rooms 
+    /// if the room at pos is the only neighbour.
+    /// Returns a boolean indicating if the attempt was successful or not.
+    /// </summary>
+    protected virtual bool TryPlaceRoomBeside(OfficeMap map, Vector2Int pos, RoomData roomToPlace)
+    {
+        foreach (Vector2Int dir in cardinalDirections)
+        {
+            Vector2Int newPos = pos + dir;
+            if (!map.HasRoom(newPos) && NumNeighbours(map, newPos) == 1)
+            {
+                map.PlaceRoom(roomToPlace, newPos);
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -37,6 +37,15 @@ public class OfficeMap
         return true;
     }
 
+    /// <summary>
+    /// Forcefuly sets the room at pos, overwriting any previous one.
+    /// (Be careful with this one!)
+    /// </summary>
+    public void ForcePlaceRoom(RoomData room, Vector2Int pos)
+    {
+        rooms[pos.y][pos.x] = new Room(room);
+    }
+
     public bool HasRoom(Vector2Int pos)
     {
         if (pos.x >= 0 && pos.x < 11 && pos.y >= 0 && pos.y < 11)
