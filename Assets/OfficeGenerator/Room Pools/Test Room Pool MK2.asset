@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Test Room Pool MK2
   m_EditorClassIdentifier: 
   items:
-  - item: {fileID: 11400000, guid: 2ec569e537f3e19428ff1eec6da5b723, type: 2}
-    weight: 2
-  - item: {fileID: 11400000, guid: dfbf4a7f760f87e4099d7712d2ba13b1, type: 2}
+  - item: {fileID: 11400000, guid: e14983c8ba7acc94aa97d9f2c00d1b29, type: 2}
     weight: 1
+  - item: {fileID: 11400000, guid: 29321e6144de5334a967f1a29f73e46c, type: 2}
+    weight: 2
+  - item: {fileID: 11400000, guid: efb0912c9151fdc4593bbc8e940f1da7, type: 2}
+    weight: 3
