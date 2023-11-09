@@ -1381,4 +1381,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c17fa28d2ef36e43ae2577bef190340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawningPrefab: {fileID: 2734471120086032468, guid: e24e6f4f1ed1d45f68181a4e4d3eb16a, type: 3}
+  spawningPrefab: {fileID: 387973373630052734, guid: be4d1af95c70c441b8488ed5dd4fe7e2, type: 3}
