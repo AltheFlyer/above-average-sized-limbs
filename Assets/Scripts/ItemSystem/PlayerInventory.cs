@@ -41,4 +41,20 @@ public class PlayerInventory : MonoBehaviour
 
         pickupEvent.Raise(item);
     }
+
+    public void PreAttack(AttackData data)
+    {
+        foreach (BaseItem item in itemListeners)
+        {
+            item.PreAttack(data);
+        }
+    }
+
+    public void OnHit(HitData data)
+    {
+        foreach (BaseItem item in itemListeners)
+        {
+            item.OnHit(data);
+        }
+    }
 }
