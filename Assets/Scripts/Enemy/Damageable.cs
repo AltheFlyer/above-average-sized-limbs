@@ -73,4 +73,9 @@ public class Damageable : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+
+    public virtual void SetMaxHP(int newMax)
+    {
+        maxHP = newMax;
+    }
 }
