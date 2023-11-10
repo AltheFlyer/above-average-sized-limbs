@@ -4,7 +4,7 @@ using UnityEngine.Events;
 /// <summary>
 /// Component that generates a map on scene start.
 /// </summary>
-public class OfficeExplorationController : MonoBehaviour
+public class OfficeExplorationController : Singleton<OfficeExplorationController>
 {
 
     public OfficeGenerator generator;
@@ -19,6 +19,7 @@ public class OfficeExplorationController : MonoBehaviour
     public UnityEvent<Vector2Int, Vector2Int> onRoomChange;
 
     public Camera camera;
+    public GameObject wallColliders;
 
     public bool isDebugMode = true;
 
@@ -98,6 +99,12 @@ public class OfficeExplorationController : MonoBehaviour
             newPos.y * 7 - 5 * 7,
             -10
         );
+        // Move the wall colliders
+        wallColliders.transform.position = new Vector3(
+            newPos.x * 13 - 5.05f * 13,
+            newPos.y * 7 - 4.96f * 7,
+            0
+        );
         // Move the doors (lol)
         for (int i = 0; i < doors.Length; ++i)
         {
@@ -109,10 +116,20 @@ public class OfficeExplorationController : MonoBehaviour
         }
     }
 
+    public void SetAllDoorLocks(bool lockState)
+    {
+        Debug.Log("Set All Door Locks " + lockState.ToString());
+        for (int i = 0; i < doors.Length; ++i)
+        {
+            doors[i].SetDoorLock(lockState);
+        }
+    }
+
     // Enables and disables doors for the current room.
     // Doors are only enabled if there's a room in that direction.
     private void ResetDoors(Vector2Int newPos)
     {
+        Debug.Log("Reset Doors");
         for (int i = 0; i < doors.Length; ++i)
         {
             if (officeMap.HasRoom(newPos + doors[i].direction))
@@ -125,5 +142,6 @@ public class OfficeExplorationController : MonoBehaviour
                 doors[i].SetOpenState(false);
             }
         }
+        SetAllDoorLocks(!currentRoom.isRoomCleared); // set all door lock state upon entrance
     }
 }
