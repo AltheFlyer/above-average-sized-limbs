@@ -118,7 +118,6 @@ public class OfficeExplorationController : Singleton<OfficeExplorationController
 
     public void SetAllDoorLocks(bool lockState)
     {
-        Debug.Log("Set All Door Locks " + lockState.ToString());
         for (int i = 0; i < doors.Length; ++i)
         {
             doors[i].SetDoorLock(lockState);
@@ -129,7 +128,6 @@ public class OfficeExplorationController : Singleton<OfficeExplorationController
     // Doors are only enabled if there's a room in that direction.
     private void ResetDoors(Vector2Int newPos)
     {
-        Debug.Log("Reset Doors");
         for (int i = 0; i < doors.Length; ++i)
         {
             if (officeMap.HasRoom(newPos + doors[i].direction))
