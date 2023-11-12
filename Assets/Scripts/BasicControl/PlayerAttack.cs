@@ -9,13 +9,13 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         hitBox = GetComponent<Collider2D>();
-
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
+            GlobalEventHandle.instance?.onHit.Raise(new HitData());
             col.gameObject.GetComponent<Damageable>().TakeDamage(1);
         }
 

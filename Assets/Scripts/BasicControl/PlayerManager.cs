@@ -83,6 +83,7 @@ public class PlayerManager : MonoBehaviour
 
     void Attack()
     {
+        GlobalEventHandle.instance?.preAttack.Raise(new AttackData());
         // if (attackDirection.x > 0)
         // {
         playerAnimator.SetTrigger("attack");
@@ -168,6 +169,12 @@ public class PlayerManager : MonoBehaviour
             dashCoolCounter -= Time.deltaTime;
         }
 
+    }
+
+    public void RecalculateStats(ItemData item)
+    {
+        // TODO: Check if not dashing
+        activeMoveSpeed = gameConstants.playerSpeed;
     }
 
 }

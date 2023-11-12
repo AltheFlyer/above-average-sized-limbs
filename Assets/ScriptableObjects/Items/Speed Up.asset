@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08623676f90bc814c9998e9a73d4df98, type: 3}
+  m_Name: Speed Up
+  m_EditorClassIdentifier: 
+  itemName: Kopi
+  sprite: {fileID: 21300000, guid: ac1ee35ca5e268c4c92061a11aab6c40, type: 3}
+  item: {fileID: 2259332053649101748, guid: a5dc6470783c23840b4152bc01e76afd, type: 3}
