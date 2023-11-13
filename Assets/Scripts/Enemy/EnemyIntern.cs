@@ -16,6 +16,7 @@ public class EnemyIntern : Damageable
 
     Rigidbody2D rb;
     Collider2D col;
+    Animator animator;
 
     protected override void Awake()
     {
@@ -23,6 +24,7 @@ public class EnemyIntern : Damageable
 
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        animator = GetComponent<Animator>();
     }
 
     protected override void Start()
@@ -70,6 +72,7 @@ public class EnemyIntern : Damageable
         {
             // aim at player
             dir = (player.transform.position - transform.position).normalized;
+            animator.SetFloat("xDir", dir.x);
 
             // rotate attack path
             rb.velocity = dir * speed;

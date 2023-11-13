@@ -19737,7 +19737,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: de569983932c347ba8096ab80925f69d, type: 3}
+  m_Sprite: {fileID: 1578661494, guid: 52ef1eb91370eac4ca1cbc6dae85f172, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -19850,6 +19850,7 @@ GameObject:
   - component: {fileID: 6536623604355044222}
   - component: {fileID: 3773850380292069965}
   - component: {fileID: 8921008571491100323}
+  - component: {fileID: 6460076503927417702}
   m_Layer: 8
   m_Name: HR Recruiter
   m_TagString: Untagged
@@ -20022,3 +20023,24 @@ MonoBehaviour:
   summonPrefab: {fileID: 387973373630052734, guid: be4d1af95c70c441b8488ed5dd4fe7e2, type: 3}
   facePalmEffectPos: {fileID: 2743235804690694690}
   facePalmEffectPrefab: {fileID: 6630275391772572677, guid: 054a44b4100f14131b456dc883354a2b, type: 3}
+--- !u!95 &6460076503927417702
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8303432624014630202}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 58168059b05a7f64b91f1fc5933fe9cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
