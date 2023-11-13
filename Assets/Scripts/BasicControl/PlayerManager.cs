@@ -84,6 +84,12 @@ public class PlayerManager : MonoBehaviour
 
     void Attack()
     {
+<<<<<<< HEAD
+=======
+        GlobalEventHandle.instance?.preAttack.Raise(new AttackData());
+        // if (attackDirection.x > 0)
+        // {
+>>>>>>> 826e479a9acbec903e263276a5491adb606db129
         playerAnimator.SetTrigger("attack");
 
     }
@@ -172,6 +178,12 @@ public class PlayerManager : MonoBehaviour
             dashCoolCounter -= Time.deltaTime;
         }
 
+    }
+
+    public void RecalculateStats(ItemData item)
+    {
+        // TODO: Check if not dashing
+        activeMoveSpeed = gameConstants.playerSpeed;
     }
 
 }

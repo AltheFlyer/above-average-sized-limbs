@@ -12,7 +12,7 @@ public class Door : MonoBehaviour
 
 
     // Internal state
-    private bool isOpen;
+    private bool isOpen; // isOpen means door is openable and not just a wall (can be locked tho)
 
     // Internal components
     public SpriteRenderer spriteRenderer;
@@ -51,5 +51,19 @@ public class Door : MonoBehaviour
         }
 
         onEnterCallback.Invoke(destination, direction);
+    }
+
+    public void SetDoorLock(bool lockState)
+    {
+        // Spot if this door has 1 child (it should) - locking doors
+        if (transform.childCount > 0)
+        {
+            Transform doorCollider = transform.GetChild(0);
+            doorCollider.gameObject.SetActive(lockState || !isOpen);
+        }
+        else
+        {
+            Debug.Log("No child found under Door (this shouldn't happen!).");
+        }
     }
 }

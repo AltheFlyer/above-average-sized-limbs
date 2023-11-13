@@ -33,6 +33,7 @@ public class EnemyHRRecruiter : Damageable
 
     Rigidbody2D rb;
     Collider2D col;
+    Animator animator;
 
     protected override void Awake()
     {
@@ -40,6 +41,7 @@ public class EnemyHRRecruiter : Damageable
 
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        animator = GetComponent<Animator>();
     }
 
     protected override void Start()
@@ -92,6 +94,8 @@ public class EnemyHRRecruiter : Damageable
         if (summonParticle2 != null)
             summonParticle2.Play();
         summonStateParticle.Play();
+
+        animator.SetTrigger("summon");
 
         // wait a bit      
         float _time = summonTime;

@@ -78,6 +78,7 @@ public class Room
 
 
     public bool isVisited;
+    public bool isRoomCleared;
 
     public Room(RoomData roomBase)
     {
