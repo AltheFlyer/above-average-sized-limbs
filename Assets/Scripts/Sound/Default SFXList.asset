@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f0daa47af9b4fa7b721c7658df7a30, type: 3}
+  m_Name: Default SFXList
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: dash1
+    clip: {fileID: 8300000, guid: 8284c43ec3edd49f49c0b73eeec395ed, type: 3}
+    volume: 1
+    audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: punchHeavy1
+    clip: {fileID: 8300000, guid: b01e12955ead3463283f82269aefe79a, type: 3}
+    volume: 1
+    audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: punch1
+    clip: {fileID: 8300000, guid: e7ef96d9f9d5349a687e12b13689c455, type: 3}
+    volume: 1
+    audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: punch2
+    clip: {fileID: 8300000, guid: 3d139daea46d64a07a83eb67cc122bd4, type: 3}
+    volume: 1
+    audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: punch3
+    clip: {fileID: 8300000, guid: 9eeedf313d5ab418ba7f7141e99be3b3, type: 3}
+    volume: 1
+    audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: impact1
+    clip: {fileID: 8300000, guid: 4db40564fe58b4f519ed6b67e6a11cc9, type: 3}
+    volume: 1
+    audioMixerGroup: {fileID: -1926846628764479051, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: splatter1
+    clip: {fileID: 8300000, guid: 8099d43585c124e32a187fb2e6c53318, type: 3}
+    volume: 1
+    audioMixerGroup: {fileID: -1926846628764479051, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: summon1
+    clip: {fileID: 8300000, guid: b9183ba2dc4a0452f83013de5cfa0a9e, type: 3}
+    volume: 1
+    audioMixerGroup: {fileID: -1926846628764479051, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: unlock1
+    clip: {fileID: 8300000, guid: bc6a7f023698745278abf49468dcc808, type: 3}
+    volume: 1
+    audioMixerGroup: {fileID: 5879685974783371366, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
