@@ -35,6 +35,7 @@ Transform:
   - {fileID: 7730675272841327118}
   - {fileID: 6721515371684037917}
   - {fileID: 7010984312848478945}
+  - {fileID: 1640660215114815580}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6041529156847766518
@@ -102,6 +103,18 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2146836794491219782}
         m_TargetAssemblyTypeName: SFXPlay, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1894012480874327765}
+        m_TargetAssemblyTypeName: RandomOnomatopoeiaSpawner, Assembly-CSharp
         m_MethodName: Activate
         m_Mode: 1
         m_Arguments:
@@ -5092,6 +5105,53 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &4230173247239370564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1640660215114815580}
+  - component: {fileID: 1894012480874327765}
+  m_Layer: 0
+  m_Name: Onomatopoeia Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1640660215114815580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4230173247239370564}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 834943655676726791}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1894012480874327765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4230173247239370564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c9db00f4f20a4d13a21f2c24bc3de65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: {x: 2.5, y: 2.5}
+  onomatopoeias: {fileID: 11400000, guid: c6d60f1ede4634513a66aeac1bee9763, type: 2}
+  basePrefab: {fileID: 6630275391772572677, guid: 3781cf23ee8ec4ce8a899f46483817a0, type: 3}
 --- !u!1 &9052644488536368816
 GameObject:
   m_ObjectHideFlags: 0
