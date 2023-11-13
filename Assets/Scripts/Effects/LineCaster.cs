@@ -10,7 +10,7 @@ public class LineCaster : MonoBehaviour
     public LayerMask raycastMask;
     public LineRenderer LineRenderer;
 
-    Vector2 hitPos;
+    [HideInInspector] public Vector2 hitPos;
 
     void Update()
     {
@@ -33,5 +33,10 @@ public class LineCaster : MonoBehaviour
         LineRenderer.SetPosition(1, hitPos);
 
         LineRenderer.material.SetFloat("_Visibility", shaderVisibility);
+    }
+
+    public float GetDistance()
+    {
+        return Vector2.Distance(transform.position, hitPos);
     }
 }

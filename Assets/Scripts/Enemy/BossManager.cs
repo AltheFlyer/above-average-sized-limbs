@@ -16,8 +16,14 @@ public class BossManager : Damageable
     [Space]
     public float fireCount = 3;
     public float fireAimTime = 1f;
+    public float fireTime = 2f;
     public float fireDelay = 0.75f;
-    public
+    public float fireTimeBetweenAttack = 0.4f;
+    public float fireSmoothTime = 0.1f;
+    public GameObject fireAttack;
+    public LaserAttackController laserAttackController;
+    float fireCurrentVelocity;
+
 
 
     GameObject player;
@@ -132,7 +138,32 @@ public class BossManager : Damageable
     {
         rb.velocity = Vector2.zero;
 
-        yield return null;
+        for (int i = 0; i < fireCount; i++)
+        {
+            float aimTime = fireAimTime;
+
+            while (aimTime > 0)
+            {
+                // aim at player smoothly
+                float angle = AngPosUtil.GetAngle(transform.position, player.transform.position);
+                angle = Mathf.SmoothDamp(fireAttack.transform.eulerAngles.z, angle, ref fireCurrentVelocity, fireSmoothTime);
+                fireAttack.transform.eulerAngles = new Vector3(0, 0, angle);
+
+                yield return null;
+                aimTime -= Time.deltaTime;
+            }
+
+            // wait a bit before actually fire
+            yield return new WaitForSeconds(fireDelay);
+
+            // fire
+            laserAttackController.Fire();
+            yield return new WaitForSeconds(fireTime);
+            laserAttackController.Stop();
+
+            // wait for next fire
+            yield return new WaitForSeconds(fireTimeBetweenAttack);
+        }
 
         StartCoroutine(RandomNextStateIE());
     }
