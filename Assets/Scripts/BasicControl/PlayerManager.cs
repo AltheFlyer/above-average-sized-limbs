@@ -6,9 +6,6 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     public GameConstants gameConstants;
-    public float attackCoolDown;
-    private float lastAttackTime;
-
     private Animator playerAnimator;
     private Rigidbody2D playerBody;
     private bool moving = false;
@@ -55,8 +52,10 @@ public class PlayerManager : MonoBehaviour
 
         playerAnimator.SetFloat("attackHorizontal", attackHorizontal);
         playerAnimator.SetFloat("attackVertical", attackVertical);
-        playerAnimator.SetFloat("moveHorizontal", horizontalAxis);
-        playerAnimator.SetFloat("moveVertical", verticalAxis);
+
+
+        playerAnimator.SetFloat("horizontal", horizontalAxis);
+        playerAnimator.SetFloat("vertical", verticalAxis);
         playerAnimator.SetFloat("speed", Mathf.Sqrt(movement.sqrMagnitude));
 
         AttackCheck(attackDirection);
@@ -84,8 +83,11 @@ public class PlayerManager : MonoBehaviour
 
     void Attack()
     {
+        GlobalEventHandle.instance?.preAttack.Raise(new AttackData());
+        // if (attackDirection.x > 0)
+        // {
         playerAnimator.SetTrigger("attack");
-
+        //}
     }
 
     public void AttackCheck(Vector2 attackDirection)
@@ -94,12 +96,7 @@ public class PlayerManager : MonoBehaviour
         { }
         else
         {
-            if (Time.time - lastAttackTime >= attackCoolDown)
-            {
-                Attack();
-                lastAttackTime = Time.time;
-            }
-
+            Attack();
         }
     }
 
