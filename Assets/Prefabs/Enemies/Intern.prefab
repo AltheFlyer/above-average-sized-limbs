@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4897652660379682468}
   - component: {fileID: 2824588226866880205}
   - component: {fileID: 101904344960699739}
+  - component: {fileID: 2348469371759206268}
   m_Layer: 8
   m_Name: Intern
   m_TagString: Untagged
@@ -169,6 +170,27 @@ MonoBehaviour:
   exclaimationEffect: {fileID: 6630275391772572677, guid: 2de6c50d9028c4a7585e2a7fab2cf743, type: 3}
   deathEffect: {fileID: 5427402122937063527, guid: 093a7fae069fb4aa6a3c18d183a619c5, type: 3}
   spriteDeathFadeSOC: {fileID: 2547272789530638689}
+--- !u!95 &2348469371759206268
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387973373630052734}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4c47d2c008eeb364a82dac85d5b02a43, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &727796287114364623
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +267,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: de569983932c347ba8096ab80925f69d, type: 3}
+  m_Sprite: {fileID: 1026932488, guid: a1b263d94f290cf4f995ace00aaa5548, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
