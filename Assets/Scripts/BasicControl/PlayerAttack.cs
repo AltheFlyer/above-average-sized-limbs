@@ -17,6 +17,7 @@ public class PlayerAttack : MonoBehaviour
         {
             GlobalEventHandle.instance?.onHit.Raise(new HitData());
             col.gameObject.GetComponent<Damageable>().TakeDamage(1);
+
         }
 
     }

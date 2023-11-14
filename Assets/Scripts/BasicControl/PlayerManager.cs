@@ -42,30 +42,38 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
+        //Movement
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         float moveVertical = Input.GetAxisRaw("Vertical");
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-
-        float attackHorizontal = Input.GetAxisRaw("AttackHorizontal");
-        float attackVertical = Input.GetAxisRaw("AttackVertical");
-        Vector2 attackDirection = new Vector2(attackHorizontal, attackVertical);
-
-        // if (attackHorizontal != 0 || attackVertical != 0)
-        // {
-        //     attackPlaceHolder = Mathf.Abs(attackHorizontal) > Mathf.Abs(attackVertical) ? attackHorizontal : attackVertical;
-        // }
-
-
-        playerAnimator.SetFloat("attackHorizontal", attackHorizontal);
-        playerAnimator.SetFloat("attackVertical", attackVertical);
-
-
         playerAnimator.SetFloat("moveHorizontal", moveHorizontal);
         playerAnimator.SetFloat("moveVertical", moveVertical);
         playerAnimator.SetFloat("speed", Mathf.Sqrt(movement.sqrMagnitude));
 
+
+        //Attack
+        float attackHorizontal = Input.GetAxisRaw("AttackHorizontal");
+        float attackVertical = Input.GetAxisRaw("AttackVertical");
+        Vector2 attackDirection = new Vector2(attackHorizontal, attackVertical);
+
+        if (attackHorizontal != 0 || attackVertical != 0)
+        {
+            float persistentAttackValue = Mathf.Abs(attackHorizontal) > Mathf.Abs(attackVertical) ? attackHorizontal : attackVertical;
+            SetAttackDirection(persistentAttackValue);
+        }
+
+        playerAnimator.SetFloat("attackHorizontal", attackHorizontal == 0 ? 0 : attackPlaceHolder);
+        playerAnimator.SetFloat("attackVertical", attackVertical == 0 ? 0 : attackPlaceHolder);
+
         AttackCheck(attackDirection);
+
+        //Dash
         DashCheck();
+    }
+
+    public void SetAttackDirection(float dirIndicator)
+    {
+        attackPlaceHolder = dirIndicator;
     }
 
     public void SetAttackToZero()
