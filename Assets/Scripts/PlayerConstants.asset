@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerConstants
   m_EditorClassIdentifier: 
   playerSpeed: 5
-  maxSpeed: 2
-  dashSpeed: 2
+  maxSpeed: 8
+  dashSpeed: 10
   maxHealth: 6
   enemySpeed: 1

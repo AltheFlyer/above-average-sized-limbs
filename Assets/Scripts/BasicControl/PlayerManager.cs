@@ -28,6 +28,8 @@ public class PlayerManager : MonoBehaviour
     //Pick Up item
     private PickUp pickUp;
 
+    private float attackPlaceHolder;
+
 
     void Start()
     {
@@ -39,29 +41,39 @@ public class PlayerManager : MonoBehaviour
         pickUp = gameObject.GetComponent<PickUp>();
         pickUp.Direction = new Vector2(0f, 0f);
 
-
     }
 
     void Update()
     {
-        float horizontalAxis = Input.GetAxisRaw("Horizontal");
-        float verticalAxis = Input.GetAxisRaw("Vertical");
-        Vector2 movement = new Vector2(horizontalAxis, verticalAxis);
+        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        float moveVertical = Input.GetAxisRaw("Vertical");
+        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
         float attackHorizontal = Input.GetAxisRaw("AttackHorizontal");
         float attackVertical = Input.GetAxisRaw("AttackVertical");
         Vector2 attackDirection = new Vector2(attackHorizontal, attackVertical);
 
+        // if (attackHorizontal != 0 || attackVertical != 0)
+        // {
+        //     attackPlaceHolder = Mathf.Abs(attackHorizontal) > Mathf.Abs(attackVertical) ? attackHorizontal : attackVertical;
+        // }
+
 
         playerAnimator.SetFloat("attackHorizontal", attackHorizontal);
         playerAnimator.SetFloat("attackVertical", attackVertical);
-        playerAnimator.SetFloat("moveHorizontal", horizontalAxis);
-        playerAnimator.SetFloat("moveVertical", verticalAxis);
+
+
+        playerAnimator.SetFloat("moveHorizontal", moveHorizontal);
+        playerAnimator.SetFloat("moveVertical", moveVertical);
         playerAnimator.SetFloat("speed", Mathf.Sqrt(movement.sqrMagnitude));
 
         AttackCheck(attackDirection);
         DashCheck();
+    }
 
+    public void SetAttackToZero()
+    {
+        attackPlaceHolder = 0;
     }
 
     void FixedUpdate()
@@ -82,14 +94,12 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+
     void Attack()
     {
-<<<<<<< HEAD
-=======
         GlobalEventHandle.instance?.preAttack.Raise(new AttackData());
         // if (attackDirection.x > 0)
         // {
->>>>>>> 826e479a9acbec903e263276a5491adb606db129
         playerAnimator.SetTrigger("attack");
 
     }
