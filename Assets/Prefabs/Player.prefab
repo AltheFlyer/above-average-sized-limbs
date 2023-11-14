@@ -410,7 +410,6 @@ MonoBehaviour:
   onDamage:
     m_PersistentCalls:
       m_Calls: []
-  damageEvent: {fileID: 0}
 --- !u!114 &1997162506908761173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,6 +531,8 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 256
+  comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
+  comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
 --- !u!1 &6263859837756752165
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,6 +626,8 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 256
+  comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
+  comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
 --- !u!1 &6281562766456737922
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,6 +721,8 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 256
+  comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
+  comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
 --- !u!1 &6407631200759518770
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,3 +851,5 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 256
+  comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
+  comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
