@@ -40,6 +40,7 @@ public class RoomController : MonoBehaviour
         RoomActivatable activationComponent = root.GetComponent<RoomActivatable>();
         if (activationComponent)
         {
+            Debug.Log($"Found activation component {activationComponent}");
             activationComponent.OnRoomFirstEnter();
             enemySpawners.Add(root);
         }
