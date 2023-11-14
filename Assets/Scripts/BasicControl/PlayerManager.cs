@@ -26,7 +26,8 @@ public class PlayerManager : MonoBehaviour
     private PickUp pickUp;
 
     private float attackPlaceHolder;
-
+    private float[] currentVal;
+    private float[] prevVal;
 
     void Start()
     {
@@ -37,6 +38,9 @@ public class PlayerManager : MonoBehaviour
 
         pickUp = gameObject.GetComponent<PickUp>();
         pickUp.Direction = new Vector2(0f, 0f);
+
+        currentVal = new float[2];
+        prevVal = new float[2];
 
     }
 
@@ -58,12 +62,19 @@ public class PlayerManager : MonoBehaviour
 
         if (attackHorizontal != 0 || attackVertical != 0)
         {
-            float persistentAttackValue = Mathf.Abs(attackHorizontal) > Mathf.Abs(attackVertical) ? attackHorizontal : attackVertical;
-            SetAttackDirection(persistentAttackValue);
+            currentVal[0] = attackHorizontal;
+            currentVal[1] = attackVertical;
+            Debug.Log(currentVal);
+            prevVal = currentVal;
+        }
+        else if (attackHorizontal == 0 && attackVertical == 0)
+        {
+            currentVal = prevVal;
+            prevVal = currentVal;
         }
 
-        playerAnimator.SetFloat("attackHorizontal", attackHorizontal == 0 ? 0 : attackPlaceHolder);
-        playerAnimator.SetFloat("attackVertical", attackVertical == 0 ? 0 : attackPlaceHolder);
+        playerAnimator.SetFloat("attackHorizontal", currentVal[0]);
+        playerAnimator.SetFloat("attackVertical", currentVal[1]);
 
         AttackCheck(attackDirection);
 
@@ -71,14 +82,10 @@ public class PlayerManager : MonoBehaviour
         DashCheck();
     }
 
-    public void SetAttackDirection(float dirIndicator)
+    public void ResetCurrentVal()
     {
-        attackPlaceHolder = dirIndicator;
-    }
-
-    public void SetAttackToZero()
-    {
-        attackPlaceHolder = 0;
+        currentVal[0] = 0;
+        currentVal[1] = 0;
     }
 
     void FixedUpdate()
