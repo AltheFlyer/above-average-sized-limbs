@@ -64,7 +64,6 @@ public class PlayerManager : MonoBehaviour
         {
             currentVal[0] = attackHorizontal;
             currentVal[1] = attackVertical;
-            Debug.Log(currentVal);
             prevVal = currentVal;
         }
         else if (attackHorizontal == 0 && attackVertical == 0)
