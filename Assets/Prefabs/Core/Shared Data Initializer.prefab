@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5116450477212654113
+--- !u!1 &555325094511678325
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3166372070970996194}
-  - component: {fileID: 2259332053649101748}
+  - component: {fileID: 8470197116896157156}
+  - component: {fileID: 6063849769270827096}
   m_Layer: 0
-  m_Name: Kopi Item
+  m_Name: Shared Data Initializer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3166372070970996194
+--- !u!4 &8470197116896157156
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5116450477212654113}
+  m_GameObject: {fileID: 555325094511678325}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,21 +32,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2259332053649101748
+--- !u!114 &6063849769270827096
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5116450477212654113}
+  m_GameObject: {fileID: 555325094511678325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8605e60085b250b46b4e8d8daac5545a, type: 3}
+  m_Script: {fileID: 11500000, guid: 507172f0829f41e45a220ca452cdddae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerVars: {fileID: 11400000, guid: 8fae656bd80baf74593064fe4cb84c52, type: 2}
-  deltaPlayerSpeed: 1
-  deltaMaxSpeed: 1
-  deltaDashSpeed: 0
-  deltaHealth: 0
-  deltaMaxHealth: 0
+  baseStats: {fileID: 11400000, guid: 4ca5011e3843d054ba59080a6de1b31f, type: 2}
+  activeStats: {fileID: 11400000, guid: 8fae656bd80baf74593064fe4cb84c52, type: 2}
+  itemPools: []

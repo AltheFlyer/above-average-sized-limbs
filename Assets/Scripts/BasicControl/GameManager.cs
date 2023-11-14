@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    public GameConstants gameConstants;
+    public PlayerVariables playerVars;
     public IntVariable currentHealth;
-    
+
     void Start()
     {
-        currentHealth.Value = gameConstants.maxHealth;
-        
+        currentHealth.Value = playerVars.maxHealth;
+
     }
 
     void Update()
     {
-        
+
     }
 
     public void DamagePlayer(int damage)

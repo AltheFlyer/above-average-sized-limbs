@@ -52,7 +52,11 @@ public class Damageable : MonoBehaviour
         // apply damage
         ApplyHP(-damage);
 
+        // Emit events
         onDamage.Invoke();
+        GlobalEventHandle.instance.takeDamage.Raise(new DamageData(
+            this, damage, hp
+        ));
 
         // set damage invisible time
         if (onDamagedInvincibleTime > 0)

@@ -12,7 +12,7 @@ public enum EnemyState
 
 public class MeleeEnemyManager : MonoBehaviour
 {
-    public GameConstants gameConstants;
+    public PlayerVariables playerVars;
     private GameObject player;
     private EnemyState currentState;
     public float attackRange;
@@ -56,7 +56,7 @@ public class MeleeEnemyManager : MonoBehaviour
 
     private void Follow()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, gameConstants.enemySpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, 0.5f * Time.deltaTime);
     }
 
     private void Attack()

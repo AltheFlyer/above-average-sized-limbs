@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public GameConstants gameConstants;
+    public PlayerVariables playerVars;
     private Animator playerAnimator;
     private Rigidbody2D playerBody;
     private bool moving = false;
@@ -34,7 +34,7 @@ public class PlayerManager : MonoBehaviour
         playerBody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
 
-        activeMoveSpeed = gameConstants.playerSpeed;
+        activeMoveSpeed = playerVars.playerSpeed;
 
         pickUp = gameObject.GetComponent<PickUp>();
         pickUp.Direction = new Vector2(0f, 0f);
@@ -129,7 +129,7 @@ public class PlayerManager : MonoBehaviour
     void Move(Vector2 movement)
     {
         // check if it doesn't go beyond maxSpeed
-        if (playerBody.velocity.magnitude < gameConstants.maxSpeed)
+        if (playerBody.velocity.magnitude < playerVars.maxSpeed)
         {
             playerBody.MovePosition(playerBody.position + movement * activeMoveSpeed * Time.deltaTime);
             //playerBody.velocity = movement * activeMoveSpeed;
@@ -156,7 +156,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (dashCounter <= 0 && dashCoolCounter <= 0)
         {
-            activeMoveSpeed = gameConstants.dashSpeed;
+            activeMoveSpeed = playerVars.dashSpeed;
             dashCounter = dashLength;
 
             //Put in update
@@ -184,7 +184,7 @@ public class PlayerManager : MonoBehaviour
 
             if (dashCounter <= 0)
             {
-                activeMoveSpeed = gameConstants.playerSpeed;
+                activeMoveSpeed = playerVars.playerSpeed;
                 dashCoolCounter = dashCooldown;
             }
         }
@@ -199,7 +199,7 @@ public class PlayerManager : MonoBehaviour
     public void RecalculateStats(ItemData item)
     {
         // TODO: Check if not dashing
-        activeMoveSpeed = gameConstants.playerSpeed;
+        activeMoveSpeed = playerVars.playerSpeed;
     }
 
 }

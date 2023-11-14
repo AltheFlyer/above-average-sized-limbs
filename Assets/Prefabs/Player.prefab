@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 124ac0c505920b04bb406b38919934ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameConstants: {fileID: 11400000, guid: 8fae656bd80baf74593064fe4cb84c52, type: 2}
+  playerVars: {fileID: 11400000, guid: 8fae656bd80baf74593064fe4cb84c52, type: 2}
   distanceBetweenImages: 0.1
 --- !u!114 &6031638417969382788
 MonoBehaviour:
@@ -410,6 +410,7 @@ MonoBehaviour:
   onDamage:
     m_PersistentCalls:
       m_Calls: []
+  damageEvent: {fileID: 0}
 --- !u!114 &1997162506908761173
 MonoBehaviour:
   m_ObjectHideFlags: 0

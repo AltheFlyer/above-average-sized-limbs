@@ -10,6 +10,7 @@ public class HUDManager : MonoBehaviour
 
     void Update()
     {
-        healthText.text = "Health: " + GameManager.instance.currentHealth.Value;
+        // TODO: change to use player damage event listener
+        // healthText.text = "Health: " + GameManager.instance.currentHealth.Value;
     }
 }

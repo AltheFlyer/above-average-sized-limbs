@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1397a8a73392d341a59436856158465, type: 3}
-  m_Name: PlayerConstants
+  m_Name: Player Base Stats
   m_EditorClassIdentifier: 
   playerSpeed: 5
   maxSpeed: 8
