@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class StatUpItem : BaseItem
 {
-    [Header("Just set this to whatever game constants are being used by the player.")]
-    public GameConstants gameConstants;
+    [Header("Just set this to whatever variables are being used by the player.")]
+    public PlayerVariables playerVars;
 
     [Header("Stat changes:")]
     public float deltaPlayerSpeed;
@@ -15,10 +15,10 @@ public class StatUpItem : BaseItem
 
     public override void OnPickUp(PlayerManager player)
     {
-        gameConstants.playerSpeed += deltaPlayerSpeed;
-        gameConstants.maxSpeed += deltaMaxSpeed;
-        gameConstants.dashSpeed += deltaDashSpeed;
-        gameConstants.maxHealth += deltaMaxHealth;
+        playerVars.playerSpeed += deltaPlayerSpeed;
+        playerVars.maxSpeed += deltaMaxSpeed;
+        playerVars.dashSpeed += deltaDashSpeed;
+        playerVars.maxHealth += deltaMaxHealth;
 
         // Well, turns out health is a bit more painful to set, 
         // as multiple things seem to track it right now.
