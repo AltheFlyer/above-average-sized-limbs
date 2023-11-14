@@ -18,7 +18,7 @@ public class OfficeExplorationController : Singleton<OfficeExplorationController
 
     public UnityEvent<Vector2Int, Vector2Int> onRoomChange;
 
-    public Camera camera;
+    public GameObject cameraParent;
     public GameObject wallColliders;
 
     public bool isDebugMode = true;
@@ -94,10 +94,11 @@ public class OfficeExplorationController : Singleton<OfficeExplorationController
         // so the player doesn't need to be moved at all.
 
         // Move the camera
-        camera.transform.position = new Vector3(
+        // Ideally this should move its parent, so screen shake effects still work
+        cameraParent.transform.position = new Vector3(
             newPos.x * 13 - 5 * 13,
             newPos.y * 7 - 5 * 7,
-            -10
+            0
         );
         // Move the wall colliders
         wallColliders.transform.position = new Vector3(

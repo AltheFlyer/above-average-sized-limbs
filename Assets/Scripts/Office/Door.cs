@@ -40,6 +40,7 @@ public class Door : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log(other);
         // TODO: Better mechanism to check for player collision
         if (other.GetComponent<PlayerManager>() == null)
         {

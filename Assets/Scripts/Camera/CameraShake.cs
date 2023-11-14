@@ -14,12 +14,12 @@ public class CameraShake : Singleton<CameraShake>
     public override void Awake()
     {
         base.Awake();
-        originalPos = transform.position;
+        originalPos = transform.localPosition;
     }
 
     void Update()
     {
-        transform.position = originalPos + GetOffset();
+        transform.localPosition = originalPos + GetOffset();
     }
 
     void FixedUpdate()
