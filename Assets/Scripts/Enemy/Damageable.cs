@@ -78,4 +78,9 @@ public class Damageable : MonoBehaviour
     {
         maxHP = newMax;
     }
+
+    public virtual void TryPlaySFX(string name)
+    {
+        SFXManager.TryPlaySFX(name, this.gameObject);
+    }
 }

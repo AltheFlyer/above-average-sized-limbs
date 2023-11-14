@@ -108,9 +108,9 @@ public class EnemyHRRecruiter : Damageable
 
         // summon
         Instantiate(hiredEffectPrefab, summonPos1.position, Quaternion.identity, transform);
-        summon1 = Instantiate(summonPrefab, summonPos1.position, Quaternion.identity, transform);
+        summon1 = Instantiate(summonPrefab, summonPos1.position, Quaternion.identity);
         Instantiate(hiredEffectPrefab, summonPos2.position, Quaternion.identity, transform);
-        summon2 = Instantiate(summonPrefab, summonPos2.position, Quaternion.identity, transform);
+        summon2 = Instantiate(summonPrefab, summonPos2.position, Quaternion.identity);
 
         if (summonParticle1 != null)
             summonParticle1.Stop();
