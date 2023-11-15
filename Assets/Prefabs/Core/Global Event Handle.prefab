@@ -50,6 +50,7 @@ MonoBehaviour:
   onHit: {fileID: 11400000, guid: e7fa39e0d98117949acbfd4ce969c7b8, type: 2}
   preAttack: {fileID: 11400000, guid: 7229a6eac5f8fd54b94fb05ecfe11a07, type: 2}
   takeDamage: {fileID: 11400000, guid: 3716a48412ba69d4785c8981a84f6db2, type: 2}
+  playerStatChange: {fileID: 11400000, guid: 9c01567a6bdcb1e488d5fd3a68f98445, type: 2}
   playerTookDamage: {fileID: 11400000, guid: d74df3498c0246549b5a2549c9a75612, type: 2}
 --- !u!114 &8592141961400827455
 MonoBehaviour:

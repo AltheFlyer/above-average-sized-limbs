@@ -18,10 +18,12 @@ public class StatUpItem : BaseItem
         playerVars.playerSpeed += deltaPlayerSpeed;
         playerVars.maxSpeed += deltaMaxSpeed;
         playerVars.dashSpeed += deltaDashSpeed;
-        playerVars.maxHealth += deltaMaxHealth;
 
-        // Well, turns out health is a bit more painful to set, 
-        // as multiple things seem to track it right now.
-        // TODO: update health and max health properly.
+        // Not great, we have to tell the damageable component that the health was changed too...
+        playerVars.maxHealth += deltaMaxHealth;
+        player.GetComponent<Damageable>()?.SetMaxHP(playerVars.maxHealth);
+        player.GetComponent<Damageable>()?.Heal(deltaHealth);
+
+        GlobalEventHandle.instance.playerStatChange.Raise(null);
     }
 }

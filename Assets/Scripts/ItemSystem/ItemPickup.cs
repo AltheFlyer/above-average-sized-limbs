@@ -16,6 +16,10 @@ public class ItemPickup : MonoBehaviour
 
     public void Start()
     {
+        if (itemSpriteRenderer == null)
+        {
+            itemSpriteRenderer = GetComponent<SpriteRenderer>();
+        }
         itemSpriteRenderer.sprite = item.sprite;
     }
 
