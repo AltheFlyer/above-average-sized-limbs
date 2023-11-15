@@ -8,6 +8,7 @@ public class AttackCollider : MonoBehaviour
 {
     [Header("Target")]
     public LayerMask targetMask;
+    public LayerMask destroyMask;
 
     [Header("Damage")]
     public int damage;
@@ -49,6 +50,13 @@ public class AttackCollider : MonoBehaviour
 
     protected virtual void OnTriggerStay2D(Collider2D collision)
     {
+        // Check if hit destroyMask
+        if (IsMaskMatched(destroyMask, collision.gameObject))
+        {
+            OnHit();
+            return;
+        }
+
         // Check if the collision is with a Damageable
         Damageable d;
         collision.gameObject.TryGetComponent<Damageable>(out d);

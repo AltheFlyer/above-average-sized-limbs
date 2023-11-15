@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using YUtil;
 
 public class BossManager : Damageable
 {
-    [Header("Enemy Intern")]
+    [Header("Boss")]
     public GameObject deathEffectPrefab;
+    public UnityEvent onDeadEvent;
     public ScaleOpacityCurve spriteDeathFadeSOC;
+    public LayerMask wallMask;
     [Space]
     public float startTime = 0.5f;
     [Space]
@@ -16,14 +19,28 @@ public class BossManager : Damageable
     [Space]
     public float fireCount = 3;
     public float fireAimTime = 1f;
+    public float fireDelay = 0.3f;
     public float fireTime = 2f;
-    public float fireDelay = 0.75f;
+    public float fireAngleSpeed = 10f;
     public float fireTimeBetweenAttack = 0.4f;
     public float fireSmoothTime = 0.1f;
+    public float fireStunTime = 3.5f;
     public GameObject fireAttack;
     public LaserAttackController laserAttackController;
     float fireCurrentVelocity;
+    [Space]
+    public float overtimePreDuration = 1.5f;
+    public ParticleSystem overtimeParticle;
+    public float overtimeAttackDuration = 5f;
+    public GameObject overtimeAttack;
 
+    [Space]
+    public Transform chargeAttackPath;
+    public int chargeCount = 3;
+    public float chargePrepareTime = 2f;
+    public float chargeAttackDelay = 0.3f;
+    public float chargeSpeed = 10;
+    public float chargeStunTime = 3.5f;
 
 
     GameObject player;
@@ -61,6 +78,8 @@ public class BossManager : Damageable
     IEnumerator StateStartIE()
     {
         // Start
+        chargeAttackPath.gameObject.SetActive(false);
+        overtimeAttack.SetActive(false);
 
         if (player == null) yield break;
 
@@ -76,7 +95,7 @@ public class BossManager : Damageable
         Follow = 0,
         Fire = 1,
         Overtime = 2,
-        Chase = 3
+        Charge = 3
     }
     public State state = State.None;
     IEnumerator RandomNextStateIE()
@@ -96,15 +115,19 @@ public class BossManager : Damageable
         {
             case State.Follow:
                 StartCoroutine(StateFollowIE());
+                Debug.Log("Follow");
                 break;
             case State.Fire:
                 StartCoroutine(StateFireIE());
+                Debug.Log("Fire");
                 break;
             case State.Overtime:
                 StartCoroutine(StateOvertimeIE());
+                Debug.Log("Overtime");
                 break;
-            case State.Chase:
-                StartCoroutine(StateChaseIE());
+            case State.Charge:
+                StartCoroutine(StateChargeIE());
+                Debug.Log("Charge");
                 break;
         }
 
@@ -140,30 +163,54 @@ public class BossManager : Damageable
 
         for (int i = 0; i < fireCount; i++)
         {
+            laserAttackController.Aim();
+
             float aimTime = fireAimTime;
 
             while (aimTime > 0)
             {
                 // aim at player smoothly
                 float angle = AngPosUtil.GetAngle(transform.position, player.transform.position);
-                angle = Mathf.SmoothDamp(fireAttack.transform.eulerAngles.z, angle, ref fireCurrentVelocity, fireSmoothTime);
+                angle = Mathf.SmoothDampAngle(fireAttack.transform.eulerAngles.z, angle, ref fireCurrentVelocity, fireSmoothTime);
                 fireAttack.transform.eulerAngles = new Vector3(0, 0, angle);
 
                 yield return null;
                 aimTime -= Time.deltaTime;
             }
 
-            // wait a bit before actually fire
             yield return new WaitForSeconds(fireDelay);
 
             // fire
             laserAttackController.Fire();
-            yield return new WaitForSeconds(fireTime);
+
+            // rotate while firing
+            float _fireTime = fireTime;
+
+            while (_fireTime > 0)
+            {
+                // aim at player smoothly
+                float targetAngle = AngPosUtil.GetAngle(transform.position, player.transform.position);
+                float angle = fireAttack.transform.eulerAngles.z;
+                if (angle < -180) angle += 360;
+                if (angle > 180) angle -= 360;
+                if (angle > 90 && targetAngle < -90) targetAngle += 360;
+                if (angle < -90 && targetAngle > 90) targetAngle -= 360;
+
+                float delta = targetAngle - angle;
+                angle += Mathf.Sign(delta) * fireAngleSpeed * Time.deltaTime;
+
+                fireAttack.transform.eulerAngles = new Vector3(0, 0, angle);
+
+                yield return null;
+                _fireTime -= Time.deltaTime;
+            }
             laserAttackController.Stop();
 
             // wait for next fire
             yield return new WaitForSeconds(fireTimeBetweenAttack);
         }
+
+        yield return new WaitForSeconds(fireStunTime);
 
         StartCoroutine(RandomNextStateIE());
     }
@@ -171,11 +218,79 @@ public class BossManager : Damageable
     IEnumerator StateOvertimeIE()
     {
         yield return null;
+        rb.velocity = Vector2.zero;
+
+        // Prepare
+        overtimeParticle.Play();
+        yield return new WaitForSeconds(overtimePreDuration);
+
+        // Attack
+        overtimeAttack.SetActive(true);
+        yield return new WaitForSeconds(overtimeAttackDuration);
+
+        // Stunned
+        overtimeAttack.SetActive(false);
+        yield return new WaitForSeconds(1.4f);
+
+        StartCoroutine(RandomNextStateIE());
     }
 
-    IEnumerator StateChaseIE()
+    IEnumerator StateChargeIE()
     {
-        yield return null;
+        // reset velocity
+        rb.velocity = Vector2.zero;
+
+        for (int i = 0; i < chargeCount; i++)
+        {
+            // Prepare
+            // show attack path
+            chargeAttackPath.gameObject.SetActive(true);
+
+            float _prepareTime = chargePrepareTime;
+
+            float angle = 0;
+
+            while (_prepareTime > 0)
+            {
+                // aim at player
+                angle = AngPosUtil.GetAngle(transform.position, player.transform.position);
+
+                // rotate attack path
+                chargeAttackPath.rotation = Quaternion.Euler(0, 0, angle);
+
+                yield return null;
+                _prepareTime -= Time.deltaTime;
+            }
+
+            yield return new WaitForSeconds(chargeAttackDelay);
+
+            // Charge
+            rb.velocity = AngPosUtil.GetAngularPos(angle, chargeSpeed);
+
+            yield return new WaitForSeconds(1.5f);
+
+            yield return WaitTilHitWall();
+        }
+
+        // Stunned
+        chargeAttackPath.gameObject.SetActive(false);
+        rb.velocity = Vector2.zero;
+
+        yield return new WaitForSeconds(chargeStunTime);
+
+        StartCoroutine(RandomNextStateIE());
+    }
+
+    IEnumerator WaitTilHitWall()
+    {
+        while (true)
+        {
+            if (col.IsTouchingLayers(wallMask))
+            {
+                yield break;
+            }
+            yield return null;
+        }
     }
 
     public override void OnDead()
@@ -191,6 +306,7 @@ public class BossManager : Damageable
 
         if (deathEffectPrefab != null)
             Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
+        onDeadEvent.Invoke();
 
         spriteDeathFadeSOC.enabled = true;
 

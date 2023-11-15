@@ -54,7 +54,7 @@ public class Damageable : MonoBehaviour
 
         // Emit events
         onDamage.Invoke();
-        GlobalEventHandle.instance.takeDamage.Raise(new DamageData(
+        if (GlobalEventHandle.instance != null) GlobalEventHandle.instance.takeDamage.Raise(new DamageData(
             this, damage, hp
         ));
 
