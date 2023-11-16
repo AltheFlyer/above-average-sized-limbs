@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Speed Up
   m_EditorClassIdentifier: 
   itemName: Kopi
-  sprite: {fileID: 21300000, guid: ac1ee35ca5e268c4c92061a11aab6c40, type: 3}
+  sprite: {fileID: -1436672746, guid: 7290d970c424e43fc8240104cbb5cf17, type: 3}
   item: {fileID: 2259332053649101748, guid: a5dc6470783c23840b4152bc01e76afd, type: 3}
