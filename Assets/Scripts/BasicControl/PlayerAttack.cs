@@ -7,8 +7,8 @@ public class PlayerAttack : MonoBehaviour
     private Collider2D hitBox;
     public LayerMask hitMask;
     public IntVariable comboCount;
-    private int comboTimeLimit = 1000000;
-    public IntVariable comboTimer;
+    private float comboTimeLimit = 5;
+    public FloatVariable comboTimer;
 
     void Start()
     {
@@ -20,7 +20,8 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         // Update the combo timer
-        comboTimer.ApplyChange(-1);
+        comboTimer.ApplyChange(-Time.deltaTime);
+        Debug.Log(comboTimer.Value);
 
         // Check if the combo timer has reached zero
         if (comboTimer.Value <= 0)
@@ -37,7 +38,7 @@ public class PlayerAttack : MonoBehaviour
         if (IsMaskMatched(hitMask, col.gameObject))
         {
             comboCount.ApplyChange(1);
-            Debug.Log(comboCount.Value);
+            //Debug.Log("Combo: " + comboCount.Value);
             ResetComboTimer();
             GlobalEventHandle.instance?.onHit.Raise(new HitData());
 
