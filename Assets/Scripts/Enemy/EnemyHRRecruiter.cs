@@ -118,6 +118,8 @@ public class EnemyHRRecruiter : Damageable
             summonParticle2.Stop();
         summonStateParticle.Stop();
 
+        SFXManager.TryPlaySFX("summon1", gameObject);
+
         StartCoroutine(StateWaitIE());
     }
 
