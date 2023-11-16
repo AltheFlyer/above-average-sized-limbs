@@ -61,6 +61,7 @@ public class LaserAttackController : MonoBehaviour
     {
         lineRenderer.enabled = true;
         lineCaster.enabled = true;
+        StopParticles();
 
         StartCoroutine(VisGraphIE(aimVisGraph, aimVisDuration));
 

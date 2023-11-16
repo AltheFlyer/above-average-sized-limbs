@@ -13,6 +13,7 @@ public class SpriteEffectSpawner : MonoBehaviour
     public void Activate()
     {
         GameObject i = new GameObject("Effect");
+        i.transform.position = transform.position;
 
         // check if game object named "[SpriteEffectSpawner]" exists for parenting
         if (parent == null)

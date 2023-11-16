@@ -54,7 +54,7 @@ public class Damageable : MonoBehaviour
 
         // Emit events
         onDamage.Invoke();
-        GlobalEventHandle.instance.takeDamage.Raise(new DamageData(
+        if (GlobalEventHandle.instance != null) GlobalEventHandle.instance.takeDamage.Raise(new DamageData(
             this, damage, hp
         ));
 
@@ -70,6 +70,8 @@ public class Damageable : MonoBehaviour
     public virtual void ApplyHP(int change)
     {
         hp += change;
+        hp = Math.Min(hp, maxHP);
+
         if (hp <= 0) OnDead();
     }
 
@@ -78,9 +80,20 @@ public class Damageable : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    // (Yes, it's just a wrapper around ApplyHP, but maybe we can put events in here idk)
+    public virtual void Heal(int amount)
+    {
+        ApplyHP(amount);
+    }
+
     public virtual void SetMaxHP(int newMax)
     {
         maxHP = newMax;
+    }
+
+    public virtual int GetHP()
+    {
+        return hp;
     }
 
     public virtual void TryPlaySFX(string name)

@@ -24,7 +24,7 @@ public class HealthUIController : MonoBehaviour
     {
         Vector3 uiPosition = transform.position;
 
-        // Derender old stuff children (inefficient, but probably ok)
+        // Derender old children (inefficient, but probably ok)
         foreach (Transform t in transform)
         {
             Destroy(t.gameObject);
@@ -56,5 +56,18 @@ public class HealthUIController : MonoBehaviour
         int maxHealth = playerVars.maxHealth;
 
         SetDisplay(currentHealth, maxHealth);
+    }
+
+    // Jank, tries to update display without being given anything
+    public void UpdateDisplayAttempt(object o)
+    {
+        int? currentHealth = FindObjectOfType<PlayerManager>()?.GetComponent<Damageable>()?.GetHP();
+        if (currentHealth == null)
+        {
+            return;
+        }
+        int maxHealth = playerVars.maxHealth;
+
+        SetDisplay((int)currentHealth, maxHealth);
     }
 }

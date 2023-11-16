@@ -19,6 +19,8 @@ public class GlobalEventHandle : MonoBehaviour
 
     public TakeDamageEvent takeDamage;
 
+    public SimpleEvent playerStatChange;
+
     // Events that this object specifically invokes
     [Header("Derived Events")]
     public TakeDamageEvent playerTookDamage;
