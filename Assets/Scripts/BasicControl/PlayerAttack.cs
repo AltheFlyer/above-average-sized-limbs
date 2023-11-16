@@ -6,10 +6,11 @@ public class PlayerAttack : MonoBehaviour
 {
     private Collider2D hitBox;
     public LayerMask hitMask;
+    public PlayerVariables playerVars;
 
     // Combo management
+    private float comboTimeLimit;
     public IntVariable comboCount;
-    private float comboTimeLimit = 5;
     public FloatVariable comboTimer;
 
 
@@ -38,17 +39,18 @@ public class PlayerAttack : MonoBehaviour
     {
         hitList = new List<Collider2D>();
         hitBox = GetComponent<Collider2D>();
+
+        comboTimeLimit = playerVars.comboTimeLimit;
         comboCount.SetValue(0);
-        comboTimer.SetValue(comboTimeLimit);
 
         transform.localScale *= data.attackSizeMultiplier;
+        ResetComboTimer();
     }
 
     void Update()
     {
         // Update the combo timer
         comboTimer.ApplyChange(-Time.deltaTime);
-        Debug.Log(comboTimer.Value);
 
         // Check if the combo timer has reached zero
         if (comboTimer.Value <= 0)
@@ -71,7 +73,7 @@ public class PlayerAttack : MonoBehaviour
         if (IsMaskMatched(hitMask, col.gameObject) && !hitList.Contains(col))
         {
             comboCount.ApplyChange(1);
-            //Debug.Log("Combo: " + comboCount.Value);
+            Debug.Log("Combo: " + comboCount.Value);
             ResetComboTimer();
             GlobalEventHandle.instance?.onHit.Raise(new HitData());
 
