@@ -5,9 +5,17 @@ using UnityEngine;
 /// The controller manages the logic for room entry/exit events.
 public class RoomController : MonoBehaviour
 {
+    public bool isBossRoom;
+    public GameObject ladder;
     private Room room;
+    Animator roomAnimator;
 
     private List<GameObject> enemySpawners = new List<GameObject>();
+
+    public void Start()
+    {
+        roomAnimator = GetComponent<Animator>();
+    }
 
     public void Update()
     {
@@ -66,6 +74,12 @@ public class RoomController : MonoBehaviour
             OfficeExplorationController.instance.SetAllDoorLocks(false);
             if (room != null)
                 room.isRoomCleared = true;
+            // Spawn ladder to go to next level
+            if (isBossRoom && ladder != null)
+            {
+                ladder.SetActive(true);
+                roomAnimator.SetTrigger("roomCleared");
+            }
         }
     }
 

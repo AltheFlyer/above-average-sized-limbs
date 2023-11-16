@@ -883,7 +883,7 @@ MonoBehaviour:
         m_CallState: 2
   cameraParent: {fileID: 1411616960}
   wallColliders: {fileID: 1495471782}
-  isDebugMode: 1
+  isDebugMode: 0
 --- !u!4 &1373410372
 Transform:
   m_ObjectHideFlags: 0

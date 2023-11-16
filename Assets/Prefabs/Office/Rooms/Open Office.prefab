@@ -1130,6 +1130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c72761cf363d246b27af96dd481fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBossRoom: 0
+  ladder: {fileID: 0}
 --- !u!1 &4702552257841102672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,7 +1449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3586882255526735450, guid: 228faffb11922fb44ab2f8509b406803, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: -1.14
       objectReference: {fileID: 0}
     - target: {fileID: 3586882255526735450, guid: 228faffb11922fb44ab2f8509b406803, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1484,6 +1486,10 @@ PrefabInstance:
     - target: {fileID: 4590484117074659200, guid: 228faffb11922fb44ab2f8509b406803, type: 3}
       propertyPath: m_Name
       value: Workstation Left (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590484117074659200, guid: 228faffb11922fb44ab2f8509b406803, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1695,7 +1701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3586882255526735450, guid: 228faffb11922fb44ab2f8509b406803, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.13
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 3586882255526735450, guid: 228faffb11922fb44ab2f8509b406803, type: 3}
       propertyPath: m_LocalPosition.z
