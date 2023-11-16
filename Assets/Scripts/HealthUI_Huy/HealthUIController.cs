@@ -52,7 +52,7 @@ public class HealthUIController : MonoBehaviour
 
     public void UpdateDisplay(DamageData data)
     {
-        int currentHealth = data.postDamageHealth;
+        int currentHealth = (int)data.postDamageHealth;
         int maxHealth = playerVars.maxHealth;
 
         SetDisplay(currentHealth, maxHealth);

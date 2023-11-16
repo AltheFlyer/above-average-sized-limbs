@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08623676f90bc814c9998e9a73d4df98, type: 3}
-  m_Name: Speed Up
+  m_Name: Machine Gun Hands
   m_EditorClassIdentifier: 
-  itemName: Kopi
-  sprite: {fileID: -1436672746, guid: 7290d970c424e43fc8240104cbb5cf17, type: 3}
-  item: {fileID: 8257119664684958761, guid: a5dc6470783c23840b4152bc01e76afd, type: 3}
+  itemName: Machine Gun Hands
+  sprite: {fileID: 385778938, guid: a1b263d94f290cf4f995ace00aaa5548, type: 3}
+  item: {fileID: 8257119664684958761, guid: 1e9d3f43abb8da84e9911e92b00fdbca, type: 3}

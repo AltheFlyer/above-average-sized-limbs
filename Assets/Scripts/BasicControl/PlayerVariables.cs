@@ -9,11 +9,16 @@ public class PlayerVariables : ScriptableObject
     public int dashSpeed;
     public int maxHealth;
 
+    public float attackDamage;
+    public float attackCooldown;
+
     public void CopyInto(PlayerVariables other)
     {
         other.playerSpeed = playerSpeed;
         other.maxSpeed = maxSpeed;
         other.dashSpeed = dashSpeed;
         other.maxHealth = maxHealth;
+        other.attackDamage = attackDamage;
+        other.attackCooldown = attackCooldown;
     }
 }

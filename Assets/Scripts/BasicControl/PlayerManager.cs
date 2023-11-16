@@ -31,6 +31,10 @@ public class PlayerManager : MonoBehaviour
 
     private string[] attackSFX = { "punch1", "punch2", "punch3" };
 
+    private float currentAttackCooldown;
+
+    public GameObject attackPrefab;
+
     void Start()
     {
         playerBody = GetComponent<Rigidbody2D>();
@@ -81,6 +85,12 @@ public class PlayerManager : MonoBehaviour
 
         //Dash
         DashCheck();
+
+        // attack cooldown tick
+        if (currentAttackCooldown > 0)
+        {
+            currentAttackCooldown -= Time.deltaTime;
+        }
     }
 
     public void ResetCurrentVal()
@@ -108,9 +118,36 @@ public class PlayerManager : MonoBehaviour
     }
 
 
-    void Attack()
+    // Precondition: attack cooldown is <= 0, attackDirection is non-zero
+    void Attack(Vector2 attackDirection)
     {
-        GlobalEventHandle.instance?.preAttack.Raise(new AttackData());
+        currentAttackCooldown = playerVars.attackCooldown;
+
+        GameObject rawAttackObject = Instantiate(attackPrefab, transform.position, Quaternion.identity);
+
+        AttackData data = new AttackData(
+            rawAttackObject, playerVars.attackDamage, 1.0f
+        );
+
+        GlobalEventHandle.instance?.preAttack.Raise(data);
+
+        rawAttackObject.GetComponent<PlayerAttack>().InitAttack(data);
+
+        // Offset the attack position so larger attacks have more range
+        // Pretty janky, but this should do th trick.
+        // (At this point, the attack hasn't updated its collider, so we calculate its new size)
+        rawAttackObject.transform.position += new Vector3(attackDirection.x, attackDirection.y, 0) * (rawAttackObject.GetComponent<Collider2D>().bounds.extents.x * data.attackSizeMultiplier);
+
+        // rotate if vertical
+        if (attackDirection.y == 1)
+        {
+            rawAttackObject.transform.Rotate(new Vector3(0, 0, 90), Space.Self);
+        }
+        else if (attackDirection.y == -1)
+        {
+            rawAttackObject.transform.Rotate(new Vector3(0, 0, -90), Space.Self);
+        }
+
         // if (attackDirection.x > 0)
         // {
         playerAnimator.SetTrigger("attack");
@@ -122,9 +159,9 @@ public class PlayerManager : MonoBehaviour
     {
         if (attackDirection == Vector2.zero)
         { }
-        else
+        else if (currentAttackCooldown <= 0)
         {
-            Attack();
+            Attack(attackDirection);
         }
     }
 
