@@ -531,6 +531,7 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 256
+  playerVars: {fileID: 11400000, guid: 4ca5011e3843d054ba59080a6de1b31f, type: 2}
   comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
   comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
 --- !u!1 &6263859837756752165
@@ -626,6 +627,7 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 256
+  playerVars: {fileID: 11400000, guid: 4ca5011e3843d054ba59080a6de1b31f, type: 2}
   comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
   comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
 --- !u!1 &6281562766456737922
@@ -721,6 +723,7 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 256
+  playerVars: {fileID: 11400000, guid: 4ca5011e3843d054ba59080a6de1b31f, type: 2}
   comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
   comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
 --- !u!1 &6407631200759518770
@@ -851,5 +854,6 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 256
+  playerVars: {fileID: 11400000, guid: 4ca5011e3843d054ba59080a6de1b31f, type: 2}
   comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
   comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}

@@ -8,6 +8,7 @@ public class PlayerVariables : ScriptableObject
     public int maxSpeed;
     public int dashSpeed;
     public int maxHealth;
+    public float comboTimeLimit;
 
     public void CopyInto(PlayerVariables other)
     {
@@ -15,5 +16,6 @@ public class PlayerVariables : ScriptableObject
         other.maxSpeed = maxSpeed;
         other.dashSpeed = dashSpeed;
         other.maxHealth = maxHealth;
+        other.comboTimeLimit = comboTimeLimit;
     }
 }
