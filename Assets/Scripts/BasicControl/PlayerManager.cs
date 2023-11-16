@@ -29,6 +29,8 @@ public class PlayerManager : MonoBehaviour
     private float[] currentVal;
     private float[] prevVal;
 
+    private string[] attackSFX = { "punch1", "punch2", "punch3" };
+
     void Start()
     {
         playerBody = GetComponent<Rigidbody2D>();
@@ -112,6 +114,7 @@ public class PlayerManager : MonoBehaviour
         // if (attackDirection.x > 0)
         // {
         playerAnimator.SetTrigger("attack");
+        SFXManager.TryPlaySFX(attackSFX, gameObject);
         //}
     }
 
@@ -165,6 +168,8 @@ public class PlayerManager : MonoBehaviour
                 PlayerAfterImagePool.Instance.GetFromPool();
                 lastImagePos = transform.position;
             }
+
+            SFXManager.TryPlaySFX("dash1", gameObject);
         }
 
     }
