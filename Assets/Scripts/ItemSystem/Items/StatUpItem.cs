@@ -13,11 +13,15 @@ public class StatUpItem : BaseItem
     public int deltaHealth;
     public int deltaMaxHealth;
 
+    public float deltaAttackCooldown;
+
     public override void OnPickUp(PlayerManager player)
     {
         playerVars.playerSpeed += deltaPlayerSpeed;
         playerVars.maxSpeed += deltaMaxSpeed;
         playerVars.dashSpeed += deltaDashSpeed;
+
+        playerVars.attackCooldown += deltaAttackCooldown;
 
         // Not great, we have to tell the damageable component that the health was changed too...
         playerVars.maxHealth += deltaMaxHealth;

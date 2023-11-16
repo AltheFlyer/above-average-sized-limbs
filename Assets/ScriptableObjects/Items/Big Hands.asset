@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5861d43ccd998a34081f7b020777a346, type: 3}
-  m_Name: ComboTimer
+  m_Script: {fileID: 11500000, guid: 08623676f90bc814c9998e9a73d4df98, type: 3}
+  m_Name: Big Hands
   m_EditorClassIdentifier: 
-  DeveloperDescription: 
+  itemName: Big Hands
+  sprite: {fileID: 21300000, guid: 804ea121191d64cd78581737b40d8327, type: 3}
+  item: {fileID: -7567319234729860419, guid: 122ad04334078d44ebe8cdd034163101, type: 3}
