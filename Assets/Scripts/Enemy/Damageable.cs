@@ -9,9 +9,9 @@ public class Damageable : MonoBehaviour
 {
     [Header("Health")]
     [SerializeField]
-    protected int maxHP;
+    protected float maxHP;
     [SerializeField]
-    protected int hp;
+    protected float hp;
     protected float invincibleTime;
     [SerializeField]
     protected float onDamagedInvincibleTime;
@@ -40,7 +40,7 @@ public class Damageable : MonoBehaviour
     }
 
     ///<summary>Call by OnCollision2D of the attacking gameobject after checking layer or type of Damageable. Will return false if the target is invincible</summary>
-    public virtual bool TakeDamage(int damage, Action onKillShot = null)
+    public virtual bool TakeDamage(float damage, Action onKillShot = null)
     {
         // check if can take damage
         if (IsInvincible()) return false;
@@ -67,10 +67,10 @@ public class Damageable : MonoBehaviour
         return true;
     }
 
-    public virtual void ApplyHP(int change)
+    public virtual void ApplyHP(float change)
     {
         hp += change;
-        hp = Math.Min(hp, maxHP);
+        hp = Mathf.Min(hp, maxHP);
 
         if (hp <= 0) OnDead();
     }
@@ -93,7 +93,7 @@ public class Damageable : MonoBehaviour
 
     public virtual int GetHP()
     {
-        return hp;
+        return (int)hp;
     }
 
     public virtual void TryPlaySFX(string name)

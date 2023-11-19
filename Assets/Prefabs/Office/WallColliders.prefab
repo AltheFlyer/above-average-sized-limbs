@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2700462007076465986}
   - component: {fileID: 5074835976009696115}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderBotLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553368765058177176}
   - component: {fileID: 3884719663500790812}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderRightTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8529282533707637260}
   - component: {fileID: 5805187085228016283}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderTopLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1573706007517957574}
   - component: {fileID: 1162722567938947782}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderLeftBot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7804191385180341347}
   - component: {fileID: 6935098733471420848}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderLeftTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1875251784189706774}
   - component: {fileID: 743396684374906396}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightTopHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4106422632067486448}
   - component: {fileID: 3703496372321449980}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderBotRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4756576816035929193}
   - component: {fileID: 680053811058032575}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftTopHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 751262863691279661}
   - component: {fileID: 7030742236981257554}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftBotHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -710,7 +710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1804807444318289285}
   - component: {fileID: 2301054800004364184}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightBotHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -783,7 +783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4497340483360027233}
   - component: {fileID: 878734133916224292}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderTopRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -856,7 +856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 241012070915545777}
   - component: {fileID: 7627885959032992276}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderRightBot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

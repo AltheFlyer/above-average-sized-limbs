@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 411879279
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fb16f4ff2c5e1bf4c85e7c2440fd575d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1334,7 +1334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyList: []
-  spawningPrefab: {fileID: 8303432624014630202, guid: 21c2b9b147285482ea1433029b9c538f, type: 3}
+  spawningPrefab: {fileID: 9012103540776501397, guid: 2a53783482f9e420c8319f26c6e03c02, type: 3}
 --- !u!1 &8163762143355029383
 GameObject:
   m_ObjectHideFlags: 0

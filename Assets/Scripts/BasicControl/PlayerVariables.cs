@@ -10,6 +10,9 @@ public class PlayerVariables : ScriptableObject
     public int maxHealth;
     public float comboTimeLimit;
 
+    public float attackDamage;
+    public float attackCooldown;
+
     public void CopyInto(PlayerVariables other)
     {
         other.playerSpeed = playerSpeed;
@@ -17,5 +20,7 @@ public class PlayerVariables : ScriptableObject
         other.dashSpeed = dashSpeed;
         other.maxHealth = maxHealth;
         other.comboTimeLimit = comboTimeLimit;
+        other.attackDamage = attackDamage;
+        other.attackCooldown = attackCooldown;
     }
 }

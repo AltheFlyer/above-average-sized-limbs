@@ -286,6 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerVars: {fileID: 11400000, guid: 8fae656bd80baf74593064fe4cb84c52, type: 2}
   distanceBetweenImages: 0.1
+  attackPrefab: {fileID: 8463685589792592666, guid: f0197e5cd443e364a8a3fc56963a371c, type: 3}
 --- !u!114 &6031638417969382788
 MonoBehaviour:
   m_ObjectHideFlags: 0

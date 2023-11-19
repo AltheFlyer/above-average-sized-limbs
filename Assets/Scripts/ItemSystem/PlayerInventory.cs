@@ -34,7 +34,7 @@ public class PlayerInventory : MonoBehaviour
     {
         items.Add(item);
 
-        BaseItem obj = Instantiate(item.item);
+        BaseItem obj = Instantiate(item.item, transform);
         itemListeners.Add(obj);
 
         obj.OnPickUp(player);

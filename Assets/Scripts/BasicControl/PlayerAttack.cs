@@ -9,18 +9,67 @@ public class PlayerAttack : MonoBehaviour
 
     //Combo
     public PlayerVariables playerVars;
+
+    // Combo management
     private float comboTimeLimit;
     public IntVariable comboCount;
     public FloatVariable comboTimer;
 
     public GameObject comboTextPrefab;
 
+
+    private float attackDamage = 1;
+
+    // List of things that were hit (used to prevent double-hits)
+    private List<Collider2D> hitList;
+
+    private AttackData data;
+
+    // How long the attack hitbox lingers for in seconds.
+    public float lifespan;
+
+    /// <summary>
+    /// Function to be invoked by whatever instantiates the attack instance. 
+    /// The passed-in AttackData is used to modify the attack we actually get.
+    /// </summary>
+    public void InitAttack(AttackData data)
+    {
+        this.attackDamage = data.damage;
+
+        this.data = data;
+    }
+
+
+    private float attackDamage = 1;
+
+    // List of things that were hit (used to prevent double-hits)
+    private List<Collider2D> hitList;
+
+    private AttackData data;
+
+    // How long the attack hitbox lingers for in seconds.
+    public float lifespan;
+
+    /// <summary>
+    /// Function to be invoked by whatever instantiates the attack instance. 
+    /// The passed-in AttackData is used to modify the attack we actually get.
+    /// </summary>
+    public void InitAttack(AttackData data)
+    {
+        this.attackDamage = data.damage;
+
+        this.data = data;
+    }
+
     void Start()
     {
+        hitList = new List<Collider2D>();
         hitBox = GetComponent<Collider2D>();
 
         comboTimeLimit = playerVars.comboTimeLimit;
         comboCount.SetValue(0);
+
+        transform.localScale *= data.attackSizeMultiplier;
         ResetComboTimer();
     }
 
@@ -37,11 +86,17 @@ public class PlayerAttack : MonoBehaviour
             // Reset the timer
             ResetComboTimer();
         }
+
+        lifespan -= Time.deltaTime;
+        if (lifespan <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (IsMaskMatched(hitMask, col.gameObject))
+        if (IsMaskMatched(hitMask, col.gameObject) && !hitList.Contains(col))
         {
             //For whoever's gonna modify this, the comboCount, showComboEffect and ResetTimer
             //doesn't work when put below the GlobalEventHandle.
@@ -51,8 +106,10 @@ public class PlayerAttack : MonoBehaviour
 
 
             GlobalEventHandle.instance?.onHit.Raise(new HitData());
-            col.gameObject.GetComponent<Damageable>().TakeDamage(1);
 
+            col.gameObject.GetComponent<Damageable>().TakeDamage(attackDamage);
+
+            hitList.Add(col);
         }
     }
 

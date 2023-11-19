@@ -47,6 +47,7 @@ public class BossManager : Damageable
 
     Rigidbody2D rb;
     Collider2D col;
+    Animator animator;
 
     protected override void Awake()
     {
@@ -54,6 +55,7 @@ public class BossManager : Damageable
 
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        animator = GetComponent<Animator>();
     }
 
     protected override void Start()
@@ -146,6 +148,7 @@ public class BossManager : Damageable
         {
             // aim at player
             dir = (player.transform.position - transform.position).normalized;
+            animator.SetFloat("xDir", dir.x);
 
             // rotate attack path
             rb.velocity = dir * followSpeed;
@@ -154,6 +157,7 @@ public class BossManager : Damageable
             _time -= Time.deltaTime;
         }
 
+        animator.SetFloat("xDir", 0);
         StartCoroutine(RandomNextStateIE());
     }
 
@@ -163,6 +167,7 @@ public class BossManager : Damageable
 
         for (int i = 0; i < fireCount; i++)
         {
+            animator.SetBool("attack", true);
             laserAttackController.Aim();
 
             float aimTime = fireAimTime;
@@ -205,6 +210,7 @@ public class BossManager : Damageable
                 _fireTime -= Time.deltaTime;
             }
             laserAttackController.Stop();
+            animator.SetBool("attack", false);
 
             // wait for next fire
             yield return new WaitForSeconds(fireTimeBetweenAttack);
@@ -219,6 +225,7 @@ public class BossManager : Damageable
     {
         yield return null;
         rb.velocity = Vector2.zero;
+        animator.SetBool("specialAttack", true);
 
         // Prepare
         overtimeParticle.Play();
@@ -232,6 +239,7 @@ public class BossManager : Damageable
         overtimeAttack.SetActive(false);
         yield return new WaitForSeconds(1.4f);
 
+        animator.SetBool("specialAttack", false);
         StartCoroutine(RandomNextStateIE());
     }
 
@@ -265,11 +273,14 @@ public class BossManager : Damageable
             yield return new WaitForSeconds(chargeAttackDelay);
 
             // Charge
+            animator.SetBool("charging", true);
+            animator.SetFloat("xDir", player.transform.position.x - transform.position.x);
             rb.velocity = AngPosUtil.GetAngularPos(angle, chargeSpeed);
 
             yield return new WaitForSeconds(1.5f);
 
             yield return WaitTilHitWall();
+            animator.SetBool("charging", false);
         }
 
         // Stunned
@@ -278,6 +289,7 @@ public class BossManager : Damageable
 
         yield return new WaitForSeconds(chargeStunTime);
 
+        animator.SetFloat("xDir", 0);
         StartCoroutine(RandomNextStateIE());
     }
 
