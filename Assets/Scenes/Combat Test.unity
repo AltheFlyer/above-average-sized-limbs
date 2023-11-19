@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &339102509 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7043139730419052482, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
+  m_PrefabInstance: {fileID: 1800658948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1670622506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -196,10 +201,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1657158231350757930, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
+      propertyPath: comboEffect
+      value: 
+      objectReference: {fileID: 6630275391772572677, guid: 3781cf23ee8ec4ce8a899f46483817a0, type: 3}
+    - target: {fileID: 1657158231350757930, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
+      propertyPath: comboTextPrefab
+      value: 
+      objectReference: {fileID: 3522553844424867168, guid: 2ab731c91be66f842ac17f64d8ff7a89, type: 3}
+    - target: {fileID: 1657158231350757930, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
+      propertyPath: comboTextSpawnPoint
+      value: 
+      objectReference: {fileID: 339102509}
     - target: {fileID: 3084568309783050615, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5562523287024262033, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
+      propertyPath: comboEffect
+      value: 
+      objectReference: {fileID: 6630275391772572677, guid: 3781cf23ee8ec4ce8a899f46483817a0, type: 3}
+    - target: {fileID: 5562523287024262033, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
+      propertyPath: comboTextPrefab
+      value: 
+      objectReference: {fileID: 3522553844424867168, guid: 2ab731c91be66f842ac17f64d8ff7a89, type: 3}
+    - target: {fileID: 5562523287024262033, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
+      propertyPath: comboTextSpawnPoint
+      value: 
+      objectReference: {fileID: 339102509}
     - target: {fileID: 7043139730419052482, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -240,6 +269,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9051033549540674248, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
+      propertyPath: comboEffect
+      value: 
+      objectReference: {fileID: 6630275391772572677, guid: 3781cf23ee8ec4ce8a899f46483817a0, type: 3}
+    - target: {fileID: 9051033549540674248, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
+      propertyPath: comboTextPrefab
+      value: 
+      objectReference: {fileID: 3522553844424867168, guid: 2ab731c91be66f842ac17f64d8ff7a89, type: 3}
+    - target: {fileID: 9051033549540674248, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
+      propertyPath: comboTextSpawnPoint
+      value: 
+      objectReference: {fileID: 339102509}
+    - target: {fileID: 9174978518311866371, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
+      propertyPath: comboEffect
+      value: 
+      objectReference: {fileID: 6630275391772572677, guid: 3781cf23ee8ec4ce8a899f46483817a0, type: 3}
+    - target: {fileID: 9174978518311866371, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
+      propertyPath: comboTextPrefab
+      value: 
+      objectReference: {fileID: 3522553844424867168, guid: 2ab731c91be66f842ac17f64d8ff7a89, type: 3}
+    - target: {fileID: 9174978518311866371, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
+      propertyPath: comboTextSpawnPoint
+      value: 
+      objectReference: {fileID: 339102509}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
