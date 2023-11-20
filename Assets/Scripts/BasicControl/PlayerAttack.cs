@@ -17,29 +17,6 @@ public class PlayerAttack : MonoBehaviour
 
     public GameObject comboTextPrefab;
 
-
-    private float attackDamage = 1;
-
-    // List of things that were hit (used to prevent double-hits)
-    private List<Collider2D> hitList;
-
-    private AttackData data;
-
-    // How long the attack hitbox lingers for in seconds.
-    public float lifespan;
-
-    /// <summary>
-    /// Function to be invoked by whatever instantiates the attack instance. 
-    /// The passed-in AttackData is used to modify the attack we actually get.
-    /// </summary>
-    public void InitAttack(AttackData data)
-    {
-        this.attackDamage = data.damage;
-
-        this.data = data;
-    }
-
-
     private float attackDamage = 1;
 
     // List of things that were hit (used to prevent double-hits)
