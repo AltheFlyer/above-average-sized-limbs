@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Machine Gun Hands
   sprite: {fileID: 385778938, guid: a1b263d94f290cf4f995ace00aaa5548, type: 3}
-  item: {fileID: 8257119664684958761, guid: 1e9d3f43abb8da84e9911e92b00fdbca, type: 3}
+  item: {fileID: -283806131014404256, guid: 1e9d3f43abb8da84e9911e92b00fdbca, type: 3}

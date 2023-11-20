@@ -146,6 +146,9 @@ MonoBehaviour:
   targetMask:
     serializedVersion: 2
     m_Bits: 512
+  destroyMask:
+    serializedVersion: 2
+    m_Bits: 0
   damage: 1
   lifetime: 0
   expireMode: 2
@@ -15108,7 +15111,7 @@ MonoBehaviour:
   deathEffectPrefab: {fileID: 5427402122937063527, guid: 093a7fae069fb4aa6a3c18d183a619c5, type: 3}
   spriteDeathFadeSOC: {fileID: 4242500260868118567}
   startTime: 0.5
-  summonTime: 1.9
+  summonTime: 2.4
   facepalmTime: 0.1
   summonStateParticle: {fileID: 3111270017945246253}
   summonPos1: {fileID: 667477399601926998}
@@ -15119,6 +15122,7 @@ MonoBehaviour:
   summonPrefab: {fileID: 387973373630052734, guid: be4d1af95c70c441b8488ed5dd4fe7e2, type: 3}
   facePalmEffectPos: {fileID: 2743235804690694690}
   facePalmEffectPrefab: {fileID: 6630275391772572677, guid: 054a44b4100f14131b456dc883354a2b, type: 3}
+  attackCollider: {fileID: 4911374963780808692}
 --- !u!95 &6460076503927417702
 Animator:
   serializedVersion: 5

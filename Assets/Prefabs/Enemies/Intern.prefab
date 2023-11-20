@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7813c624523644245ae91fe8b5b0b95f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 5
-  hp: 5
+  maxHP: 2
+  hp: 2
   onDamagedInvincibleTime: 0
   onDamage:
     m_PersistentCalls:
@@ -170,6 +170,7 @@ MonoBehaviour:
   exclaimationEffect: {fileID: 6630275391772572677, guid: 2de6c50d9028c4a7585e2a7fab2cf743, type: 3}
   deathEffect: {fileID: 5427402122937063527, guid: 093a7fae069fb4aa6a3c18d183a619c5, type: 3}
   spriteDeathFadeSOC: {fileID: 2547272789530638689}
+  attackCollider: {fileID: 7165462745135984862}
 --- !u!95 &2348469371759206268
 Animator:
   serializedVersion: 5
@@ -482,6 +483,9 @@ MonoBehaviour:
   targetMask:
     serializedVersion: 2
     m_Bits: 512
+  destroyMask:
+    serializedVersion: 2
+    m_Bits: 0
   damage: 1
   lifetime: 0
   expireMode: 2
