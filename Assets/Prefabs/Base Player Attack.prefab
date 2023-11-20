@@ -133,8 +133,10 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 256
+  playerVars: {fileID: 11400000, guid: 8fae656bd80baf74593064fe4cb84c52, type: 2}
   comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
   comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
+  comboTextPrefab: {fileID: 3522553844424867168, guid: 2ab731c91be66f842ac17f64d8ff7a89, type: 3}
   lifespan: 0.3
 --- !u!61 &7729217266623319594
 BoxCollider2D:

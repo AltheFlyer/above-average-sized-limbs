@@ -12,6 +12,8 @@ public class EnemyIntern : Damageable
     public GameObject deathEffect;
     public ScaleOpacityCurve spriteDeathFadeSOC;
 
+    public Collider2D attackCollider;
+
     GameObject player;
 
     Rigidbody2D rb;
@@ -83,6 +85,8 @@ public class EnemyIntern : Damageable
 
     public override void OnDead()
     {
+        attackCollider.enabled = false;
+
         StopAllCoroutines();
         StartCoroutine(OnDeadIE());
     }

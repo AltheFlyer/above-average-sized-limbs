@@ -35,6 +35,7 @@ public class RoomController : MonoBehaviour
         {
             room.isVisited = true;
             FirstEnterRecursive(gameObject);
+            UnlockDoorsWhenRoomCleared();
         }
     }
 

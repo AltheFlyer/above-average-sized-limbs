@@ -26,6 +26,8 @@ public class EnemyHRRecruiter : Damageable
     public Transform facePalmEffectPos;
     public GameObject facePalmEffectPrefab;
 
+    public Collider2D attackCollider;
+
     GameObject summon1;
     GameObject summon2;
 
@@ -154,6 +156,8 @@ public class EnemyHRRecruiter : Damageable
 
     public override void OnDead()
     {
+        attackCollider.enabled = false;
+
         StopAllCoroutines();
         StartCoroutine(OnDeadIE());
     }
