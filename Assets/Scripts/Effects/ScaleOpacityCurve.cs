@@ -10,16 +10,19 @@ public class ScaleOpacityCurve : MonoBehaviour
     public float time = 1;
     float timer = 0;
 
+    public bool destroyOnOver = true;
+
     Vector3 originalScale;
     float originalOpacity;
 
     SpriteRenderer sr;
 
-    void Awake()
+    void OnEnable()
     {
         sr = GetComponent<SpriteRenderer>();
         originalScale = transform.localScale;
         originalOpacity = sr.color.a;
+        timer = 0;
     }
 
     void Update()
@@ -27,11 +30,12 @@ public class ScaleOpacityCurve : MonoBehaviour
         timer += Time.deltaTime;
 
         float _timer = timer / time;
+        _timer = Mathf.Clamp01(_timer);
 
         UpdateScale(_timer);
         UpdateOpacity(_timer);
 
-        if (_timer >= 1) Destroy(gameObject);
+        if (_timer >= 1 && destroyOnOver) Destroy(gameObject);
     }
 
     void UpdateScale(float normalizedTime)
