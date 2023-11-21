@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Runtime.CompilerServices;
 public class PlayerAttack : MonoBehaviour
 {
     private Collider2D hitBox;
@@ -44,7 +45,6 @@ public class PlayerAttack : MonoBehaviour
         hitBox = GetComponent<Collider2D>();
 
         comboTimeLimit = playerVars.comboTimeLimit;
-        comboCount.SetValue(0);
 
         transform.localScale *= data.attackSizeMultiplier;
         ResetComboTimer();

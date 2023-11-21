@@ -82,7 +82,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1841217055
   m_SortingLayer: 1
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: -775200324, guid: 75f681b4948914946a84ad5cef7e2f3b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -93,7 +93,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &7463959771989101399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,10 +359,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0011890829, y: -0.68413234}
+  m_Offset: {x: 0, y: 0.13}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.175}
     oldSize: {x: 3.125, y: 2.5}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
@@ -535,7 +535,7 @@ MonoBehaviour:
   playerVars: {fileID: 11400000, guid: 4ca5011e3843d054ba59080a6de1b31f, type: 2}
   comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
   comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
-  comboTextPrefab: {fileID: 0}
+  comboTextPrefab: {fileID: 3522553844424867168, guid: 2ab731c91be66f842ac17f64d8ff7a89, type: 3}
   lifespan: 0
 --- !u!1 &6263859837756752165
 GameObject:
@@ -633,7 +633,7 @@ MonoBehaviour:
   playerVars: {fileID: 11400000, guid: 4ca5011e3843d054ba59080a6de1b31f, type: 2}
   comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
   comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
-  comboTextPrefab: {fileID: 0}
+  comboTextPrefab: {fileID: 3522553844424867168, guid: 2ab731c91be66f842ac17f64d8ff7a89, type: 3}
   lifespan: 0
 --- !u!1 &6281562766456737922
 GameObject:
@@ -731,7 +731,7 @@ MonoBehaviour:
   playerVars: {fileID: 11400000, guid: 4ca5011e3843d054ba59080a6de1b31f, type: 2}
   comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
   comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
-  comboTextPrefab: {fileID: 0}
+  comboTextPrefab: {fileID: 3522553844424867168, guid: 2ab731c91be66f842ac17f64d8ff7a89, type: 3}
   lifespan: 0
 --- !u!1 &6407631200759518770
 GameObject:
@@ -864,5 +864,5 @@ MonoBehaviour:
   playerVars: {fileID: 11400000, guid: 4ca5011e3843d054ba59080a6de1b31f, type: 2}
   comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
   comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
-  comboTextPrefab: {fileID: 0}
+  comboTextPrefab: {fileID: 3522553844424867168, guid: 2ab731c91be66f842ac17f64d8ff7a89, type: 3}
   lifespan: 0
