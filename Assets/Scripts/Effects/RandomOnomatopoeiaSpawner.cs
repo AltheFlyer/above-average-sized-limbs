@@ -17,9 +17,9 @@ public class RandomOnomatopoeiaSpawner : MonoBehaviour
         i.GetComponent<SpriteRenderer>().sprite = onomatopoeias.GetRandomSprite();
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position, size);
-    }
+    // private void OnDrawGizmosSelected()
+    // {
+    //     Gizmos.color = Color.red;
+    //     Gizmos.DrawWireCube(transform.position, size);
+    // }
 }

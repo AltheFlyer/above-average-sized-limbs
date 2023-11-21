@@ -76,7 +76,7 @@ public class AttackCollider : MonoBehaviour
         return ((mask.value & (1 << target.layer)) > 0);
     }
 
-    protected virtual void OnHit()
+    public virtual void OnHit()
     {
         onHitEvent.Invoke();
         switch (hitMode)
@@ -92,7 +92,7 @@ public class AttackCollider : MonoBehaviour
         }
     }
 
-    protected virtual void OnExpired()
+    public virtual void OnExpired()
     {
         onExpiredEvent.Invoke();
         switch (expireMode)
