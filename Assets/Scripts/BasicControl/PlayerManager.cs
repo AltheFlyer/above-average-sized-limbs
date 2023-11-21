@@ -123,7 +123,7 @@ public class PlayerManager : MonoBehaviour
     {
         currentAttackCooldown = playerVars.attackCooldown;
 
-        GameObject rawAttackObject = Instantiate(attackPrefab, transform.position, Quaternion.identity);
+        GameObject rawAttackObject = Instantiate(attackPrefab, transform.position, Quaternion.identity, transform);
 
         AttackData data = new AttackData(
             rawAttackObject, playerVars.attackDamage, 1.0f

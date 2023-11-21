@@ -14,7 +14,7 @@ public class ItemPedestal : RoomActivatable
     {
         ItemData itemToSpawn = itemPool.GetItem();
 
-        ItemPickup newPickup = Instantiate(pickupPrefab, transform.position, Quaternion.identity);
+        ItemPickup newPickup = Instantiate(pickupPrefab, transform.position, Quaternion.identity, transform);
         newPickup.item = itemToSpawn;
     }
 

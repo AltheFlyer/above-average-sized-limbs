@@ -363,7 +363,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 1.625}
+    oldSize: {x: 3.125, y: 2.5}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -405,8 +405,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f71dba059af949eca45f614461dec98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 5
-  hp: 5
+  maxHP: 6
+  hp: 6
   onDamagedInvincibleTime: 1
   onDamage:
     m_PersistentCalls:
@@ -535,6 +535,8 @@ MonoBehaviour:
   playerVars: {fileID: 11400000, guid: 4ca5011e3843d054ba59080a6de1b31f, type: 2}
   comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
   comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
+  comboTextPrefab: {fileID: 0}
+  lifespan: 0
 --- !u!1 &6263859837756752165
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +633,8 @@ MonoBehaviour:
   playerVars: {fileID: 11400000, guid: 4ca5011e3843d054ba59080a6de1b31f, type: 2}
   comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
   comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
+  comboTextPrefab: {fileID: 0}
+  lifespan: 0
 --- !u!1 &6281562766456737922
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +731,8 @@ MonoBehaviour:
   playerVars: {fileID: 11400000, guid: 4ca5011e3843d054ba59080a6de1b31f, type: 2}
   comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
   comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
+  comboTextPrefab: {fileID: 0}
+  lifespan: 0
 --- !u!1 &6407631200759518770
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,3 +864,5 @@ MonoBehaviour:
   playerVars: {fileID: 11400000, guid: 4ca5011e3843d054ba59080a6de1b31f, type: 2}
   comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
   comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
+  comboTextPrefab: {fileID: 0}
+  lifespan: 0
