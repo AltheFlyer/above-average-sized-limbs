@@ -138,6 +138,12 @@ public class PlayerManager : MonoBehaviour
         // (At this point, the attack hasn't updated its collider, so we calculate its new size)
         rawAttackObject.transform.position += new Vector3(attackDirection.x, attackDirection.y, 0) * (rawAttackObject.GetComponent<Collider2D>().bounds.extents.x * data.attackSizeMultiplier);
 
+        // Hitboxes are placed at the feed, so move the attack down if it's horizontal
+        if (attackDirection.x != 0)
+        {
+            rawAttackObject.transform.position -= new Vector3(0, 0.75f, 0);
+        }
+
         // rotate if vertical
         if (attackDirection.y == 1)
         {
