@@ -13,6 +13,7 @@ public class ScaleTween : MonoBehaviour
         originalScale = transform.localScale;
     }
 
+    [ContextMenu("Tween")]
     public void Tween()
     {
         LeanTween.cancel(gameObject);

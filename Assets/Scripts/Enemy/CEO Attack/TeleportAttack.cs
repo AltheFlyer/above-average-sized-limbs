@@ -24,6 +24,7 @@ public class TeleportAttack : MonoBehaviour
 
         impact.SetActive(true);
         impactCollider.enabled = true;
+        SFXManager.TryPlaySFX("bomb1", gameObject);
 
         yield return new WaitForSeconds(impactTime);
 
