@@ -52,18 +52,6 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        // Update the combo timer
-        comboTimer.ApplyChange(-Time.deltaTime);
-
-        // Check if the combo timer has reached zero
-        if (comboTimer.Value <= 0)
-        {
-            // Reset the combo if the timer has elapsed
-            comboCount.SetValue(0);
-            // Reset the timer
-            ResetComboTimer();
-        }
-
         lifespan -= Time.deltaTime;
         if (lifespan <= 0)
         {
@@ -95,6 +83,7 @@ public class PlayerAttack : MonoBehaviour
         GameObject comboText = Instantiate(comboTextPrefab, this.transform.position, Quaternion.identity, transform);
         comboText.GetComponent<MeshRenderer>().material.color = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
         comboText.GetComponent<TextMesh>().text = "Combo: " + comboCount.Value.ToString();
+        Debug.Log(comboCount.Value.ToString());
     }
     void ResetComboTimer()
     {
