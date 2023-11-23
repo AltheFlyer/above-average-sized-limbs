@@ -142,6 +142,9 @@ public class PlayerManager : MonoBehaviour
         if (attackDirection.y == 1)
         {
             rawAttackObject.transform.Rotate(new Vector3(0, 0, 90), Space.Self);
+            // Since we attack from our feet, we need to move this up to compensate
+            // Yes, adding to the x copmonent moves it up due to rotation jank
+            rawAttackObject.transform.Translate(0.5f, 0, 0);
         }
         else if (attackDirection.y == -1)
         {

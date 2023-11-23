@@ -31,7 +31,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.33333334
+        time: 0.083333336
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -40,7 +40,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.51666665
+        time: 0.26666668
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -61,17 +61,17 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 656207924, guid: 75f681b4948914946a84ad5cef7e2f3b, type: 3}
-    - time: 0.083333336
+    - time: 0.016666668
       value: {fileID: 1180208206, guid: 75f681b4948914946a84ad5cef7e2f3b, type: 3}
-    - time: 0.16666667
+    - time: 0.033333335
       value: {fileID: 97556478, guid: 75f681b4948914946a84ad5cef7e2f3b, type: 3}
-    - time: 0.25
+    - time: 0.05
       value: {fileID: -430703598, guid: 75f681b4948914946a84ad5cef7e2f3b, type: 3}
-    - time: 0.33333334
+    - time: 0.083333336
       value: {fileID: -1938035974, guid: 75f681b4948914946a84ad5cef7e2f3b, type: 3}
-    - time: 0.41666666
+    - time: 0.16666667
       value: {fileID: -1975809426, guid: 75f681b4948914946a84ad5cef7e2f3b, type: 3}
-    - time: 0.5
+    - time: 0.25
       value: {fileID: -1307774268, guid: 75f681b4948914946a84ad5cef7e2f3b, type: 3}
     attribute: m_Sprite
     path: 
@@ -116,7 +116,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.51666665
+    m_StopTime: 0.26666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -146,7 +146,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.33333334
+        time: 0.083333336
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -155,7 +155,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.51666665
+        time: 0.26666668
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -175,7 +175,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.51666665
+  - time: 0.26666668
     functionName: ResetCurrentVal
     data: 
     objectReferenceParameter: {fileID: 0}
