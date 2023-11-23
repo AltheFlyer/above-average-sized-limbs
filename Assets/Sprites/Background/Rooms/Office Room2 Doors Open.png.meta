@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,280 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Office Room2 Doors Top Wall Left
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 213
+        width: 220
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b9c445b4977ac468bb0bf0dda52ab9
+      internalID: -954637674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office Room2 Doors Left Hall Top
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 137
+        width: 86
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c4cfdd4b634154d8f31c6fb450b5b2
+      internalID: 1189556568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office Room2 Doors Right Hall Top
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 137
+        width: 87
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f470040ce1e974f439d33989b21d171e
+      internalID: -143586103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office Room2 Doors Center
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 23
+        width: 307
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362c969f71653fb48be8969294424e0d
+      internalID: 883095937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office Room2 Doors Top Wall Right
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 213
+        width: 221
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c3e36475e2e9bf4bac1053c50aedb3e
+      internalID: -1087969185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office Room2 Doors Top Hall
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 213
+        width: 39
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a245e228d50455448a1abe2306d431f
+      internalID: -108514066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office Room2 Doors Left Hall
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 86
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d046f0bad08ad17449a4362e908a7114
+      internalID: 23663689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office Room2 Doors Right Hall
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 116
+        width: 87
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37ad98f1e75ffa40a1cfde003cc452d
+      internalID: 984753246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office Room2 Doors Left Hall Bot
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 23
+        width: 86
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995f3a4fb92a1e94fa4f9c537f5546c9
+      internalID: 2103651490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office Room2 Doors Right Hall Bot
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 23
+        width: 87
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83975e2fd4eda54c9336458a49bd3bc
+      internalID: -1426660688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office Room2 Doors Bot Wall Left
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 219
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d595a7303222f14a9c6286f33a4b947
+      internalID: 1521038706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office Room2 Doors Bot Hall
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 0
+        width: 41
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4aeeafa68ede494d84c7ca92723fd26
+      internalID: -421783967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office Room2 Doors Bot Wall Right
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 220
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc9c855c09167949816c0411803846a
+      internalID: 1044830719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +392,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Office Room2 Doors Bot Hall: -421783967
+      Office Room2 Doors Bot Wall Left: 1521038706
+      Office Room2 Doors Bot Wall Right: 1044830719
+      Office Room2 Doors Center: 883095937
+      Office Room2 Doors Left Hall: 23663689
+      Office Room2 Doors Left Hall Bot: 2103651490
+      Office Room2 Doors Left Hall Top: 1189556568
+      Office Room2 Doors Right Hall: 984753246
+      Office Room2 Doors Right Hall Bot: -1426660688
+      Office Room2 Doors Right Hall Top: -143586103
+      Office Room2 Doors Top Hall: -108514066
+      Office Room2 Doors Top Wall Left: -954637674
+      Office Room2 Doors Top Wall Right: -1087969185
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
