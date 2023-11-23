@@ -27,6 +27,8 @@ public class EnemyVP : Damageable
     public Collider2D attackCollider;
     public CamShaker camShaker;
 
+    private string[] attackSFX = { "punch1", "punch2", "punch3" };
+
     GameObject player;
 
     Rigidbody2D rb;
@@ -134,6 +136,7 @@ public class EnemyVP : Damageable
         attackCollider.enabled = true;
         attackAnim.SetTrigger("Attack");
         camShaker.Activate();
+        SFXManager.TryPlaySFX(attackSFX, gameObject);
 
         float _time = punchTime;
 

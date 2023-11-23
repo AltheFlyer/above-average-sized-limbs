@@ -25,6 +25,7 @@ public class HandGrenade : MonoBehaviour
 
         impact.SetActive(true);
         if (impactCollider != null) impactCollider.enabled = true;
+        SFXManager.TryPlaySFX("bomb1", gameObject);
 
         yield return new WaitForSeconds(impactTime);
 

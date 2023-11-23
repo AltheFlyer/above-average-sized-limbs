@@ -174,6 +174,7 @@ public class BossCEO : Damageable
         gs.Add(Instantiate(vpPrefab, spawnPos2, Quaternion.identity));
         gs.Add(Instantiate(vpPrefab, spawnPos3, Quaternion.identity));
         gs.Add(Instantiate(vpPrefab, spawnPos4, Quaternion.identity));
+        SFXManager.TryPlaySFX("summon1", gameObject);
 
         // wait post attack
         float _time = vpPostTime;
