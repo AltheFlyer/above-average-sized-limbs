@@ -51,6 +51,9 @@ public class PlayerManager : MonoBehaviour
         currentAttackInputVal = new float[2];
         prevAttackInputVal = new float[2];
 
+        //Set combo to 0 when game starts
+        comboCount.SetValue(0);
+
     }
 
     void Update()

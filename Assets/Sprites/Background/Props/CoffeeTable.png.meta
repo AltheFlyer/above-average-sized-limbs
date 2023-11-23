@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4baf811a25292d94cb36414e2fe1db37
+guid: 49915269b5f784b4eb0550670765f704
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,55 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hearts_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 24
-        width: 15
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae298cc060ba448c38e7374846308f9e
-      internalID: 1238058703
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hearts_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 12
-        width: 15
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84c0fa00744674763b1afa582b1c4ba2
-      internalID: 1336245602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hearts_2
+      name: CoffeeTable_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 15
-        height: 12
+        width: 55
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +124,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7f2fc0b0e3e441cebdeb8f4d3359401
-      internalID: -202096839
+      spriteID: 10320f6e8f91e7e4c8ba683b25302529
+      internalID: -1482576373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeTable_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 0
+        width: 55
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a18df34fc6a7104e90240748e9b9deb
+      internalID: -1118051558
       vertices: []
       indices: 
       edges: []
@@ -183,9 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hearts_0: 1238058703
-      Hearts_1: 1336245602
-      Hearts_2: -202096839
+      CoffeeTable_0: -1482576373
+      CoffeeTable_1: -1118051558
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
