@@ -26,8 +26,8 @@ public class PlayerManager : MonoBehaviour
     private PickUp pickUp;
 
     private float attackPlaceHolder;
-    private float[] currentVal;
-    private float[] prevVal;
+    private float[] currentAttackInputVal;
+    private float[] prevAttackInputVal;
 
     private string[] attackSFX = { "punch1", "punch2", "punch3" };
 
@@ -45,8 +45,8 @@ public class PlayerManager : MonoBehaviour
         pickUp = gameObject.GetComponent<PickUp>();
         pickUp.Direction = new Vector2(0f, 0f);
 
-        currentVal = new float[2];
-        prevVal = new float[2];
+        currentAttackInputVal = new float[2];
+        prevAttackInputVal = new float[2];
 
     }
 
@@ -66,20 +66,22 @@ public class PlayerManager : MonoBehaviour
         float attackVertical = Input.GetAxisRaw("AttackVertical");
         Vector2 attackDirection = new Vector2(attackHorizontal, attackVertical);
 
+        //If any arrow keys is pressed, set Animator Attack Float to currentAttackInputVal 
         if (attackHorizontal != 0 || attackVertical != 0)
         {
-            currentVal[0] = attackHorizontal;
-            currentVal[1] = attackVertical;
-            prevVal = currentVal;
+            currentAttackInputVal[0] = attackHorizontal;
+            currentAttackInputVal[1] = attackVertical;
+            prevAttackInputVal = currentAttackInputVal;
         }
+        // If no arrow key is pressed, set Animator Attack Float to prevAttackInputVal
         else if (attackHorizontal == 0 && attackVertical == 0)
         {
-            currentVal = prevVal;
-            prevVal = currentVal;
+            currentAttackInputVal = prevAttackInputVal;
+            prevAttackInputVal = currentAttackInputVal;
         }
 
-        playerAnimator.SetFloat("attackHorizontal", currentVal[0]);
-        playerAnimator.SetFloat("attackVertical", currentVal[1]);
+        playerAnimator.SetFloat("attackHorizontal", currentAttackInputVal[0]);
+        playerAnimator.SetFloat("attackVertical", currentAttackInputVal[1]);
 
         AttackCheck(attackDirection);
 
@@ -93,10 +95,10 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void ResetCurrentVal()
+    public void ResetCurrentAttackInputVal()
     {
-        currentVal[0] = 0;
-        currentVal[1] = 0;
+        currentAttackInputVal[0] = 0;
+        currentAttackInputVal[1] = 0;
     }
 
     void FixedUpdate()
