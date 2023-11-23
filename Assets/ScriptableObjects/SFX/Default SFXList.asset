@@ -40,12 +40,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: impact1
     clip: {fileID: 8300000, guid: 4db40564fe58b4f519ed6b67e6a11cc9, type: 3}
-    volume: 1
+    volume: 0.56
     audioMixerGroup: {fileID: -1926846628764479051, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
     source: {fileID: 0}
   - name: splatter1
     clip: {fileID: 8300000, guid: 8099d43585c124e32a187fb2e6c53318, type: 3}
-    volume: 1
+    volume: 0.2
     audioMixerGroup: {fileID: -1926846628764479051, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
     source: {fileID: 0}
   - name: summon1
