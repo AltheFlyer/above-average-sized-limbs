@@ -102,8 +102,8 @@ public class OfficeExplorationController : Singleton<OfficeExplorationController
         );
         // Move the wall colliders
         wallColliders.transform.position = new Vector3(
-            newPos.x * 13 - 5.05f * 13,
-            newPos.y * 7 - 4.96f * 7,
+            newPos.x * 13 - 5 * 13,
+            newPos.y * 7 - 5 * 7,
             0
         );
         // Move the doors (lol)
