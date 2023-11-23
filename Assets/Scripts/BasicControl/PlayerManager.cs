@@ -35,6 +35,9 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject attackPrefab;
 
+    public IntVariable comboCount;
+    public FloatVariable comboTimer;
+
     void Start()
     {
         playerBody = GetComponent<Rigidbody2D>();
@@ -90,6 +93,21 @@ public class PlayerManager : MonoBehaviour
         if (currentAttackCooldown > 0)
         {
             currentAttackCooldown -= Time.deltaTime;
+        }
+
+        // Combo cooldown
+
+        // Update the combo timer
+        if (comboTimer.Value > 0)
+        {
+            comboTimer.ApplyChange(-Time.deltaTime);
+
+            // Check if the combo timer has reached zero
+            if (comboTimer.Value <= 0)
+            {
+                // Reset the combo if the timer has elapsed
+                comboCount.SetValue(0);
+            }
         }
     }
 
