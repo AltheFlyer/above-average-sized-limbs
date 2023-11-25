@@ -134,11 +134,11 @@ public class OfficeExplorationController : Singleton<OfficeExplorationController
             if (officeMap.HasRoom(newPos + doors[i].direction))
             {
                 doors[i].destination = newPos + doors[i].direction;
-                doors[i].SetOpenState(true);
+                doors[i].SetOpenable(true);
             }
             else
             {
-                doors[i].SetOpenState(false);
+                doors[i].SetOpenable(false);
             }
         }
         SetAllDoorLocks(!currentRoom.isRoomCleared); // set all door lock state upon entrance

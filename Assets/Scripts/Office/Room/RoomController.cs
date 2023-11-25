@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,18 +11,11 @@ public class RoomController : MonoBehaviour
     private Room room;
     Animator roomAnimator;
 
-    private List<GameObject> enemySpawners = new List<GameObject>();
+    private int enemyCount = 0;
 
     public void Start()
     {
         roomAnimator = GetComponent<Animator>();
-    }
-
-    public void Update()
-    {
-        bool checkDoorLock = room != null ? room.isVisited && !room.isRoomCleared : false;
-        if (checkDoorLock)
-            UnlockDoorsWhenRoomCleared();
     }
 
     public void Init(Room room)
@@ -35,8 +29,15 @@ public class RoomController : MonoBehaviour
         {
             room.isVisited = true;
             FirstEnterRecursive(gameObject);
-            UnlockDoorsWhenRoomCleared();
+            // Check enemy spawns on the next frame
+            StartCoroutine(NextFrameDoorCheck());
         }
+    }
+
+    IEnumerator NextFrameDoorCheck()
+    {
+        yield return null;
+        UnlockDoorsWhenRoomCleared();
     }
 
     public void UnloadRoom()
@@ -49,9 +50,7 @@ public class RoomController : MonoBehaviour
         RoomActivatable activationComponent = root.GetComponent<RoomActivatable>();
         if (activationComponent)
         {
-            Debug.Log($"Found activation component {activationComponent}");
             activationComponent.OnRoomFirstEnter();
-            enemySpawners.Add(root);
         }
         foreach (Transform t in root.transform)
         {
@@ -61,16 +60,8 @@ public class RoomController : MonoBehaviour
 
     private void UnlockDoorsWhenRoomCleared()
     {
-        bool roomCleared = true;
-        for (int i = 0; i < enemySpawners.Count; i++)
-        {
-            if (!enemySpawners[i].GetComponent<RoomActivatable>().IsRoomCleared())
-            {
-                roomCleared = false;
-                break;
-            }
-        }
-        if (roomCleared)
+        Debug.Log($"Enemy count: {enemyCount}");
+        if (enemyCount == 0)
         {
             OfficeExplorationController.instance.SetAllDoorLocks(false);
             if (room != null)
@@ -84,4 +75,15 @@ public class RoomController : MonoBehaviour
         }
     }
 
+    public void OnEnemyDeath(EnemyDeathData data)
+    {
+        enemyCount--;
+        UnlockDoorsWhenRoomCleared();
+    }
+
+    public void OnEnemySpawn(EnemySpawnData data)
+    {
+        enemyCount++;
+        Debug.Log($"Enemy spawned");
+    }
 }

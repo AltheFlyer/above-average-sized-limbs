@@ -140,6 +140,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8034773503012750122}
   - component: {fileID: 603729507341179956}
+  - component: {fileID: 3306292297120274945}
+  - component: {fileID: 5174572206400785376}
   m_Layer: 0
   m_Name: Reception
   m_TagString: Untagged
@@ -184,6 +186,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBossRoom: 0
   ladder: {fileID: 0}
+--- !u!114 &3306292297120274945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2784514113676947341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189d37f389090854296d4e4ae33d48f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: e9aed30a1cd913d4083a389cd3599bd4, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 603729507341179956}
+        m_TargetAssemblyTypeName: RoomController, Assembly-CSharp
+        m_MethodName: OnEnemySpawn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5174572206400785376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2784514113676947341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1666c0c42812c14d89ca2cf54514a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 420273f18746cab4297858704f747cde, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 603729507341179956}
+        m_TargetAssemblyTypeName: RoomController, Assembly-CSharp
+        m_MethodName: OnEnemyDeath
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3396714167166398333
 GameObject:
   m_ObjectHideFlags: 0

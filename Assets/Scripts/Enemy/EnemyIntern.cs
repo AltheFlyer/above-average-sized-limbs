@@ -32,6 +32,7 @@ public class EnemyIntern : Damageable
     protected override void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        GlobalEventHandle.instance.enemySpawn.Raise(new EnemySpawnData(gameObject));
 
         base.Start();
 
@@ -86,6 +87,7 @@ public class EnemyIntern : Damageable
     public override void OnDead()
     {
         attackCollider.enabled = false;
+        GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
 
         StopAllCoroutines();
         StartCoroutine(OnDeadIE());

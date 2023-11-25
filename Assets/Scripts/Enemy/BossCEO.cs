@@ -269,6 +269,7 @@ public class BossCEO : Damageable
     public override void OnDead()
     {
         attackCollider.enabled = false;
+        GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
 
         StopAllCoroutines();
         StartCoroutine(OnDeadIE());

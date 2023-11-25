@@ -27,6 +27,7 @@ public class EnemyMelee : Damageable
         base.Start();
 
         player = GameObject.FindGameObjectWithTag("Player");
+        GlobalEventHandle.instance.enemySpawn.Raise(new EnemySpawnData(gameObject));
 
         StartCoroutine(StateMoveIE());
     }
@@ -76,5 +77,12 @@ public class EnemyMelee : Damageable
     {
         //Debug.Log("Enemy attacking");
 
+    }
+
+    public override void OnDead()
+    {
+        GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
+
+        base.OnDead();
     }
 }

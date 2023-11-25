@@ -12,26 +12,31 @@ public class Door : MonoBehaviour
 
 
     // Internal state
-    private bool isOpen; // isOpen means door is openable and not just a wall (can be locked tho)
+
+    // Indicates whether or not the door canconnects to a different room
+    // If `isDoorOpenable` is true, then the door can be locked or unlocked.
+    // Otherwise, the door is always locked (effectively just a wall).
+    private bool isDoorOpenable;
 
     public void Start()
     {
     }
 
-    public void SetOpenState(bool open)
+    public void SetOpenable(bool openable)
     {
-        isOpen = open;
+        isDoorOpenable = openable;
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other);
-        // TODO: Better mechanism to check for player collision
-        if (other.GetComponent<PlayerManager>() == null)
+        // Disable trigger if the door is actually a wall
+        if (!isDoorOpenable)
         {
             return;
         }
-        if (!isOpen)
+
+        // Only activate on player entry
+        if (other.GetComponent<PlayerManager>() == null)
         {
             return;
         }
@@ -41,12 +46,12 @@ public class Door : MonoBehaviour
 
     public void SetDoorLock(bool lockState)
     {
-        // ENable/disable children
+        // Enable/disable children
         if (transform.childCount > 0)
         {
             foreach (Transform t in transform)
             {
-                t.gameObject.SetActive(lockState || !isOpen);
+                t.gameObject.SetActive(lockState || !isDoorOpenable);
             }
         }
         else
