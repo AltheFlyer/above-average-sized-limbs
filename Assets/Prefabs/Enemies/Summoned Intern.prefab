@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2824588226866880205}
   - component: {fileID: 101904344960699739}
   - component: {fileID: 2348469371759206268}
-  - component: {fileID: 968644523703862892}
+  - component: {fileID: 2514149812201415611}
   m_Layer: 8
-  m_Name: Intern
+  m_Name: Summoned Intern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -193,7 +193,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &968644523703862892
+--- !u!114 &2514149812201415611
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19dcab92f34e432419dc3f257e8cfb25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDropRate: 0.01
+  itemDropRate: 0
 --- !u!1 &727796287114364623
 GameObject:
   m_ObjectHideFlags: 0

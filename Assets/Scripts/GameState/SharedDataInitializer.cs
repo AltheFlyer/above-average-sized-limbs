@@ -13,8 +13,7 @@ public class SharedDataInitializer : MonoBehaviour
 
     public List<DepletablePool<ItemData>> itemPools;
 
-
-    public void Start()
+    public void Awake()
     {
         // Initalize player stats to starting values
         baseStats.CopyInto(activeStats);

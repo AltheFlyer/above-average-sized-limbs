@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3166372070970996194}
-  - component: {fileID: -283806131014404256}
+  - component: {fileID: 8813313515726623547}
   m_Layer: 0
   m_Name: Machine Gun Hands
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-283806131014404256
+--- !u!114 &8813313515726623547
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,9 +41,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5116450477212654113}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0da8cece6b98e6c438602556d2625e94, type: 3}
+  m_Script: {fileID: 11500000, guid: c73b465439f8e044c89d0ee3507d4a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numStacks: 1
   playerVars: {fileID: 11400000, guid: 8fae656bd80baf74593064fe4cb84c52, type: 2}
-  attackDamageMultiplier: 0.5
-  attackCooldownMultiplier: 0.25
+  extraAttackRatioPerStack: 0.5

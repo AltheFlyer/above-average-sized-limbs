@@ -15,4 +15,9 @@ public interface IItem
     /// Invoked when any player attack hits an enemy.
     /// </summary>
     void OnHit(HitData data);
+
+    /// <summary>
+    /// Invoked when a new item of the same type is picked up.
+    /// </summary>
+    void Stack();
 }

@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class BigHands : BaseItem
 {
-    public float sizeMultiplier = 2.0f;
+    public float sizeUpCoefficient = 1.0f;
 
     public override void PreAttack(AttackData data)
     {
-        data.attackSizeMultiplier *= sizeMultiplier;
+        data.attackSizeMultiplier += sizeUpCoefficient * Mathf.Log(2 * numStacks);
     }
 }

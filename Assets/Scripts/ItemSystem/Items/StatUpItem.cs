@@ -15,7 +15,9 @@ public class StatUpItem : BaseItem
 
     public float deltaAttackCooldown;
 
-    public override void OnPickUp(PlayerManager player)
+    private PlayerManager player;
+
+    public void StatUp(PlayerManager player)
     {
         playerVars.playerSpeed += deltaPlayerSpeed;
         playerVars.maxSpeed += deltaMaxSpeed;
@@ -29,5 +31,19 @@ public class StatUpItem : BaseItem
         player.GetComponent<Damageable>()?.Heal(deltaHealth);
 
         GlobalEventHandle.instance.playerStatChange.Raise(null);
+    }
+
+    public override void OnPickUp(PlayerManager player)
+    {
+        this.player = player;
+
+        StatUp(player);
+    }
+
+    public override void Stack()
+    {
+        base.Stack();
+
+        StatUp(player);
     }
 }

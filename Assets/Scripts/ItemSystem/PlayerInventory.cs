@@ -15,6 +15,8 @@ public class PlayerInventory : MonoBehaviour
     // Used internally to have items receive events
     private List<BaseItem> itemListeners = new List<BaseItem>();
 
+    private Dictionary<ItemData, BaseItem> itemToInGameListener = new Dictionary<ItemData, BaseItem>();
+
     // Singleton stuff
     private static PlayerInventory _instance;
     public static PlayerInventory instance
@@ -32,9 +34,17 @@ public class PlayerInventory : MonoBehaviour
 
     public void AddItem(ItemData item, PlayerManager player)
     {
+        if (itemToInGameListener.ContainsKey(item))
+        {
+            itemToInGameListener[item].Stack();
+            return;
+        }
+
         items.Add(item);
 
         BaseItem obj = Instantiate(item.item, transform);
+        itemToInGameListener[item] = obj;
+
         itemListeners.Add(obj);
 
         obj.OnPickUp(player);

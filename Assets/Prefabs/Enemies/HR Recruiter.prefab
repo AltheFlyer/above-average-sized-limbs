@@ -14937,6 +14937,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   time: 0.8
+  destroyOnOver: 1
 --- !u!1 &8303432624014630202
 GameObject:
   m_ObjectHideFlags: 0
@@ -14950,6 +14951,7 @@ GameObject:
   - component: {fileID: 3773850380292069965}
   - component: {fileID: 8921008571491100323}
   - component: {fileID: 6460076503927417702}
+  - component: {fileID: 7505877185952014731}
   m_Layer: 8
   m_Name: HR Recruiter
   m_TagString: Untagged
@@ -15119,7 +15121,7 @@ MonoBehaviour:
   summonPos2: {fileID: 2504887570502908930}
   summonParticle2: {fileID: 8508926844596919371}
   hiredEffectPrefab: {fileID: 5427402122937063527, guid: 98189b9f4c8fd45529abbedb97dcc907, type: 3}
-  summonPrefab: {fileID: 387973373630052734, guid: be4d1af95c70c441b8488ed5dd4fe7e2, type: 3}
+  summonPrefab: {fileID: 387973373630052734, guid: e6b8af568fc429b4492bcb9c0355005f, type: 3}
   facePalmEffectPos: {fileID: 2743235804690694690}
   facePalmEffectPrefab: {fileID: 6630275391772572677, guid: 054a44b4100f14131b456dc883354a2b, type: 3}
   attackCollider: {fileID: 4911374963780808692}
@@ -15144,6 +15146,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7505877185952014731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8303432624014630202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19dcab92f34e432419dc3f257e8cfb25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDropRate: 1
 --- !u!1001 &474362648570540863
 PrefabInstance:
   m_ObjectHideFlags: 0
