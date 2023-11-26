@@ -123,6 +123,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &73042808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6407631200759518770, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
+  m_PrefabInstance: {fileID: 1572106138}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &73042811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73042808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9de83a78f8fe52344989614000f32ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
+  comboTextPrefab: {fileID: 3522553844424867168, guid: 2ab731c91be66f842ac17f64d8ff7a89, type: 3}
 --- !u!1001 &233745195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -255,7 +274,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1657158231350757930, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
       propertyPath: lifespan
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1657158231350757930, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
       propertyPath: playerVars
@@ -267,12 +286,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5562523287024262033, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
       propertyPath: lifespan
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5562523287024262033, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
       propertyPath: playerVars
       value: 
       objectReference: {fileID: 11400000, guid: 4ca5011e3843d054ba59080a6de1b31f, type: 2}
+    - target: {fileID: 6407631200759518770, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7043139730419052482, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.14
@@ -315,7 +338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9051033549540674248, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
       propertyPath: lifespan
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9051033549540674248, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
       propertyPath: playerVars
@@ -323,7 +346,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 4ca5011e3843d054ba59080a6de1b31f, type: 2}
     - target: {fileID: 9174978518311866371, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
       propertyPath: lifespan
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9174978518311866371, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
       propertyPath: playerVars
@@ -332,7 +355,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6407631200759518770, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 73042811}
   m_SourcePrefab: {fileID: 100100000, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
 --- !u!1001 &1655287995
 PrefabInstance:

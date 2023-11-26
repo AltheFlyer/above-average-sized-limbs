@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4352866277935898656}
   - component: {fileID: 6719704698600017027}
   - component: {fileID: 3581286227722465660}
-  - component: {fileID: -5757042145546193855}
+  - component: {fileID: -3334872921123944794}
   m_Layer: 0
   m_Name: FloatingText
   m_TagString: Untagged
@@ -120,7 +120,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-5757042145546193855
+--- !u!114 &-3334872921123944794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,4 +132,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d70334aab0134af44af73e3d19d8b852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 10, z: 0}
