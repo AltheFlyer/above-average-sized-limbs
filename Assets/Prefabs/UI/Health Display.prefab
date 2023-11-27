@@ -125,3 +125,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tweenTime: 1
   tweenScale: 1.2
+  flickerTime: 0.3
+  flickerMaterial: {fileID: 2100000, guid: 9a620bce47b3a4c60b229d0c891168e0, type: 2}

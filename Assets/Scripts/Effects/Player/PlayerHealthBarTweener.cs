@@ -8,7 +8,6 @@ public class PlayerHealthBarTweener : MonoBehaviour
     {
         if (PlayerHealthBarTween.instance != null)
         {
-            Debug.Log("test");
             PlayerHealthBarTween.instance.Tween();
 
         }
