@@ -13,23 +13,22 @@ public class ComboUIEffect : MonoBehaviour
         //Combo Effect
         currentComboText = Instantiate(comboTextPrefab, this.transform.position, Quaternion.identity, transform);
         currentComboText.SetActive(false);
+    }
 
+    void Update()
+    {
+        if (comboCount.Value == 0)
+        {
+            currentComboText.SetActive(false);
+        }
     }
 
     public void ShowComboEffect()
     {
         currentComboText.SetActive(true);
-        //Debug.Log("Combo on");
-        float colorRange = Random.Range(0.4f, 1.0f);
-        currentComboText.GetComponent<MeshRenderer>().material.color = new Color(colorRange, colorRange, colorRange, colorRange);
+        float colorRange = Random.Range(0.0f, 1.0f);
+        currentComboText.GetComponent<MeshRenderer>().material.color = new Color(1, 0, 1, 1);
         currentComboText.GetComponent<TextMesh>().text = "Combo: " + comboCount.Value.ToString();
-        Invoke("HideComboText", 1f);
-
     }
 
-    void HideComboText()
-    {
-        currentComboText.SetActive(false);
-        //Debug.Log("Combo off");
-    }
 }
