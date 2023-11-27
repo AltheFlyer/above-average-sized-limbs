@@ -20,7 +20,15 @@ public class ItemPickup : MonoBehaviour
         {
             itemSpriteRenderer = GetComponent<SpriteRenderer>();
         }
-        itemSpriteRenderer.sprite = item.sprite;
+
+        if (item.additionalRendererOnPickup != null)
+        {
+            Instantiate(item.additionalRendererOnPickup, transform.position, Quaternion.identity, transform);
+        }
+        else
+        {
+            itemSpriteRenderer.sprite = item.sprite;
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D other)

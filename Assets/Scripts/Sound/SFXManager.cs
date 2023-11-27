@@ -33,10 +33,19 @@ public class SFXManager : Singleton<SFXManager>
 
     public void PlaySFX(string name, GameObject target)
     {
+        if (!Array.Exists(sfxList.sounds, sound => sound.name == name))
+        {
+            Debug.LogError($"The sound corresponding to {name} doesn't exist!");
+            return;
+        }
+
         // find sound
         SFXSound s = Array.Find(sfxList.sounds, sound => sound.name == name);
 
         // if can't find sound with the same name
+        // Note: this won't actually work, since Array.Find returns the 
+        // default value if none is found, which is a problem since it's 
+        // effectively a Null value that isn't actually equal to null.
         if (s == null)
         {
             // if 

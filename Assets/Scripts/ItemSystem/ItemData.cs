@@ -7,4 +7,7 @@ public class ItemData : ScriptableObject
     public Sprite sprite;
 
     public BaseItem item;
+
+    [Header("For items with custom renderers (e.g. animation)")]
+    public GameObject additionalRendererOnPickup;
 }
