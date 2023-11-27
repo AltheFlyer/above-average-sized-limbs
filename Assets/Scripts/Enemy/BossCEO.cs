@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using YUtil;
 
-public class BossCEO : Damageable
+public class BossCEO : Enemy
 {
     [Header("Boss CEO")]
     public Transform exclaimationEffectPos;
@@ -268,6 +268,8 @@ public class BossCEO : Damageable
 
     public override void OnDead()
     {
+        base.OnDead();
+
         attackCollider.enabled = false;
         GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
 

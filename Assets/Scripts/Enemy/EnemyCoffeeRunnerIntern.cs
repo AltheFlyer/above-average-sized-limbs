@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using YUtil;
 
-public class EnemyCoffeeRunnerIntern : Damageable
+public class EnemyCoffeeRunnerIntern : Enemy
 {
     [Header("Enemy Coffee Runner Intern")]
     public LayerMask wallMask;
@@ -137,6 +137,8 @@ public class EnemyCoffeeRunnerIntern : Damageable
 
     public override void OnDead()
     {
+        base.OnDead();
+
         GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
 
         StopAllCoroutines();

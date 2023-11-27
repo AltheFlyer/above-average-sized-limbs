@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using YUtil;
 
-public class BossManager : Damageable
+public class BossManager : Enemy
 {
     [Header("Boss")]
     public GameObject deathEffectPrefab;
@@ -308,6 +308,8 @@ public class BossManager : Damageable
 
     public override void OnDead()
     {
+        base.OnDead();
+
         GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
 
         StopAllCoroutines();

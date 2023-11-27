@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMelee : Damageable
+public class EnemyMelee : Enemy
 {
     [Header("Enemy Melee")]
     public float speed;
@@ -81,6 +81,8 @@ public class EnemyMelee : Damageable
 
     public override void OnDead()
     {
+        base.OnDead();
+
         GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
 
         base.OnDead();

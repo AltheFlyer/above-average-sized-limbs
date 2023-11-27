@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using YUtil;
 
-public class EnemyIntern : Damageable
+public class EnemyIntern : Enemy
 {
     [Header("Enemy Intern")]
     public float speed = 7;
@@ -86,6 +86,8 @@ public class EnemyIntern : Damageable
 
     public override void OnDead()
     {
+        base.OnDead();
+
         attackCollider.enabled = false;
         GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
 
