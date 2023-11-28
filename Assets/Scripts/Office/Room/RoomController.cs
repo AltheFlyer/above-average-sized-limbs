@@ -63,7 +63,7 @@ public class RoomController : MonoBehaviour
         Debug.Log($"Enemy count: {enemyCount}");
         if (enemyCount == 0)
         {
-            SFXManager.TryPlaySFX("unlock", gameObject);
+            SFXManager.TryPlaySFX("unlock1", gameObject);
             OfficeExplorationController.instance.SetAllDoorLocks(false);
             if (room != null)
                 room.isRoomCleared = true;
