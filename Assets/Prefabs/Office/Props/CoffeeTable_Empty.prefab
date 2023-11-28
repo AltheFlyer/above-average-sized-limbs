@@ -53,12 +53,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1118051558, guid: 49915269b5f784b4eb0550670765f704, type: 3}
     - target: {fileID: 1591444314288202999, guid: 279724e08744be34bae41a203e30266f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591444314288202999, guid: 279724e08744be34bae41a203e30266f, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1841217055
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591444314288202999, guid: 279724e08744be34bae41a203e30266f, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2332678583058997738, guid: 279724e08744be34bae41a203e30266f, type: 3}
       propertyPath: m_Name
-      value: CoffeeTable (1) Variant
+      value: CoffeeTable_Empty
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
