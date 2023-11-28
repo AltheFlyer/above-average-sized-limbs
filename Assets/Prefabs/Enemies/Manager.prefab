@@ -1,5 +1,105 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &30820966343171985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5053376256436046917}
+  - component: {fileID: 160273180555565082}
+  m_Layer: 8
+  m_Name: Blood Splatter (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5053376256436046917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30820966343171985}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.39, y: -2.35, z: 0}
+  m_LocalScale: {x: 1.9605, y: 1.9605, z: 1.9605}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3835552263526391700}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160273180555565082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30820966343171985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa362baf6e9049949357528ae3da04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotation: 1
+  spriteRandomSet:
+  - {fileID: -2053128160, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  - {fileID: 109325210, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  - {fileID: 1580763813, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  color: {r: 0.6415094, g: 0.56585974, b: 0.56585974, a: 0.65882355}
+--- !u!1 &428042041099034792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4172730844095566391}
+  - component: {fileID: 4178927011664642318}
+  m_Layer: 8
+  m_Name: Blood Splatter (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4172730844095566391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428042041099034792}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.8799999, y: 1.6102002, z: 0}
+  m_LocalScale: {x: 1.9605, y: 1.9605, z: 1.9605}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3835552263526391700}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4178927011664642318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428042041099034792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa362baf6e9049949357528ae3da04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotation: 1
+  spriteRandomSet:
+  - {fileID: -2053128160, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  - {fileID: 109325210, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  - {fileID: 1580763813, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  color: {r: 0.6415094, g: 0.56585974, b: 0.56585974, a: 0.65882355}
 --- !u!1 &1254555853458238531
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +286,56 @@ MonoBehaviour:
   damage: 1
   width: 1
   col: {fileID: 8461440191064165338}
+--- !u!1 &1567205129914453033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8049065892055133185}
+  - component: {fileID: 2187192216104303005}
+  m_Layer: 8
+  m_Name: Blood Splatter (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8049065892055133185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567205129914453033}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.8251002, y: -1.8010998, z: 0}
+  m_LocalScale: {x: 1.9605, y: 1.9605, z: 1.9605}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3835552263526391700}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2187192216104303005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567205129914453033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa362baf6e9049949357528ae3da04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotation: 1
+  spriteRandomSet:
+  - {fileID: -2053128160, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  - {fileID: 109325210, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  - {fileID: 1580763813, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  color: {r: 0.6415094, g: 0.56585974, b: 0.56585974, a: 0.65882355}
 --- !u!1 &1579983557558114505
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,6 +750,56 @@ MonoBehaviour:
   - {fileID: 8705204599982955425}
   - {fileID: 6217992090775151759}
   - {fileID: 8165099363241165569}
+--- !u!1 &2576066426163679956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7593731945774091064}
+  - component: {fileID: 626931320201277446}
+  m_Layer: 8
+  m_Name: Blood Splatter (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7593731945774091064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2576066426163679956}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.0799003, y: 1.5318003, z: 0}
+  m_LocalScale: {x: 1.9605, y: 1.9605, z: 1.9605}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3835552263526391700}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &626931320201277446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2576066426163679956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa362baf6e9049949357528ae3da04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotation: 1
+  spriteRandomSet:
+  - {fileID: -2053128160, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  - {fileID: 109325210, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  - {fileID: 1580763813, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  color: {r: 0.6415094, g: 0.56585974, b: 0.56585974, a: 0.65882355}
 --- !u!1 &3063936182380146474
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,7 +812,7 @@ GameObject:
   - component: {fileID: 6129069728473882249}
   - component: {fileID: 1805493480016910575}
   - component: {fileID: 7907485214855889401}
-  - component: {fileID: 8974321545029193214}
+  - component: {fileID: 3426089604948015718}
   m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
@@ -716,7 +916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tweenTime: 0.3
   tweenScale: 1.1
---- !u!114 &8974321545029193214
+--- !u!114 &3426089604948015718
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -734,20 +934,29 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 34
+      inSlope: 0.11341781
+      outSlope: 0.11341781
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.44760707
+    - serializedVersion: 3
+      time: 0.7778473
+      value: 1.3502759
+      inSlope: 1.215103
+      outSlope: 1.215103
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      value: 1.7901142
+      inSlope: 1.9798917
+      outSlope: 1.9798917
       tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -758,17 +967,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 1
-      inSlope: -1
-      outSlope: -1
+      inSlope: -0.5141509
+      outSlope: -0.5141509
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: -1
-      outSlope: -1
+      value: 0.48584908
+      inSlope: -0.5141509
+      outSlope: -0.5141509
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -776,7 +985,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  time: 0.8
+  time: 1
+  destroyOnOver: 0
 --- !u!1 &3169785255423494392
 GameObject:
   m_ObjectHideFlags: 0
@@ -5637,6 +5847,56 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &3776205072808522878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4112799445966055338}
+  - component: {fileID: 3702941593583573908}
+  m_Layer: 8
+  m_Name: Blood Splatter (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4112799445966055338
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3776205072808522878}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.1389, y: -1.9186997, z: 0}
+  m_LocalScale: {x: 1.9605, y: 1.9605, z: 1.9605}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3835552263526391700}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3702941593583573908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3776205072808522878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa362baf6e9049949357528ae3da04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotation: 1
+  spriteRandomSet:
+  - {fileID: -2053128160, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  - {fileID: 109325210, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  - {fileID: 1580763813, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  color: {r: 0.6415094, g: 0.56585974, b: 0.56585974, a: 0.65882355}
 --- !u!1 &3980218964370242737
 GameObject:
   m_ObjectHideFlags: 0
@@ -5684,6 +5944,56 @@ MonoBehaviour:
   auto: 1
   setting: {fileID: 11400000, guid: 676119fd53a764be898ec8dbe0e0ef3a, type: 2}
   projectilePrefab: {fileID: 521521619713821286, guid: ec537f5914773476db6ea6adb0a7db4a, type: 3}
+--- !u!1 &4010651314509895759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5402789793287414242}
+  - component: {fileID: 7731221061225279249}
+  m_Layer: 8
+  m_Name: Blood Splatter (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5402789793287414242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4010651314509895759}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.021600127, y: -0.89919984, z: 0}
+  m_LocalScale: {x: 1.9605, y: 1.9605, z: 1.9605}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3835552263526391700}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7731221061225279249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4010651314509895759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa362baf6e9049949357528ae3da04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotation: 1
+  spriteRandomSet:
+  - {fileID: -2053128160, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  - {fileID: 109325210, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  - {fileID: 1580763813, guid: 443556ab55c2f4b8c96e0db86f675095, type: 3}
+  color: {r: 0.6415094, g: 0.56585974, b: 0.56585974, a: 0.65882355}
 --- !u!1 &4531466620774949059
 GameObject:
   m_ObjectHideFlags: 0
@@ -15959,7 +16269,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.09}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -16056,20 +16366,7 @@ MonoBehaviour:
   deathEffectPrefab: {fileID: 5427402122937063527, guid: 093a7fae069fb4aa6a3c18d183a619c5, type: 3}
   onDeadEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2970504789585489447}
-        m_TargetAssemblyTypeName: EffectRelayer, Assembly-CSharp
-        m_MethodName: Activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  spriteDeathFadeSOC: {fileID: 8974321545029193214}
+      m_Calls: []
   wallMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -16096,6 +16393,8 @@ MonoBehaviour:
   chargeAttackDelay: 0.3
   chargeSpeed: 24
   chargeStunTime: 3.5
+  spriteExplodeSOC: {fileID: 3426089604948015718}
+  spriteExplodeEffect: {fileID: 2970504789585489447}
   state: -1
 --- !u!95 &6342457978930515643
 Animator:
@@ -16156,6 +16455,12 @@ Transform:
   - {fileID: 228454485151365229}
   - {fileID: 2282098097729525101}
   - {fileID: 7849231951209210008}
+  - {fileID: 7593731945774091064}
+  - {fileID: 4112799445966055338}
+  - {fileID: 5053376256436046917}
+  - {fileID: 4172730844095566391}
+  - {fileID: 8049065892055133185}
+  - {fileID: 5402789793287414242}
   m_Father: {fileID: 4901698043371646547}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2970504789585489447
@@ -16258,6 +16563,78 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 3010805504450966215}
+        m_TargetAssemblyTypeName: SpriteEffectSpawner, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 626931320201277446}
+        m_TargetAssemblyTypeName: SpriteEffectSpawner, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3702941593583573908}
+        m_TargetAssemblyTypeName: SpriteEffectSpawner, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 30820966343171985}
+        m_TargetAssemblyTypeName: SpriteEffectSpawner, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 428042041099034792}
+        m_TargetAssemblyTypeName: SpriteEffectSpawner, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1567205129914453033}
+        m_TargetAssemblyTypeName: SpriteEffectSpawner, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4010651314509895759}
         m_TargetAssemblyTypeName: SpriteEffectSpawner, Assembly-CSharp
         m_MethodName: Activate
         m_Mode: 1
