@@ -4,8 +4,17 @@ using UnityEngine.Events;
 /// <summary>
 /// Component that generates a map on scene start.
 /// </summary>
-public class OfficeExplorationController : Singleton<OfficeExplorationController>
+public class OfficeExplorationController : MonoBehaviour
 {
+
+    private static OfficeExplorationController _instance;
+    public static OfficeExplorationController instance
+    {
+        get
+        {
+            return _instance;
+        }
+    }
 
     public OfficeGenerator generator;
 
@@ -18,10 +27,25 @@ public class OfficeExplorationController : Singleton<OfficeExplorationController
 
     public UnityEvent<Vector2Int, Vector2Int> onRoomChange;
 
+    // Parent of the camera gameobject
+    // Used to avoid conflicts with screenshake
     public GameObject cameraParent;
+
+    // Reference to wall colliders
+    // We telport these to the room we're in
     public GameObject wallColliders;
 
+    [Header("Decoration")]
+    // Prefab to add to the room that's adjacent to the boss room
+    public GameObject bossRoomIndicator;
+    private bool hasCreatedBossIndicator;
+
     public bool isDebugMode = true;
+
+    public void Awake()
+    {
+        _instance = this;
+    }
 
     public void Start()
     {
@@ -57,6 +81,7 @@ public class OfficeExplorationController : Singleton<OfficeExplorationController
                 Debug.Log(loadedRoom);
 
                 room.SetLoadedRoom(loadedRoom);
+                room.location = new Vector2Int(x, y);
                 loadedRoom.GetComponent<RoomController>()?.Init(room);
 
                 // Move rooms to where they should be in game world space
@@ -120,6 +145,18 @@ public class OfficeExplorationController : Singleton<OfficeExplorationController
                 direction.y * 7,
                 0
             );
+
+            // If the door leads to the boss, spawn an indicator
+            if (!hasCreatedBossIndicator && newPos + doors[i].direction == officeMap.bossRoomLocation)
+            {
+                hasCreatedBossIndicator = true;
+                GameObject indicator = Instantiate(
+                    bossRoomIndicator,
+                    doors[i].transform.position - new Vector3(doors[i].direction.x, doors[i].direction.y, 0),
+                    Quaternion.identity
+                );
+                officeMap.GetRoom(newPos).AddToRoom(indicator);
+            }
         }
     }
 
@@ -148,5 +185,10 @@ public class OfficeExplorationController : Singleton<OfficeExplorationController
             }
         }
         SetAllDoorLocks(!currentRoom.isRoomCleared); // set all door lock state upon entrance
+    }
+
+    public bool isCurrentlyBossRoom()
+    {
+        return currentRoom.location == officeMap.bossRoomLocation;
     }
 }

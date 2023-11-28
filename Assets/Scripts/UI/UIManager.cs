@@ -48,7 +48,6 @@ public class UIManager : Singleton<UIManager>
         Debug.Log("Restarted");
         gameOverScreen.SetActive(false);
         TogglePause(false);
-        officeExplorationController.DestroyThyself();
         DestroyThyself();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

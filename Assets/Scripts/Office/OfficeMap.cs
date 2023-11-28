@@ -12,6 +12,8 @@ public class OfficeMap
 
     public Room[][] rooms;
 
+    public Vector2Int bossRoomLocation;
+
     public OfficeMap(RoomData startingRoom)
     {
         // Definitely not stealing from Isaac
@@ -80,6 +82,8 @@ public class Room
     public bool isVisited;
     public bool isRoomCleared;
 
+    public Vector2Int location;
+
     public Room(RoomData roomBase)
     {
         this.roomBase = roomBase;
@@ -112,5 +116,11 @@ public class Room
     {
         roomObject.GetComponent<RoomController>()?.UnloadRoom();
         roomObject.SetActive(false);
+    }
+
+    public void AddToRoom(GameObject obj)
+    {
+        obj.transform.parent = roomObject.transform;
+        Debug.Log($"parent: {roomObject}");
     }
 }
