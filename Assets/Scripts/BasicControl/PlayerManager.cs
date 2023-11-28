@@ -14,9 +14,10 @@ public class PlayerManager : MonoBehaviour
     private float activeMoveSpeed;
 
     //For Dashing
-    private float dashLength = .5f, dashCooldown = 1f;
-    private float dashCounter;
-    private float dashCoolCounter;
+    private float dashLength = .5f;
+    private float dashCooldown = 1f;
+    private float dashCounter; //how long the player can dash
+    private float dashCoolCounter;  //cooldown period between dashes.
 
     //For Dash AfterImage
     private Vector2 lastImagePos;
@@ -168,10 +169,16 @@ public class PlayerManager : MonoBehaviour
             // Since we attack from our feet, we need to move this up to compensate
             // Yes, adding to the x copmonent moves it up due to rotation jank
             rawAttackObject.transform.Translate(0.5f, 0, 0);
+
+            //...but we also need to move the sprite back
+            rawAttackObject.GetComponentInChildren<SpriteRenderer>().transform.SetLocalPositionAndRotation(new Vector3(0, 0, 0), Quaternion.identity);
         }
         else if (attackDirection.y == -1)
         {
             rawAttackObject.transform.Rotate(new Vector3(0, 0, -90), Space.Self);
+
+            //...but we also need to move the sprite back
+            rawAttackObject.GetComponentInChildren<SpriteRenderer>().transform.SetLocalPositionAndRotation(new Vector3(0, 0, 0), Quaternion.identity);
         }
 
         // if (attackDirection.x > 0)
@@ -223,6 +230,7 @@ public class PlayerManager : MonoBehaviour
         if (dashCounter <= 0 && dashCoolCounter <= 0)
         {
             activeMoveSpeed = playerVars.dashSpeed;
+            //Set dashCounter to dashLength (how long they player will dash). The cooldown will be done in DashCheck
             dashCounter = dashLength;
 
             //Put in update
@@ -248,6 +256,8 @@ public class PlayerManager : MonoBehaviour
             }
             dashCounter -= Time.deltaTime;
 
+            // Set countdown to dashCounter. When it goes below 0, player will stop dashing
+            // Set dashCoolCounter to dashCooldown - cooldown time before player can dash again
             if (dashCounter <= 0)
             {
                 activeMoveSpeed = playerVars.playerSpeed;

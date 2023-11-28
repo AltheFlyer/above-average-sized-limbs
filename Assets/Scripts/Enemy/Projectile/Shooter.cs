@@ -63,7 +63,6 @@ public class Shooter : MonoBehaviour
 
             if (setting.shootParticle != null)
                 Instantiate(setting.shootParticle, shootPos, Quaternion.identity);
-            SFXManager.TryPlaySFX(setting.shootSFX, gameObject);
 
             if (setting.timePerProjectile != 0)
             {

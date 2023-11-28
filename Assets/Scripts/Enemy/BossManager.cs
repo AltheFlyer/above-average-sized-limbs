@@ -9,7 +9,6 @@ public class BossManager : Enemy
     [Header("Boss")]
     public GameObject deathEffectPrefab;
     public UnityEvent onDeadEvent;
-    public ScaleOpacityCurve spriteDeathFadeSOC;
     public LayerMask wallMask;
     [Space]
     public float startTime = 0.5f;
@@ -42,6 +41,10 @@ public class BossManager : Enemy
     public float chargeSpeed = 10;
     public float chargeStunTime = 3.5f;
 
+    [Space]
+    public ScaleOpacityCurve spriteExplodeSOC;
+    public EffectRelayer spriteExplodeEffect;
+
 
     GameObject player;
 
@@ -61,11 +64,13 @@ public class BossManager : Enemy
     protected override void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        GlobalEventHandle.instance.enemySpawn.Raise(new EnemySpawnData(gameObject));
+        if (GlobalEventHandle.instance != null) GlobalEventHandle.instance.enemySpawn.Raise(new EnemySpawnData(gameObject));
 
         base.Start();
 
         StartCoroutine(StateStartIE());
+
+        MusicManager.PlayBossMusic();
     }
 
     protected override void Update()
@@ -310,7 +315,7 @@ public class BossManager : Enemy
     {
         base.OnDead();
 
-        GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
+        if (GlobalEventHandle.instance != null) GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
 
         StopAllCoroutines();
         StartCoroutine(OnDeadIE());
@@ -325,9 +330,21 @@ public class BossManager : Enemy
             Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
         onDeadEvent.Invoke();
 
-        spriteDeathFadeSOC.enabled = true;
+        SFXManager.TryPlaySFX("argh1", player);
 
         yield return new WaitForSeconds(1f);
+
+        MusicManager.PlayBackgroundMusic();
+
+        // dead animation
+        spriteExplodeSOC.enabled = true;
+
+        yield return new WaitForSeconds(.95f);
+        spriteExplodeEffect.Activate();
+        yield return new WaitForSeconds(.05f);
+        spriteExplodeEffect.Activate();
+        yield return new WaitForSeconds(.05f);
+        spriteExplodeEffect.Activate();
 
         Destroy(gameObject);
     }

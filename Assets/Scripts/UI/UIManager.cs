@@ -6,15 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : Singleton<UIManager>
 {
+    int MAIN_MENU_BUILD_INDEX = 0;
     bool isPaused;
     [SerializeField] OfficeExplorationController officeExplorationController;
     public GameObject gameOverScreen;
+    public GameObject pauseScreen;
 
     public void OnPauseAction(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
             TogglePause(!isPaused);
+            pauseScreen.SetActive(isPaused);
         }
     }
 
@@ -44,11 +47,22 @@ public class UIManager : Singleton<UIManager>
     public void Restart()
     {
         Debug.Log("Restarted");
+        ResetGameState();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void ResetGameState()
+    {
         gameOverScreen.SetActive(false);
         TogglePause(false);
         officeExplorationController.DestroyThyself();
         DestroyThyself();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void MainMenuClicked()
+    {
+        ResetGameState();
+        SceneManager.LoadScene(MAIN_MENU_BUILD_INDEX);
     }
 
     public void OnGameOver()
