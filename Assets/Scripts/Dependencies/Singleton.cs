@@ -25,4 +25,6 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void DestroyThyself() { Destroy(gameObject); _instance = null; }
 }

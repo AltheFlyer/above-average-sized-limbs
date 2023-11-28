@@ -25,6 +25,11 @@ public class OfficeExplorationController : Singleton<OfficeExplorationController
 
     public void Start()
     {
+        InstantiateMap();
+    }
+
+    public void InstantiateMap()
+    {
         if (generator == null)
         {
             Debug.LogError("You forgot to set the OfficeExplorationController's generator!");
@@ -49,6 +54,7 @@ public class OfficeExplorationController : Singleton<OfficeExplorationController
                 }
 
                 GameObject loadedRoom = Instantiate(room.GetRoomPrefab());
+                Debug.Log(loadedRoom);
 
                 room.SetLoadedRoom(loadedRoom);
                 loadedRoom.GetComponent<RoomController>()?.Init(room);
