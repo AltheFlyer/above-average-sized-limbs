@@ -7,6 +7,7 @@ public class EffectRelayer : MonoBehaviour
 {
     public UnityEvent OnActivate;
 
+    [ContextMenu("Activate")]
     public void Activate()
     {
         OnActivate.Invoke();

@@ -1617,6 +1617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CEO
       objectReference: {fileID: 0}
+    - target: {fileID: 8710073475802148205, guid: 2aa62bfd8b3de44b1a76b8b74a02c75a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1730,10 +1734,6 @@ PrefabInstance:
     - target: {fileID: 9012103540776501397, guid: 2a53783482f9e420c8319f26c6e03c02, type: 3}
       propertyPath: m_Name
       value: Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 9012103540776501397, guid: 2a53783482f9e420c8319f26c6e03c02, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
