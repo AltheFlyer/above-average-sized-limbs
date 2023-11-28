@@ -124,8 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7813c624523644245ae91fe8b5b0b95f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 2
-  hp: 2
+  maxHP: 1
+  hp: 1
   onDamagedInvincibleTime: 0
   onDamage:
     m_PersistentCalls:
@@ -166,7 +166,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  speed: 2
+  speed: 5
   exclaimationEffectPos: {fileID: 2042286097975406320}
   exclaimationEffect: {fileID: 6630275391772572677, guid: 2de6c50d9028c4a7585e2a7fab2cf743, type: 3}
   deathEffect: {fileID: 5427402122937063527, guid: 093a7fae069fb4aa6a3c18d183a619c5, type: 3}
