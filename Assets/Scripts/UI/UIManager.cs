@@ -9,12 +9,14 @@ public class UIManager : Singleton<UIManager>
     bool isPaused;
     [SerializeField] OfficeExplorationController officeExplorationController;
     public GameObject gameOverScreen;
+    public GameObject pauseScreen;
 
     public void OnPauseAction(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
             TogglePause(!isPaused);
+            pauseScreen.SetActive(isPaused);
         }
     }
 
