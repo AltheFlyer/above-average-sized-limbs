@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6719704698600017027}
   - component: {fileID: 3581286227722465660}
   - component: {fileID: -3334872921123944794}
+  - component: {fileID: -2748545266527298240}
   m_Layer: 0
   m_Name: FloatingText
   m_TagString: Untagged
@@ -86,7 +87,7 @@ TextMesh:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3522553844424867168}
   m_Text: Some Text
-  m_OffsetZ: 0
+  m_OffsetZ: 5
   m_CharacterSize: 1
   m_LineSpacing: 1
   m_Anchor: 1
@@ -133,3 +134,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 10, z: 0}
+--- !u!210 &-2748545266527298240
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3522553844424867168}
+  m_Enabled: 1
+  m_SortingLayerID: 1841217055
+  m_SortingLayer: 1
+  m_SortingOrder: 5
+  m_SortAtRoot: 0
