@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using YUtil;
 
-public class EnemyHRRecruiter : Damageable
+public class EnemyHRRecruiter : Enemy
 {
     [Header("Enemy Intern")]
     public Transform exclaimationEffectPos;
@@ -98,6 +98,7 @@ public class EnemyHRRecruiter : Damageable
             summonParticle2.Play();
         summonStateParticle.Play();
 
+        SFXManager.TryPlaySFX("summon", gameObject);
         animator.SetTrigger("summon");
 
         // wait a bit      
@@ -157,6 +158,8 @@ public class EnemyHRRecruiter : Damageable
 
     public override void OnDead()
     {
+        base.OnDead();
+
         attackCollider.enabled = false;
         GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
 

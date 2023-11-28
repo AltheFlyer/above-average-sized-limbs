@@ -25,36 +25,56 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: punch1
     clip: {fileID: 8300000, guid: e7ef96d9f9d5349a687e12b13689c455, type: 3}
-    volume: 1
+    volume: 2
     audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
     source: {fileID: 0}
   - name: punch2
     clip: {fileID: 8300000, guid: 3d139daea46d64a07a83eb67cc122bd4, type: 3}
-    volume: 1
+    volume: 2
     audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
     source: {fileID: 0}
   - name: punch3
     clip: {fileID: 8300000, guid: 9eeedf313d5ab418ba7f7141e99be3b3, type: 3}
-    volume: 1
+    volume: 2
     audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
     source: {fileID: 0}
   - name: impact1
     clip: {fileID: 8300000, guid: 4db40564fe58b4f519ed6b67e6a11cc9, type: 3}
-    volume: 0.56
+    volume: 1
     audioMixerGroup: {fileID: -1926846628764479051, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
     source: {fileID: 0}
   - name: splatter1
     clip: {fileID: 8300000, guid: 8099d43585c124e32a187fb2e6c53318, type: 3}
-    volume: 0.2
+    volume: 0.1
     audioMixerGroup: {fileID: -1926846628764479051, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
     source: {fileID: 0}
   - name: summon1
     clip: {fileID: 8300000, guid: b9183ba2dc4a0452f83013de5cfa0a9e, type: 3}
-    volume: 1
+    volume: 0.6
     audioMixerGroup: {fileID: -1926846628764479051, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
     source: {fileID: 0}
   - name: unlock1
     clip: {fileID: 8300000, guid: bc6a7f023698745278abf49468dcc808, type: 3}
     volume: 1
     audioMixerGroup: {fileID: 5879685974783371366, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: bomb1
+    clip: {fileID: 8300000, guid: 469ec7a38143e4ef2bcb4f62be6dd9c8, type: 3}
+    volume: 0.35
+    audioMixerGroup: {fileID: 5879685974783371366, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: fired1
+    clip: {fileID: 8300000, guid: 6624a9be34eea491e9bf1f34ec2503eb, type: 3}
+    volume: 1
+    audioMixerGroup: {fileID: -1926846628764479051, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: yeboi1
+    clip: {fileID: 8300000, guid: c06f3fe16153344a3a86ab54c9df5567, type: 3}
+    volume: 1
+    audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: wow1
+    clip: {fileID: 8300000, guid: 0893dca19df46429b90940d766f7fd1a, type: 3}
+    volume: 1
+    audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
     source: {fileID: 0}

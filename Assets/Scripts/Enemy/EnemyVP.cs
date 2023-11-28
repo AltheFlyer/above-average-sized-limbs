@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using YUtil;
 
-public class EnemyVP : Damageable
+public class EnemyVP : Enemy
 {
     [Header("Enemy Intern")]
     public Transform exclaimationEffectPos;
@@ -169,6 +169,8 @@ public class EnemyVP : Damageable
 
     public override void OnDead()
     {
+        base.OnDead();
+
         GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
 
         StopAllCoroutines();

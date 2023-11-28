@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 public class PlayerAttack : MonoBehaviour
 {
     private Collider2D hitBox;
@@ -15,8 +16,7 @@ public class PlayerAttack : MonoBehaviour
     private float comboTimeLimit;
     public IntVariable comboCount;
     public FloatVariable comboTimer;
-
-    public GameObject comboTextPrefab;
+    private ComboUIEffect parentScript;
 
     private float attackDamage = 1;
 
@@ -48,6 +48,8 @@ public class PlayerAttack : MonoBehaviour
 
         transform.localScale *= data.attackSizeMultiplier;
         ResetComboTimer();
+
+        parentScript = GameObject.Find("Hitboxes").GetComponent<ComboUIEffect>();
     }
 
     void Update()
@@ -66,7 +68,7 @@ public class PlayerAttack : MonoBehaviour
             //For whoever's gonna modify this, the comboCount, showComboEffect and ResetTimer
             //doesn't work when put below the GlobalEventHandle.
             comboCount.ApplyChange(1);
-            ShowComboEffect();
+            parentScript.ShowComboEffect();
             ResetComboTimer();
 
 
@@ -78,13 +80,6 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    private void ShowComboEffect()
-    {
-        GameObject comboText = Instantiate(comboTextPrefab, this.transform.position, Quaternion.identity, transform);
-        comboText.GetComponent<MeshRenderer>().material.color = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
-        comboText.GetComponent<TextMesh>().text = "Combo: " + comboCount.Value.ToString();
-        Debug.Log(comboCount.Value.ToString());
-    }
     void ResetComboTimer()
     {
         comboTimer.SetValue(comboTimeLimit);
