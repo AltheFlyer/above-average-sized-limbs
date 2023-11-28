@@ -168,10 +168,16 @@ public class PlayerManager : MonoBehaviour
             // Since we attack from our feet, we need to move this up to compensate
             // Yes, adding to the x copmonent moves it up due to rotation jank
             rawAttackObject.transform.Translate(0.5f, 0, 0);
+
+            //...but we also need to move the sprite back
+            rawAttackObject.GetComponentInChildren<SpriteRenderer>().transform.SetLocalPositionAndRotation(new Vector3(0, 0, 0), Quaternion.identity);
         }
         else if (attackDirection.y == -1)
         {
             rawAttackObject.transform.Rotate(new Vector3(0, 0, -90), Space.Self);
+
+            //...but we also need to move the sprite back
+            rawAttackObject.GetComponentInChildren<SpriteRenderer>().transform.SetLocalPositionAndRotation(new Vector3(0, 0, 0), Quaternion.identity);
         }
 
         // if (attackDirection.x > 0)
