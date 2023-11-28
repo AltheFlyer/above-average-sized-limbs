@@ -239,8 +239,6 @@ public class PlayerManager : MonoBehaviour
 
     public void DashCheck()
     {
-
-
         if (dashCounter > 0)
         {
             if (Vector2.Distance(transform.position, lastImagePos) > distanceBetweenImages)
