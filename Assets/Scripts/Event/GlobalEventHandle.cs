@@ -28,6 +28,8 @@ public class GlobalEventHandle : MonoBehaviour
     [Header("Derived Events")]
     public TakeDamageEvent playerTookDamage;
 
+    public PlayerDeathEvent playerDeath;
+
     private static GlobalEventHandle _instance;
 
     public static GlobalEventHandle instance
@@ -50,6 +52,11 @@ public class GlobalEventHandle : MonoBehaviour
         if (data.target.GetComponent<PlayerManager>() != null)
         {
             playerTookDamage.Raise(data);
+            if (data.postDamageHealth <= 0)
+            {
+                Debug.Log("player ded rip");
+                playerDeath.Raise(new PlayerDeathData(data.target.gameObject));
+            }
         }
     }
 

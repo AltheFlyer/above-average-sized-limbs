@@ -93,6 +93,11 @@ public class EnemyVP : Enemy
 
         while (true)
         {
+            if (player == null)
+            {
+                yield return null;
+                continue;
+            }
             // aim at player
             dir = (player.transform.position - transform.position).normalized;
             animator.SetFloat("xDir", dir.x);
