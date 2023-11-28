@@ -26,8 +26,10 @@ public class ComboUIEffect : MonoBehaviour
     public void ShowComboEffect()
     {
         currentComboText.SetActive(true);
-        float colorRange = Random.Range(0.0f, 1.0f);
-        currentComboText.GetComponent<MeshRenderer>().material.color = new Color(1, 0, 1, 1);
+        // float saturation = Random.Range(0.7f, 1.0f);
+        // float brightness = Random.Range(0.7f, 1.0f);
+        Color randomColor = Color.HSVToRGB(Random.value, 1, 1);
+        currentComboText.GetComponent<MeshRenderer>().material.color = randomColor;
         currentComboText.GetComponent<TextMesh>().text = "Combo: " + comboCount.Value.ToString();
     }
 
