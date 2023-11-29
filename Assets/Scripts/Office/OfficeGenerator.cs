@@ -175,18 +175,21 @@ public class OfficeGenerator : ScriptableObject
         // But just in case I screwed up, uhhh throw an exception because something really bad happened.
         if (furthestDeadEnd.x == 5 && furthestDeadEnd.y == 5)
         {
-            if (!TryPlaceRoomBeside(map, new Vector2Int(5, 5), bossRoom))
+            Vector2Int placement = TryPlaceRoomBeside(map, new Vector2Int(5, 5), bossRoom);
+            if (placement == new Vector2Int(-1, -1))
             {
                 throw new System.Exception("Couldn't place boss room! Panicking!");
             }
+            map.bossRoomLocation = placement;
         }
         else
         {
             map.ForcePlaceRoom(bossRoom, furthestDeadEnd);
+            map.bossRoomLocation = furthestDeadEnd;
         }
         if (secondFurthestDeadEnd.x == 5 && secondFurthestDeadEnd.y == 5)
         {
-            if (!TryPlaceRoomBeside(map, new Vector2Int(5, 5), itemRoom))
+            if (TryPlaceRoomBeside(map, new Vector2Int(5, 5), itemRoom) == new Vector2Int(-1, -1))
             {
                 throw new System.Exception("Couldn't place item room! Panicking!");
             }
@@ -220,7 +223,7 @@ public class OfficeGenerator : ScriptableObject
     /// if the room at pos is the only neighbour.
     /// Returns a boolean indicating if the attempt was successful or not.
     /// </summary>
-    protected virtual bool TryPlaceRoomBeside(OfficeMap map, Vector2Int pos, RoomData roomToPlace)
+    protected virtual Vector2Int TryPlaceRoomBeside(OfficeMap map, Vector2Int pos, RoomData roomToPlace)
     {
         foreach (Vector2Int dir in cardinalDirections)
         {
@@ -228,9 +231,9 @@ public class OfficeGenerator : ScriptableObject
             if (!map.HasRoom(newPos) && NumNeighbours(map, newPos) == 1)
             {
                 map.PlaceRoom(roomToPlace, newPos);
-                return true;
+                return newPos;
             }
         }
-        return false;
+        return new Vector2Int(-1, -1);
     }
 }

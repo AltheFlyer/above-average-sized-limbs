@@ -10,6 +10,8 @@ public class Door : MonoBehaviour
 
     public UnityEvent<Vector2Int, Vector2Int> onEnterCallback;
 
+    public SpriteRenderer spriteRenderer;
+
 
     // Internal state
 

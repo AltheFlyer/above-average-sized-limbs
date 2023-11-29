@@ -97,7 +97,7 @@ MonoBehaviour:
   onEnterCallback:
     m_PersistentCalls:
       m_Calls: []
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 7022123829056431718}
 --- !u!1 &920123425940040159
 GameObject:
   m_ObjectHideFlags: 0

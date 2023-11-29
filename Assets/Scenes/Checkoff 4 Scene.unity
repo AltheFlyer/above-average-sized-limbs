@@ -1516,9 +1516,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796ce30bda0ce404f8394e9a6e8b0374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  officeExplorationController: {fileID: 1373410371}
+  officeExplorationController: {fileID: 0}
   gameOverScreen: {fileID: 1775072402}
-  pauseScreen: {fileID: 502832348}
+  pauseScreen: {fileID: 0}
 --- !u!4 &988399717
 Transform:
   m_ObjectHideFlags: 0
@@ -1613,6 +1613,10 @@ PrefabInstance:
     - target: {fileID: 5411803521995438535, guid: aae935a8e5c7e984eb94f2b378370ccb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361247071734132913, guid: aae935a8e5c7e984eb94f2b378370ccb, type: 3}
+      propertyPath: dropRateMultiplier
+      value: 111111
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2044,74 +2048,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1373410370
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1373410372}
-  - component: {fileID: 1373410371}
-  m_Layer: 0
-  m_Name: Map Generator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1373410371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373410370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0f2a8c87b189cf42b75b78527b268ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  generator: {fileID: 11400000, guid: b183eca3e0a82fe448988e7648e858e0, type: 2}
-  doors:
-  - {fileID: 1475176736}
-  - {fileID: 902267943}
-  - {fileID: 1647672112}
-  - {fileID: 2019459668}
-  onRoomChange:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1373410371}
-        m_TargetAssemblyTypeName: OfficeExplorationController, Assembly-CSharp
-        m_MethodName: ChangeRoom
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  cameraParent: {fileID: 1411616960}
-  wallColliders: {fileID: 785036999}
-  isDebugMode: 0
---- !u!4 &1373410372
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373410370}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1411616960
 GameObject:
   m_ObjectHideFlags: 0
@@ -2852,6 +2788,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26d3ca81934f46c48a1fa92472278ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &2120927469
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5372143763034790417, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372143763034790417, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372143763034790417, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372143763034790417, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372143763034790417, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372143763034790417, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372143763034790417, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372143763034790417, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372143763034790417, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372143763034790417, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5628290191347757255, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: cameraParent
+      value: 
+      objectReference: {fileID: 1411616960}
+    - target: {fileID: 5628290191347757255, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: wallColliders
+      value: 
+      objectReference: {fileID: 785036999}
+    - target: {fileID: 5628290191347757255, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: bossRoomIndicator
+      value: 
+      objectReference: {fileID: 5032280200541228043, guid: e886403ee39d7c348b3bf2d38f880d63, type: 3}
+    - target: {fileID: 5628290191347757255, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: doors.Array.data[0]
+      value: 
+      objectReference: {fileID: 1475176736}
+    - target: {fileID: 5628290191347757255, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: doors.Array.data[1]
+      value: 
+      objectReference: {fileID: 1647672112}
+    - target: {fileID: 5628290191347757255, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: doors.Array.data[2]
+      value: 
+      objectReference: {fileID: 2019459668}
+    - target: {fileID: 5628290191347757255, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: doors.Array.data[3]
+      value: 
+      objectReference: {fileID: 902267943}
+    - target: {fileID: 6900068061488722884, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
+      propertyPath: m_Name
+      value: Map Generator
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a6153a017b89b264a8a4a5247ced3cd5, type: 3}
 --- !u!1001 &3393136131781675066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3411,7 +3432,7 @@ SceneRoots:
   - {fileID: 341061242}
   - {fileID: 1542279524}
   - {fileID: 1481188277}
-  - {fileID: 1373410372}
+  - {fileID: 2120927469}
   - {fileID: 337303641}
   - {fileID: 5725210818284575338}
   - {fileID: 5218937932019608243}

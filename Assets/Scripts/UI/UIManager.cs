@@ -55,7 +55,6 @@ public class UIManager : Singleton<UIManager>
     {
         gameOverScreen.SetActive(false);
         TogglePause(false);
-        officeExplorationController.DestroyThyself();
         DestroyThyself();
     }
 
