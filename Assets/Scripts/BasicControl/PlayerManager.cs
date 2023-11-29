@@ -14,10 +14,10 @@ public class PlayerManager : MonoBehaviour
     private float activeMoveSpeed;
 
     //For Dashing
-    private float dashLength = .5f;
-    private float dashCooldown = 1f;
-    private float dashCounter; //how long the player can dash
-    private float dashCoolCounter;  //cooldown period between dashes.
+    private float dashDuration; //how long the player can dash
+    private float dashCooldown;  //cooldown period between dashes.
+    private float dashDurationCounter;  // Countdown for dashDuration
+    private float dashCoolCounter;  // Countdown for dashCooldown
 
     //For Dash AfterImage
     private Vector2 lastImagePos;
@@ -44,11 +44,16 @@ public class PlayerManager : MonoBehaviour
         playerBody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
 
+        //movement
         activeMoveSpeed = playerVars.playerSpeed;
+        dashDuration = playerVars.dashDuration;
+        dashCooldown = playerVars.dashCooldown;
 
+        //For pickup items
         pickUp = gameObject.GetComponent<PickUp>();
         pickUp.Direction = new Vector2(0f, 0f);
 
+        //Helper val to check attack
         currentAttackInputVal = new float[2];
         prevAttackInputVal = new float[2];
 
@@ -241,11 +246,11 @@ public class PlayerManager : MonoBehaviour
 
     public void Dash()
     {
-        if (dashCounter <= 0 && dashCoolCounter <= 0)
+        if (dashDurationCounter <= 0 && dashCoolCounter <= 0)
         {
             activeMoveSpeed = playerVars.dashSpeed;
-            //Set dashCounter to dashLength (how long they player will dash). The cooldown will be done in DashCheck
-            dashCounter = dashLength;
+            //Set dashDurationCounter to dashDuration (how long they player will dash). The cooldown will be done in DashCheck
+            dashDurationCounter = dashDuration;
 
             //Put in update
             if (Vector2.Distance(transform.position, lastImagePos) > distanceBetweenImages)
@@ -261,18 +266,18 @@ public class PlayerManager : MonoBehaviour
 
     public void DashCheck()
     {
-        if (dashCounter > 0)
+        if (dashDurationCounter > 0)
         {
             if (Vector2.Distance(transform.position, lastImagePos) > distanceBetweenImages)
             {
                 PlayerAfterImagePool.Instance.GetFromPool();
                 lastImagePos = transform.position;
             }
-            dashCounter -= Time.deltaTime;
+            dashDurationCounter -= Time.deltaTime;
 
-            // Set countdown to dashCounter. When it goes below 0, player will stop dashing
+            // Set countdown to dashDurationCounter. When it goes below 0, player will stop dashing
             // Set dashCoolCounter to dashCooldown - cooldown time before player can dash again
-            if (dashCounter <= 0)
+            if (dashDurationCounter <= 0)
             {
                 activeMoveSpeed = playerVars.playerSpeed;
                 dashCoolCounter = dashCooldown;
