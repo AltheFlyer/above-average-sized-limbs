@@ -162,6 +162,12 @@ public class PlayerManager : MonoBehaviour
         // (At this point, the attack hasn't updated its collider, so we calculate its new size)
         rawAttackObject.transform.position += new Vector3(attackDirection.x, attackDirection.y, 0) * (rawAttackObject.GetComponent<Collider2D>().bounds.extents.x * data.attackSizeMultiplier);
 
+        // flip sprite if punch left
+        if (attackDirection.x == -1)
+        {
+            rawAttackObject.GetComponentInChildren<SpriteRenderer>().flipX = true;
+        }
+
         // rotate if vertical
         if (attackDirection.y == 1)
         {
@@ -171,14 +177,22 @@ public class PlayerManager : MonoBehaviour
             rawAttackObject.transform.Translate(0.5f, 0, 0);
 
             //...but we also need to move the sprite back
-            rawAttackObject.GetComponentInChildren<SpriteRenderer>().transform.SetLocalPositionAndRotation(new Vector3(0, 0, 0), Quaternion.identity);
+            // rawAttackObject.GetComponentInChildren<SpriteRenderer>().transform.SetLocalPositionAndRotation(new Vector3(0, 0, 0), Quaternion.identity);
         }
         else if (attackDirection.y == -1)
         {
             rawAttackObject.transform.Rotate(new Vector3(0, 0, -90), Space.Self);
 
             //...but we also need to move the sprite back
-            rawAttackObject.GetComponentInChildren<SpriteRenderer>().transform.SetLocalPositionAndRotation(new Vector3(0, 0, 0), Quaternion.identity);
+            // rawAttackObject.GetComponentInChildren<SpriteRenderer>().transform.SetLocalPositionAndRotation(new Vector3(0, 0, 0), Quaternion.identity);
+        }
+        else
+        {
+            rawAttackObject.GetComponentInChildren<SpriteRenderer>().gameObject.transform.Translate(0, 1 / data.attackSizeMultiplier, 0);
+            if (attackDirection.x == -1)
+            {
+                rawAttackObject.GetComponentInChildren<SpriteRenderer>().gameObject.transform.Translate(-1, 0, 0);
+            }
         }
 
         // if (attackDirection.x > 0)
