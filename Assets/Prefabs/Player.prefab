@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 1306489772361066857}
   - component: {fileID: 6682481805096974632}
   - component: {fileID: 5168885644117367322}
-  - component: {fileID: 9142071050362847378}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -451,13 +450,13 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 8685495026916294811}
         m_TargetAssemblyTypeName: SpriteFlicker, Assembly-CSharp
-        m_MethodName: Flicker
-        m_Mode: 1
+        m_MethodName: FlickerForDuration
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -579,21 +578,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxName: yeboi1,wow1
---- !u!114 &9142071050362847378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3084568309783050615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9ea8cb03c88d429794f1e7e2836fc5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flickerMaterial: {fileID: 2100000, guid: 9a620bce47b3a4c60b229d0c891168e0, type: 2}
-  flickerTime: 0.2
-  spriteRenderer: {fileID: 3255108870062062204}
 --- !u!1 &3110424012642478073
 GameObject:
   m_ObjectHideFlags: 0

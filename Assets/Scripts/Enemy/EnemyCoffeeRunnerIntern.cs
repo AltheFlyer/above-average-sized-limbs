@@ -36,7 +36,7 @@ public class EnemyCoffeeRunnerIntern : Enemy
     protected override void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        GlobalEventHandle.instance.enemySpawn.Raise(new EnemySpawnData(gameObject));
+        if (GlobalEventHandle.instance != null) GlobalEventHandle.instance.enemySpawn.Raise(new EnemySpawnData(gameObject));
 
         base.Start();
 
@@ -139,7 +139,7 @@ public class EnemyCoffeeRunnerIntern : Enemy
     {
         base.OnDead();
 
-        GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
+        if (GlobalEventHandle.instance != null) GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
 
         StopAllCoroutines();
         StartCoroutine(OnDeadIE());
