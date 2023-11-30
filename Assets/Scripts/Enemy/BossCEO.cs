@@ -102,21 +102,27 @@ public class BossCEO : Enemy
         Teleport = 3
     }
 
-    public State state = State.None;
+    public List<State> stateHistory = new List<State>();
 
     IEnumerator RandomNextStateIE()
     {
         rb.velocity = Vector2.zero;
 
+        // if storing more than 2 history, only kept 2
+        while (stateHistory.Count > 2)
+        {
+            stateHistory.RemoveAt(0);
+        }
+
         // random til get different state than old state
-        int rand = Random.Range(0, 4); ;
-        while (rand == (int)state)
+        int rand = Random.Range(0, 4);
+        while (stateHistory.Contains((State)rand))
         {
             rand = Random.Range(0, 4);
         }
-        state = (State)rand;
+        stateHistory.Add((State)rand);
 
-        switch (state)
+        switch (stateHistory[stateHistory.Count - 1])
         {
             case State.HandGrenade:
                 StartCoroutine(StateHandGrenadeIE());
@@ -252,9 +258,12 @@ public class BossCEO : Enemy
         Vector2 playerPos = player.transform.position;
 
         // teleport
-        int randDir = Random.Range(0, 2) * 2 - 1;
-        Vector2 teleportPos = playerPos + new Vector2(teleportOffsetDist * randDir, 0);
+        // int randDir = Random.Range(0, 2) * 2 - 1;
+        int dir = playerPos.x - Camera.main.transform.position.x > 0 ? -1 : 1;
+        Vector2 teleportPos = playerPos + new Vector2(teleportOffsetDist * dir, 0);
         transform.position = teleportPos;
+
+
 
         // wait attack
         yield return new WaitForSeconds(teleportAttackDelay);

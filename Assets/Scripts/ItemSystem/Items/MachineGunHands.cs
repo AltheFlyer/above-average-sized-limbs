@@ -17,7 +17,7 @@ public class MachineGunHands : BaseItem
 
     public void StatUp(PlayerManager player)
     {
-        playerVars.attackCooldown *= (1 + extraAttackRatioPerStack * (numStacks - 1)) / (1 + extraAttackRatioPerStack * numStacks);
+        playerVars.UpdateInverseAttackCooldown(extraAttackRatioPerStack);
     }
 
     public override void OnPickUp(PlayerManager player)

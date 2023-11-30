@@ -25,6 +25,8 @@ public class SpriteEffectSpawner : MonoBehaviour
         SpriteRenderer sr = i.AddComponent<SpriteRenderer>();
         sr.sprite = spriteRandomSet[Random.Range(0, spriteRandomSet.Length)];
         sr.color = color;
+        sr.sortingLayerName = "Background";
+        sr.sortingOrder = 10;
 
         // add transform info
         i.transform.position = transform.position;

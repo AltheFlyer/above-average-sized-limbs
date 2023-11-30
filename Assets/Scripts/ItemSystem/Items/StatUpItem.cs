@@ -8,22 +8,23 @@ public class StatUpItem : BaseItem
 
     [Header("Stat changes:")]
     public float deltaPlayerSpeed;
-    public int deltaMaxSpeed;
+
+    public float deltaAttacksPerSecond;
+
+    public float deltaAttackDamage;
+
     public int deltaDashSpeed;
     public int deltaHealth;
     public int deltaMaxHealth;
-
-    public float deltaAttackCooldown;
 
     private PlayerManager player;
 
     public void StatUp(PlayerManager player)
     {
-        playerVars.playerSpeed += deltaPlayerSpeed;
-        playerVars.maxSpeed += deltaMaxSpeed;
+        playerVars.UpdateRawSpeed(deltaPlayerSpeed);
+        playerVars.UpdateInverseAttackCooldown(deltaAttacksPerSecond);
         playerVars.dashSpeed += deltaDashSpeed;
-
-        playerVars.attackCooldown += deltaAttackCooldown;
+        playerVars.attackDamage += deltaAttackDamage;
 
         // Not great, we have to tell the damageable component that the health was changed too...
         playerVars.maxHealth += deltaMaxHealth;

@@ -17,6 +17,7 @@ public class SharedDataInitializer : MonoBehaviour
     {
         // Initalize player stats to starting values
         baseStats.CopyInto(activeStats);
+        activeStats.InitInternalStats();
 
         // Reset item pools
         foreach (DepletablePool<ItemData> pool in itemPools)
