@@ -20,7 +20,8 @@ public class EnemyVP : Enemy
     public float punchTime = 0.3f;
     public float punchDelay = 1f;
     public float postPunchDelay = 2f;
-    public GameObject attack;
+    public GameObject attackTransform;
+    public Transform attackColliderTransform;
     private Animator attackAnim;
     private ScaleOpacityCurve attackSOC;
     private SpriteRenderer attackSR;
@@ -47,14 +48,15 @@ public class EnemyVP : Enemy
     protected override void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        GlobalEventHandle.instance.enemySpawn.Raise(new EnemySpawnData(gameObject));
+        if (GlobalEventHandle.instance != null) GlobalEventHandle.instance.enemySpawn.Raise(new EnemySpawnData(gameObject));
 
         base.Start();
 
-        attackAnim = attack.GetComponent<Animator>();
-        attackSOC = attack.GetComponent<ScaleOpacityCurve>();
-        attackSR = attack.GetComponent<SpriteRenderer>();
-        attack.SetActive(false);
+        attackAnim = attackTransform.GetComponent<Animator>();
+        attackSOC = attackTransform.GetComponent<ScaleOpacityCurve>();
+        attackSR = attackTransform.GetComponent<SpriteRenderer>();
+        attackTransform.SetActive(false);
+        attackColliderTransform.gameObject.SetActive(false);
         attackCollider.enabled = false;
 
         StartCoroutine(StateStartIE());
@@ -124,19 +126,22 @@ public class EnemyVP : Enemy
         animator.SetFloat("xDir", dir.x);
 
         // show pre attack
-        attack.SetActive(true);
+        attackTransform.SetActive(true);
+        attackColliderTransform.gameObject.SetActive(true);
         attackSR.color = new Color(attackSR.color.r, attackSR.color.g, attackSR.color.b, 1);
         attackSOC.enabled = false;
         attackCollider.enabled = false;
         attackAnim.SetTrigger("Pre");
-        attack.transform.eulerAngles = new Vector3(0, 0, AngPosUtil.GetAngle(Vector2.zero, dir));
+        attackTransform.transform.eulerAngles = new Vector3(0, 0, AngPosUtil.GetAngle(Vector2.zero, dir));
+        attackColliderTransform.eulerAngles = new Vector3(0, 0, AngPosUtil.GetAngle(Vector2.zero, dir));
         attackSR.flipY = dir.x < 0;
 
         // delay before punching
         yield return new WaitForSeconds(punchDelay);
 
         // show attack
-        attack.SetActive(true);
+        attackTransform.SetActive(true);
+        attackColliderTransform.gameObject.SetActive(true);
         attackSR.color = new Color(attackSR.color.r, attackSR.color.g, attackSR.color.b, 1);
         attackSOC.enabled = false;
         attackCollider.enabled = true;
@@ -158,7 +163,8 @@ public class EnemyVP : Enemy
         rb.velocity = Vector2.zero;
 
         // hide attack
-        attack.SetActive(true);
+        attackTransform.SetActive(true);
+        attackColliderTransform.gameObject.SetActive(true);
         attackSR.color = new Color(attackSR.color.r, attackSR.color.g, attackSR.color.b, 1);
         attackSOC.enabled = true;
         attackCollider.enabled = false;
@@ -166,7 +172,8 @@ public class EnemyVP : Enemy
         yield return new WaitForSeconds(postPunchDelay);
 
         // disable attack
-        attack.SetActive(false);
+        attackTransform.SetActive(false);
+        attackColliderTransform.gameObject.SetActive(false);
         attackSOC.enabled = false;
 
         StartCoroutine(StateFollowIE());
@@ -176,7 +183,7 @@ public class EnemyVP : Enemy
     {
         base.OnDead();
 
-        GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
+        if (GlobalEventHandle.instance != null) GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
 
         StopAllCoroutines();
         StartCoroutine(OnDeadIE());

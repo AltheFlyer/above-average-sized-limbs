@@ -47,15 +47,20 @@ public class UIManager : Singleton<UIManager>
     public void Restart()
     {
         Debug.Log("Restarted");
+        ResetGameState();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void ResetGameState()
+    {
         gameOverScreen.SetActive(false);
         TogglePause(false);
-        officeExplorationController.DestroyThyself();
         DestroyThyself();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void MainMenuClicked()
     {
+        ResetGameState();
         SceneManager.LoadScene(MAIN_MENU_BUILD_INDEX);
     }
 

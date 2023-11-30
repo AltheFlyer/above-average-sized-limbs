@@ -15,5 +15,9 @@ MonoBehaviour:
   playerSpeed: 5
   maxSpeed: 8
   dashSpeed: 10
+  dashDuration: 0.5
+  dashCooldown: 1
   maxHealth: 6
-  comboTimeLimit: 10
+  attackDamage: 0
+  attackCooldown: 0
+  comboTimeLimit: 1
