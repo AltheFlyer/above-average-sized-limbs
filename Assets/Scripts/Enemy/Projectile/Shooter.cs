@@ -41,7 +41,7 @@ public class Shooter : MonoBehaviour
 
         // spawn position and angle will change for multiSpanDist Setting
         Vector2 shootPos = Vector2.zero;
-        float shootAngle = setting.angle;
+        float shootAngle = setting.angle + transform.eulerAngles.z;
         if (setting.projPerShot > 1)
         {
             shootPos.x -= (setting.multiSpanDist / 2);

@@ -105,21 +105,28 @@ public class BossManager : Enemy
         Overtime = 2,
         Charge = 3
     }
-    public State state = State.None;
+
+    public List<State> stateHistory = new List<State>();
+
     IEnumerator RandomNextStateIE()
     {
         rb.velocity = Vector2.zero;
 
+        // if storing more than 2 history, only kept 2
+        while (stateHistory.Count > 2)
+        {
+            stateHistory.RemoveAt(0);
+        }
+
         // random til get different state than old state
-        int rand = Random.Range(0, 4); ;
-        while (rand == (int)state)
+        int rand = Random.Range(0, 4);
+        while (stateHistory.Contains((State)rand))
         {
             rand = Random.Range(0, 4);
         }
-        state = (State)rand;
+        stateHistory.Add((State)rand);
 
-        // do state
-        switch (state)
+        switch (stateHistory[stateHistory.Count - 1])
         {
             case State.Follow:
                 StartCoroutine(StateFollowIE());
@@ -239,7 +246,13 @@ public class BossManager : Enemy
 
         // Attack
         overtimeAttack.SetActive(true);
-        yield return new WaitForSeconds(overtimeAttackDuration);
+        float _timer = overtimeAttackDuration;
+        while (_timer > 0)
+        {
+            overtimeAttack.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0, 360));
+            yield return null;
+            _timer -= Time.deltaTime;
+        }
 
         // Stunned
         overtimeAttack.SetActive(false);

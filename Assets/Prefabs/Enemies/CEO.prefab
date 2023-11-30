@@ -476,26 +476,26 @@ MonoBehaviour:
   spriteDeathFadeSOC: {fileID: 2528910776700335522}
   attackCollider: {fileID: 6809103071546588307}
   handGrenadePrefab: {fileID: 3387040023319997604, guid: 2fd4a98eb0c63435b9bff8503bc2a63c, type: 3}
-  handGrenadeCount: 6
-  handGrenadeDelay: 0.5
+  handGrenadeCount: 10
+  handGrenadeDelay: 0.33
   handGrenadePreTime: 1.2
-  handGrenadePostTime: 3
+  handGrenadePostTime: 1
   handGrenadeSpawnCornerSpawnFromCamera: {x: 8.3, y: 4.5}
   vpPrefab: {fileID: 8686049544494536927, guid: be4b6c23883af4830b4c1641e4f1a588, type: 3}
   vpCornerSpawnFromCamera: {x: 5, y: 3}
-  vpPreTime: 4
-  vpPostTime: 23
+  vpPreTime: 3
+  vpPostTime: 18
   duplicatePrefab: {fileID: 6228268207741050061, guid: 0ae75f8ca7c6348178acaecee405a5be, type: 3}
   duplicateAim: {fileID: 6784056222955468507, guid: 1c7c73f2d19a94af19262329082e5411, type: 3}
   duplicatePreTime: 2.1
-  duplicatePostTime: 8
+  duplicatePostTime: 5
   duplicateSpawnVelocityCorner: {x: 4, y: 3}
   teleportAttackPrefab: {fileID: 4975929321771226642, guid: 29eb99d2380fb4ca681cbfa1ecc0124d, type: 3}
   teleportPreTime: 0.5
-  teleportAttackDelay: 0.7
+  teleportAttackDelay: 0.55
   teleportPosTime: 2
   teleportOffsetDist: 2
-  state: -1
+  stateHistory: 
 --- !u!95 &1821967295472951868
 Animator:
   serializedVersion: 5
