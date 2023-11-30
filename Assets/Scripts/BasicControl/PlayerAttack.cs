@@ -19,6 +19,8 @@ public class PlayerAttack : MonoBehaviour
     private ComboUIEffect parentScript;
 
     private float attackDamage = 1;
+    private float currentAttackDamage;
+    private bool damageIncreaseByCombo = false;
 
     // List of things that were hit (used to prevent double-hits)
     private List<Collider2D> hitList;
@@ -50,6 +52,7 @@ public class PlayerAttack : MonoBehaviour
         ResetComboTimer();
 
         parentScript = GameObject.Find("Hitboxes").GetComponent<ComboUIEffect>();
+        currentAttackDamage = attackDamage;
     }
 
     void Update()
@@ -58,6 +61,22 @@ public class PlayerAttack : MonoBehaviour
         if (lifespan <= 0)
         {
             Destroy(gameObject);
+        }
+        ComboDamageCheck();
+
+    }
+
+    void ComboDamageCheck()
+    {
+        if (comboCount.Value >= 10 && !damageIncreaseByCombo)
+        {
+            currentAttackDamage += 1;
+            damageIncreaseByCombo = true;
+        }
+        else if (comboCount.Value < 10)
+        {
+            currentAttackDamage = attackDamage;
+            damageIncreaseByCombo = false;
         }
     }
 
@@ -70,7 +89,6 @@ public class PlayerAttack : MonoBehaviour
             comboCount.ApplyChange(1);
             parentScript.ShowComboEffect();
             ResetComboTimer();
-
 
             GlobalEventHandle.instance?.onHit.Raise(new HitData());
 

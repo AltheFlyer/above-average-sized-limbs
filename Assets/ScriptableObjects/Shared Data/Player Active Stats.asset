@@ -18,6 +18,6 @@ MonoBehaviour:
   dashDuration: 0.5
   dashCooldown: 1
   maxHealth: 6
-  attackDamage: 0
-  attackCooldown: 0
+  attackDamage: 1
+  attackCooldown: 1
   comboTimeLimit: 1
