@@ -276,58 +276,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3836024445763889298, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
-      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3836024445763889298, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
-      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3836024445763889298, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
-      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3836024445763889298, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
-      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3836024445763889298, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
-      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3836024445763889298, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
-      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3836024445763889298, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
-      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3836024445763889298, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
-      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Flicker
-      objectReference: {fileID: 0}
-    - target: {fileID: 3836024445763889298, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
-      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Activate
-      objectReference: {fileID: 0}
-    - target: {fileID: 3836024445763889298, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
-      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SpriteFlicker, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3836024445763889298, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
-      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: EffectRelayer, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3836024445763889298, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
-      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3836024445763889298, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
-      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7043139730419052482, guid: dda2ffa1995e0614cb0b8d63e32d3ae0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.38

@@ -30,6 +30,32 @@ public class SpriteFlicker : MonoBehaviour
         spriteRenderer.material = originalMaterial;
     }
 
+    public void FlickerForDuration(float time)
+    {
+        StartCoroutine(FlickerForDurationIE(time));
+    }
+
+    IEnumerator FlickerForDurationIE(float time)
+    {
+        bool prevFlicker = false;
+        while (time > 0)
+        {
+            if (prevFlicker)
+            {
+                spriteRenderer.material = originalMaterial;
+                prevFlicker = !prevFlicker;
+            }
+            else
+            {
+                spriteRenderer.material = flickerMaterial;
+                prevFlicker = !prevFlicker;
+            }
+            yield return new WaitForSeconds(flickerTime);
+            time -= flickerTime;
+        }
+        spriteRenderer.material = originalMaterial;
+    }
+
     ///<summary>When value in inspector changes, try to set sprite renderer if null</summary>
     void OnValidate()
     {
