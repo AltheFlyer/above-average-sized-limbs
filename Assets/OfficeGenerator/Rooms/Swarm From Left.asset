@@ -9,16 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1397a8a73392d341a59436856158465, type: 3}
-  m_Name: Player Active Stats
+  m_Script: {fileID: 11500000, guid: b0ff7d08a9b549640b55683af8781272, type: 3}
+  m_Name: Swarm From Left
   m_EditorClassIdentifier: 
-  playerSpeed: 5
-  maxSpeed: 8
-  dashSpeed: 10
-  speedCap: 0
-  dashDuration: 0
-  dashCooldown: 0
-  maxHealth: 6
-  attackDamage: 1
-  attackCooldown: 1
-  comboTimeLimit: 1
+  roomPrefab: {fileID: 2784514113676947341, guid: d64d4f28094926c4b9759bb58f70a9c7, type: 3}
+  doorLocations:
+  - {x: 1, y: 0}
