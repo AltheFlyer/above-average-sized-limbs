@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : Singleton<UIManager>
 {
+    int MAIN_MENU_BUILD_INDEX = 0;
     bool isPaused;
     [SerializeField] OfficeExplorationController officeExplorationController;
     public GameObject gameOverScreen;
@@ -51,6 +52,11 @@ public class UIManager : Singleton<UIManager>
         officeExplorationController.DestroyThyself();
         DestroyThyself();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void MainMenuClicked()
+    {
+        SceneManager.LoadScene(MAIN_MENU_BUILD_INDEX);
     }
 
     public void OnGameOver()

@@ -63,6 +63,8 @@ public class BossCEO : Enemy
         base.Start();
 
         StartCoroutine(StateStartIE());
+
+        MusicManager.PlayBossMusic();
     }
 
     protected override void Update()
@@ -288,6 +290,8 @@ public class BossCEO : Enemy
         spriteDeathFadeSOC.enabled = true;
 
         yield return new WaitForSeconds(1f);
+
+        MusicManager.PlayBackgroundMusic();
 
         Destroy(gameObject);
     }

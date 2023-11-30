@@ -9,8 +9,14 @@ public class NextScene : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Change scene!");
-            SceneManager.LoadSceneAsync(nextSceneName, LoadSceneMode.Single);
+            other.GetComponent<PlayerManager>().ClimbLadder();
+            StartCoroutine(LoadNextScene());
         }
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadSceneAsync(nextSceneName, LoadSceneMode.Single);
     }
 }
