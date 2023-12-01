@@ -16,7 +16,6 @@ public class PlayerAttack : MonoBehaviour
     private float comboTimeLimit;
     public IntVariable comboCount;
     public FloatVariable comboTimer;
-    private ComboUIEffect parentScript;
 
     private float attackDamage = 1;
     private float currentAttackDamage;
@@ -51,7 +50,6 @@ public class PlayerAttack : MonoBehaviour
         transform.localScale *= data.attackSizeMultiplier;
         ResetComboTimer();
 
-        parentScript = GameObject.Find("Hitboxes").GetComponent<ComboUIEffect>();
         currentAttackDamage = attackDamage;
     }
 
@@ -62,7 +60,7 @@ public class PlayerAttack : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        ComboDamageCheck();
+        //ComboDamageCheck();
 
     }
 
@@ -87,7 +85,6 @@ public class PlayerAttack : MonoBehaviour
             //For whoever's gonna modify this, the comboCount, showComboEffect and ResetTimer
             //doesn't work when put below the GlobalEventHandle.
             comboCount.ApplyChange(1);
-            parentScript.ShowComboEffect();
             ResetComboTimer();
 
             GlobalEventHandle.instance?.onHit.Raise(new HitData());
