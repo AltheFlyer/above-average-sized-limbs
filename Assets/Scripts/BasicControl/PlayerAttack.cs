@@ -95,7 +95,7 @@ public class PlayerAttack : MonoBehaviour
             if (col.GetComponent<KnockbackImmunity>() == null)
             {
                 col.attachedRigidbody.AddForce((col.transform.position - transform.parent.position).normalized *
-                    Mathf.Max(3 * attackDamage * data.attackSizeMultiplier, 10.0f), ForceMode2D.Impulse);
+                    Mathf.Min(5 * attackDamage * data.attackSizeMultiplier, 10.0f), ForceMode2D.Impulse);
             }
 
             hitList.Add(col);
