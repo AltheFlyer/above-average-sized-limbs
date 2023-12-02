@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Machine Gun Hands
   m_EditorClassIdentifier: 
   itemName: Machine Gun Hands
-  sprite: {fileID: 385778938, guid: a1b263d94f290cf4f995ace00aaa5548, type: 3}
+  description: Punch even faster!
+  sprite: {fileID: -910299959, guid: d9293380fd836184c92658cea980e4cf, type: 3}
   item: {fileID: 8813313515726623547, guid: 1e9d3f43abb8da84e9911e92b00fdbca, type: 3}
   additionalRendererOnPickup: {fileID: 448928482819467066, guid: 043d2023606831e44b6188d2380470f9, type: 3}

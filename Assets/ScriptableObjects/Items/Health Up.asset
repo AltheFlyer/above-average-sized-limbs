@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08623676f90bc814c9998e9a73d4df98, type: 3}
   m_Name: Health Up
   m_EditorClassIdentifier: 
-  itemName: Health Up
+  itemName: Burger
+  description: Health up!
   sprite: {fileID: -1511087636, guid: bb211b84718424bd4969b8fadbc814e8, type: 3}
   item: {fileID: 2259332053649101748, guid: 5d4efd609c847454c90571654ff61013, type: 3}
   additionalRendererOnPickup: {fileID: 448928482819467066, guid: 63bf69e71925ebd488335a63257b097a, type: 3}
