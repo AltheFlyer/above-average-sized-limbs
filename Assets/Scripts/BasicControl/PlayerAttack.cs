@@ -91,6 +91,13 @@ public class PlayerAttack : MonoBehaviour
 
             col.gameObject.GetComponent<Damageable>().TakeDamage(attackDamage);
 
+            // Knockback
+            if (col.GetComponent<KnockbackImmunity>() == null)
+            {
+                col.attachedRigidbody.AddForce((col.transform.position - transform.parent.position).normalized *
+                    Mathf.Max(3 * attackDamage * data.attackSizeMultiplier, 10.0f), ForceMode2D.Impulse);
+            }
+
             hitList.Add(col);
         }
     }

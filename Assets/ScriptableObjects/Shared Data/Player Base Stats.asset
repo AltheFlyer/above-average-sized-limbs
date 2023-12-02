@@ -15,7 +15,7 @@ MonoBehaviour:
   playerSpeed: 5
   maxSpeed: 8
   dashSpeed: 10
-  speedCap: 20
+  speedCap: 15
   dashDuration: 0.5
   dashCooldown: 1
   maxHealth: 6

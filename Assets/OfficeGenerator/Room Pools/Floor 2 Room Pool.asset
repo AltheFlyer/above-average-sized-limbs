@@ -10,16 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a560ef686d7f3f4a9b8144e1f941b00, type: 3}
-  m_Name: Test Room Pool MK2
+  m_Name: Floor 2 Room Pool
   m_EditorClassIdentifier: 
   items:
   - item: {fileID: 11400000, guid: e14983c8ba7acc94aa97d9f2c00d1b29, type: 2}
     weight: 1
-  - item: {fileID: 11400000, guid: 29321e6144de5334a967f1a29f73e46c, type: 2}
-    weight: 2
-  - item: {fileID: 11400000, guid: efb0912c9151fdc4593bbc8e940f1da7, type: 2}
-    weight: 3
-  - item: {fileID: 11400000, guid: dc0325a78ca945d47a4228590608aab6, type: 2}
-    weight: 2
   - item: {fileID: 11400000, guid: b45f4295c6b81f8408c6736ed7b8b0cd, type: 2}
-    weight: 2
+    weight: 1
+  - item: {fileID: 11400000, guid: b94f4ca903fef7c49bdd8a45fb2a70fb, type: 2}
+    weight: 1

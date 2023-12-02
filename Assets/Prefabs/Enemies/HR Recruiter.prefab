@@ -14833,8 +14833,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1841217055
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1578661494, guid: 52ef1eb91370eac4ca1cbc6dae85f172, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -14952,6 +14952,7 @@ GameObject:
   - component: {fileID: 8921008571491100323}
   - component: {fileID: 6460076503927417702}
   - component: {fileID: 7505877185952014731}
+  - component: {fileID: 3058396204841789420}
   m_Layer: 8
   m_Name: HR Recruiter
   m_TagString: Untagged
@@ -15159,6 +15160,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemDropRate: 1
+--- !u!114 &3058396204841789420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8303432624014630202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc86aa23ed0b6d439872bc9b7002210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &474362648570540863
 PrefabInstance:
   m_ObjectHideFlags: 0

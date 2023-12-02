@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebfb058a6467ec64493750615b8bf037, type: 3}
-  m_Name: New Super Office Generator 2
+  m_Name: Floor 1 Generator
   m_EditorClassIdentifier: 
   numRooms: 10
   startingRoom: {fileID: 11400000, guid: 9a2636afb92273342ba30d763899e672, type: 2}

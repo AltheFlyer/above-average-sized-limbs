@@ -10,7 +10,8 @@ public class LineCaster : MonoBehaviour
     public LayerMask raycastMask;
     public LineRenderer LineRenderer;
 
-    [HideInInspector] public Vector2 hitPos;
+    [HideInInspector]
+    public Vector2 hitPos;
 
     void Update()
     {
