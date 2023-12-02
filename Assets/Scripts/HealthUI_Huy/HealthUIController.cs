@@ -16,8 +16,7 @@ public class HealthUIController : MonoBehaviour
 
     void Start()
     {
-        // TODO: get current health through other means
-        SetDisplay(playerVars.maxHealth, playerVars.maxHealth);
+        UpdateDisplayAttempt(null);
     }
 
     public void SetDisplay(int currentHealth, int maxHealth)

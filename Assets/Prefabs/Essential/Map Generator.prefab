@@ -67,4 +67,5 @@ MonoBehaviour:
         m_CallState: 2
   cameraParent: {fileID: 0}
   wallColliders: {fileID: 0}
+  bossRoomIndicator: {fileID: 5032280200541228043, guid: e886403ee39d7c348b3bf2d38f880d63, type: 3}
   isDebugMode: 0
