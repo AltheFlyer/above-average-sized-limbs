@@ -16206,6 +16206,7 @@ GameObject:
   - component: {fileID: 8547982871070641701}
   - component: {fileID: 4936078733367041658}
   - component: {fileID: 6342457978930515643}
+  - component: {fileID: -7139184145899433807}
   m_Layer: 8
   m_Name: Manager
   m_TagString: Untagged
@@ -16417,6 +16418,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!210 &-7139184145899433807
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012103540776501397}
+  m_Enabled: 1
+  m_SortingLayerID: 1841217055
+  m_SortingLayer: 1
+  m_SortingOrder: 3
+  m_SortAtRoot: 0
 --- !u!1 &9037671712230507226
 GameObject:
   m_ObjectHideFlags: 0
