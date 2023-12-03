@@ -126,7 +126,7 @@ public class OfficeExplorationController : MonoBehaviour
 
         // Move the camera
         // Ideally this should move its parent, so screen shake effects still work
-        cameraParent.transform.position = new Vector3(
+        cameraParent.transform.localPosition = new Vector3(
             newPos.x * 13 - 5 * 13,
             newPos.y * 7 - 5 * 7,
             0
