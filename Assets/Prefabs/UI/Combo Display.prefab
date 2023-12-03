@@ -128,7 +128,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -32.557747, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -187,8 +187,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
   comboText: {fileID: 888147554534562171}
-  jitterAmount: 0
-  jitterSpeed: 0
+  baseJitterParams:
+  - 4
+  - 10
 --- !u!222 &8581520775237640807
 CanvasRenderer:
   m_ObjectHideFlags: 0

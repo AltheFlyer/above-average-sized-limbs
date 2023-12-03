@@ -616,12 +616,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 1686243591}
     m_Modifications:
     - target: {fileID: 888147554534562171, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
+      propertyPath: m_text
+      value: 'Combo: 000'
+      objectReference: {fileID: 0}
+    - target: {fileID: 888147554534562171, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: m_fontSize
       value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 888147554534562171, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: m_margin.x
-      value: -153.27426
+      value: -248.81711
       objectReference: {fileID: 0}
     - target: {fileID: 888147554534562171, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: m_fontSizeBase
@@ -701,11 +705,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4906429170968632744, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 350
+      value: 356.5
       objectReference: {fileID: 0}
     - target: {fileID: 4906429170968632744, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 209
+      value: 190
       objectReference: {fileID: 0}
     - target: {fileID: 4906429170968632744, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
