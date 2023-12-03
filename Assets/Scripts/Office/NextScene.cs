@@ -17,6 +17,8 @@ public class NextScene : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(3.0f);
+        DontDestroyOnLoad(FindObjectOfType<PlayerManager>());
+        DontDestroyOnLoad(FindObjectOfType<PlayerInventory>());
         SceneManager.LoadSceneAsync(nextSceneName, LoadSceneMode.Single);
     }
 }

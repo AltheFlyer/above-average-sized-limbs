@@ -4,13 +4,15 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class UIManager : Singleton<UIManager>
+public class UIManager : MonoBehaviour
 {
     int MAIN_MENU_BUILD_INDEX = 0;
     bool isPaused;
     [SerializeField] OfficeExplorationController officeExplorationController;
     public GameObject gameOverScreen;
     public GameObject pauseScreen;
+
+    public string startGameScene;
 
     public void OnPauseAction(InputAction.CallbackContext context)
     {
@@ -48,14 +50,13 @@ public class UIManager : Singleton<UIManager>
     {
         Debug.Log("Restarted");
         ResetGameState();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(startGameScene);
     }
 
     private void ResetGameState()
     {
         gameOverScreen.SetActive(false);
         TogglePause(false);
-        DestroyThyself();
     }
 
     public void MainMenuClicked()

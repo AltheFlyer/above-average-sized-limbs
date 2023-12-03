@@ -37,6 +37,7 @@ public class PlayerInventory : MonoBehaviour
         if (itemToInGameListener.ContainsKey(item))
         {
             itemToInGameListener[item].Stack();
+            pickupEvent.Raise(item);
             return;
         }
 

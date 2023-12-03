@@ -48,6 +48,10 @@ public class EnemyIntern : Enemy
         {
             TakeDamage(1);
         }
+        if (spriteDeathFadeSOC == null || spriteDeathFadeSOC.enabled)
+        {
+            rb.velocity = Vector2.zero;
+        }
     }
 
     IEnumerator StateStartIE()
@@ -74,6 +78,8 @@ public class EnemyIntern : Enemy
 
         while (true)
         {
+            // Dampen knockback
+            rb.velocity *= Mathf.Pow(0.1f, Time.deltaTime);
             if (player == null)
             {
                 yield return null;
@@ -84,7 +90,8 @@ public class EnemyIntern : Enemy
             animator.SetFloat("xDir", dir.x);
 
             // rotate attack path
-            rb.velocity = dir * speed;
+            //rb.velocity =
+            transform.position += new Vector3(dir.x, dir.y, 0) * speed * Time.deltaTime;
 
             yield return null;
         }

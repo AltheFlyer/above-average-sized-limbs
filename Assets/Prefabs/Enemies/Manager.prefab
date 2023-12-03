@@ -16206,6 +16206,9 @@ GameObject:
   - component: {fileID: 8547982871070641701}
   - component: {fileID: 4936078733367041658}
   - component: {fileID: 6342457978930515643}
+  - component: {fileID: -7139184145899433807}
+  - component: {fileID: 8865992104754335369}
+  - component: {fileID: -2395596008990308694}
   m_Layer: 8
   m_Name: Manager
   m_TagString: Untagged
@@ -16321,8 +16324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecbbeafead70046da8c3f9b63981a4f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 60
-  hp: 60
+  maxHP: 30
+  hp: 30
   onDamagedInvincibleTime: 0
   onDamage:
     m_PersistentCalls:
@@ -16417,6 +16420,43 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!210 &-7139184145899433807
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012103540776501397}
+  m_Enabled: 1
+  m_SortingLayerID: 1841217055
+  m_SortingLayer: 1
+  m_SortingOrder: 3
+  m_SortAtRoot: 0
+--- !u!114 &8865992104754335369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012103540776501397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc86aa23ed0b6d439872bc9b7002210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2395596008990308694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012103540776501397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19dcab92f34e432419dc3f257e8cfb25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDropRate: 1
 --- !u!1 &9037671712230507226
 GameObject:
   m_ObjectHideFlags: 0

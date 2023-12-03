@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Employee of the Month
   m_EditorClassIdentifier: 
   itemName: Employee of the Month
+  description: All stats up!
   sprite: {fileID: -870707063, guid: 3356092f4f05edd4fa8d8a61fc8e0d6f, type: 3}
   item: {fileID: -951578567178923755, guid: ab16b36a379a8524fb4e5a3ff402726b, type: 3}
   additionalRendererOnPickup: {fileID: 448928482819467066, guid: 8963790133879124eb6a804d5b4ca3d3, type: 3}
