@@ -11,6 +11,8 @@ public class Destructable : Damageable
 
     public Damageable damageable;
 
+    string[] damagedSounds = new string[] { "break2", "break3", "break4", "break5" };
+
     protected override void Awake()
     {
         base.Awake();
@@ -20,6 +22,7 @@ public class Destructable : Damageable
         spriteFlicker = GetComponent<SpriteFlicker>();
 
         onDamage.AddListener(spriteFlicker.Flicker);
+        onDamage.AddListener(() => SFXManager.TryPlaySFX(damagedSounds, gameObject));
     }
 
     protected override void Update()
@@ -31,6 +34,8 @@ public class Destructable : Damageable
     {
         if (explodable != null)
         {
+            GameObject p = GameObject.FindGameObjectWithTag("Player");
+            if (p) SFXManager.TryPlaySFX("break1", p);
             CameraShake.Shake();
             explodable.explode();
         }
