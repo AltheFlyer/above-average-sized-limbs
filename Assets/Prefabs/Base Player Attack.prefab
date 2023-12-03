@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8048697532212080578}
   - component: {fileID: 6678850399379967380}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Debug Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6602172125420025117}
   - component: {fileID: 5735731632092871997}
   - component: {fileID: 7729217266623319594}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Base Player Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 148182871792748726}
   - component: {fileID: 3853607000485897488}
   - component: {fileID: 5582226267727354086}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Attack VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}

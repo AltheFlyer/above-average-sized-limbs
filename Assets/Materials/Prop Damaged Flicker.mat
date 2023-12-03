@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Enemy Damaged Flicker
+  m_Name: Prop Damaged Flicker
   m_Shader: {fileID: -6465566751694194690, guid: e941e7d2403434f8e9617dfcb753db40, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -68,7 +68,7 @@ Material:
     m_Floats:
     - _EnableExternalAlpha: 0
     m_Colors:
-    - _Color: {r: 1.6055589, g: 1.6055589, b: 1.6055589, a: 1}
+    - _Color: {r: 1.6055588, g: 1.6055588, b: 1.6055588, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

@@ -8,12 +8,12 @@ public class Explodable : MonoBehaviour
 {
     public System.Action<List<GameObject>> OnFragmentsGenerated;
 
-    public bool allowRuntimeFragmentation = false;
+    public bool allowRuntimeFragmentation = true;
     public int extraPoints = 0;
     public int subshatterSteps = 0;
 
     public string fragmentLayer = "Default";
-    public string sortingLayerName = "Default";
+    public string sortingLayerName = "Background";
     public int orderInLayer = 0;
 
     public enum ShatterType
@@ -26,7 +26,7 @@ public class Explodable : MonoBehaviour
     private List<List<Vector2>> polygons = new List<List<Vector2>>();
 
     [Space]
-    public float explodeVelocity = 4;
+    private float explodeVelocity = 8;
 
     /// <summary>
     /// Creates fragments if necessary and destroys original gameobject
@@ -51,7 +51,7 @@ public class Explodable : MonoBehaviour
         {
             Rigidbody2D rb = frag.GetComponent<Rigidbody2D>();
             rb.velocity = Random.insideUnitCircle * explodeVelocity;
-            rb.gravityScale = 0.3f;
+            rb.gravityScale = 1f;
         }
         //if fragments exist destroy the original
         if (fragments.Count > 0)

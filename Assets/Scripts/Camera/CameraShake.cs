@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class CameraShake : Singleton<CameraShake>
 {
-    public float shakeFrequency = 15;
+    public float shakeFrequency = 30;
     private float magnitude;
     public float magnitudeDegradation = 0.93f;
 
@@ -27,9 +27,15 @@ public class CameraShake : Singleton<CameraShake>
         magnitude *= magnitudeDegradation;
     }
 
-    public void Shake(float mag = 1)
+    public static void Shake(float mag = 1)
     {
-        magnitude = mag * 0.08f;
+        if (CameraShake.instance == null)
+        {
+            GameObject g = Camera.main.gameObject;
+            CameraShake c = g.AddComponent<CameraShake>();
+        }
+
+        instance.magnitude = mag * 0.08f;
     }
 
     Vector3 GetOffset()

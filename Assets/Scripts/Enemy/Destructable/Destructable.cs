@@ -15,6 +15,10 @@ public class Destructable : Damageable
     {
         base.Awake();
 
+        rigidbody = GetComponent<Rigidbody2D>();
+        explodable = GetComponent<Explodable>();
+        spriteFlicker = GetComponent<SpriteFlicker>();
+
         onDamage.AddListener(spriteFlicker.Flicker);
     }
 
@@ -27,16 +31,18 @@ public class Destructable : Damageable
     {
         if (explodable != null)
         {
+            CameraShake.Shake();
             explodable.explode();
         }
     }
 
     void OnValidate()
     {
-        if (maxHP < 1) maxHP = 1;
-        if (hp < 1) hp = 1;
+        if (maxHP < 1) maxHP = 4;
+        if (hp < 1) hp = 4;
 
-        gameObject.layer = LayerMask.NameToLayer("Destructable");
+        if (gameObject.layer != LayerMask.NameToLayer("Destructable"))
+            gameObject.layer = LayerMask.NameToLayer("Destructable");
 
         if (rigidbody == null)
         {
@@ -56,9 +62,9 @@ public class Destructable : Damageable
             {
                 explodable = gameObject.AddComponent<Explodable>();
                 explodable.shatterType = Explodable.ShatterType.Voronoi;
-                explodable.extraPoints = 3;
+                explodable.extraPoints = 2;
                 explodable.fragmentLayer = "NoCollision";
-                explodable.sortingLayerName = "Background";
+                explodable.sortingLayerName = "Top Effects";
                 explodable.orderInLayer = 5;
             }
         }
@@ -73,10 +79,10 @@ public class Destructable : Damageable
             }
         }
 
-        if (rigidbody && explodable && spriteFlicker && transform.childCount == 0)
-        {
-            explodable.fragmentInEditor();
-        }
+        // if (rigidbody && explodable && spriteFlicker && transform.childCount == 0)
+        // {
+        //     explodable.fragmentInEditor();
+        // }
 
         if (damageable == null)
             damageable = GetComponent<Damageable>();
