@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 1.2
   angle: 180
-  projPerShot: 12
+  projPerShot: 20
   timePerProjectile: 0
-  multiSpanAngle: -330
+  multiSpanAngle: 360
   multiSpanDist: 0
   shootParticle: {fileID: 0}
   shootSFX: 

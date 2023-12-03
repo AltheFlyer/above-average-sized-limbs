@@ -99,7 +99,7 @@ public class EnemyHRRecruiter : Enemy
             summonParticle2.Play();
         summonStateParticle.Play();
 
-        SFXManager.TryPlaySFX("summon", gameObject);
+        SFXManager.TryPlaySFX("summon1", gameObject);
         animator.SetTrigger("summon");
 
         // wait a bit      

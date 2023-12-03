@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7813c624523644245ae91fe8b5b0b95f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 2
+  maxHP: 1.2
   hp: 2
   onDamagedInvincibleTime: 0
   onDamage:
