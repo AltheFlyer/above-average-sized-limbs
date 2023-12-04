@@ -1645,7 +1645,7 @@ MonoBehaviour:
   officeExplorationController: {fileID: 0}
   gameOverScreen: {fileID: 1775072402}
   pauseScreen: {fileID: 502832348}
-  startGameScene: Checkoff 4 Scene
+  startGameScene: Level 1
 --- !u!4 &988399717
 Transform:
   m_ObjectHideFlags: 0
