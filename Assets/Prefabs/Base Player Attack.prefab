@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8048697532212080578}
   - component: {fileID: 6678850399379967380}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Debug Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6602172125420025117}
   - component: {fileID: 5735731632092871997}
   - component: {fileID: 7729217266623319594}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Base Player Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 16640
   playerVars: {fileID: 11400000, guid: 8fae656bd80baf74593064fe4cb84c52, type: 2}
   comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
   comboTimer: {fileID: 11400000, guid: 46ee2c49cfa1b18458e0322d38b1eaff, type: 2}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 148182871792748726}
   - component: {fileID: 3853607000485897488}
   - component: {fileID: 5582226267727354086}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Attack VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}

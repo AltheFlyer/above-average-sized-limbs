@@ -8,12 +8,6 @@ public class CamShaker : MonoBehaviour
 
     public void Activate()
     {
-        if (CameraShake.instance == null)
-        {
-            GameObject g = Camera.main.gameObject;
-            CameraShake c = g.AddComponent<CameraShake>();
-        }
-
-        CameraShake.instance.Shake(magnitude);
+        CameraShake.Shake(magnitude);
     }
 }
