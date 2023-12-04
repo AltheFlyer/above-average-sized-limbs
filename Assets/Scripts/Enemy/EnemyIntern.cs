@@ -103,7 +103,7 @@ public class EnemyIntern : Enemy
 
         attackCollider.enabled = false;
         if (GlobalEventHandle.instance != null)
-            GlobalEventHandle.instance.enemySpawn.Raise(new EnemySpawnData(gameObject));
+            GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
 
         StopAllCoroutines();
         StartCoroutine(OnDeadIE());
