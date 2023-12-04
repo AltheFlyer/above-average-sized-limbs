@@ -40,14 +40,14 @@ public class ComboUIEffect : MonoBehaviour
     {
         Color comboTextColor;
 
-        if (comboCount.Value <= comboThreshold[0])
+        if (comboCount.Value < comboThreshold[0])
         {
             comboTextColor = Color.white;
             isTextShaking = false;
             comboText.transform.localPosition = originalPosition;
             comboVFX.enabled = false;
         }
-        else if (comboCount.Value <= comboThreshold[1] && comboCount.Value > comboThreshold[0])
+        else if (comboCount.Value <= comboThreshold[1] && comboCount.Value >= comboThreshold[0])
         {
             comboTextColor = Color.yellow;
             isTextShaking = true;

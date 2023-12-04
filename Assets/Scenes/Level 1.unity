@@ -2482,7 +2482,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2533871098872412205, guid: 4424c4ed3b6035741897e8514a15f750, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2533871098872412205, guid: 4424c4ed3b6035741897e8514a15f750, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Value
@@ -2538,7 +2538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7633209770129565585, guid: 4424c4ed3b6035741897e8514a15f750, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7633209770129565585, guid: 4424c4ed3b6035741897e8514a15f750, type: 3}
       propertyPath: m_SortingLayer

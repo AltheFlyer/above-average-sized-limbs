@@ -94,8 +94,15 @@ public class PlayerAttack : MonoBehaviour
             // Knockback
             if (col.GetComponent<KnockbackImmunity>() == null)
             {
-                col.attachedRigidbody.AddForce((col.transform.position - transform.parent.position).normalized *
-                    Mathf.Min(5 * attackDamage * data.attackSizeMultiplier, 10.0f), ForceMode2D.Impulse);
+                float knockbackForce = comboCount.Value > 3 ?
+                Mathf.Min(20 * attackDamage * data.attackSizeMultiplier, 25.0f) :
+                Mathf.Min(5 * attackDamage * data.attackSizeMultiplier, 10.0f);
+
+                col.attachedRigidbody.AddForce((col.transform.position - transform.parent.position).normalized * knockbackForce, ForceMode2D.Impulse);
+
+                //col.attachedRigidbody.AddForce((col.transform.position - transform.parent.position).normalized *
+                //Mathf.Min(5 * attackDamage * data.attackSizeMultiplier, 10.0f), ForceMode2D.Impulse);
+
             }
 
             hitList.Add(col);
