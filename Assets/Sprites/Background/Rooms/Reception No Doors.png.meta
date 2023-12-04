@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Reception No Doors_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 214
+        width: 180
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422a71a724742014cabd5a8761d1561b
+      internalID: -2138162276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reception No Doors_1
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 170
+        width: 135
+        height: 100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c5a3ad5658b96449ae5fc3d679f32f
+      internalID: 878099421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reception No Doors_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 136
+        width: 135
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855b12056f2a00e43bda986f9b94d4e1
+      internalID: 1563043320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reception No Doors_3
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 214
+        width: 165
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 306b338fce77fe74994e5f1c2ba37e54
+      internalID: -1635245460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reception No Doors_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136
+        width: 86
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4351b290db18174ba21bda031a118b7
+      internalID: -235986741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reception No Doors_5
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 136
+        width: 94
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1c5493e4a1b304f858848b8465a941
+      internalID: 2107472182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reception No Doors_6
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 136
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767397ad48066d74cbe6b89e76bae5a5
+      internalID: -1727534300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reception No Doors_7
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 136
+        width: 87
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24642c6bdbc3df643a7e728b7507626b
+      internalID: -383340305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reception No Doors_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 86
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c435a4f83ae7b5646a1225710b32e2b5
+      internalID: 1699521889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reception No Doors_9
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 0
+        width: 41
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d73fa742e16a0c44290a2436df821e6a
+      internalID: -24340728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reception No Doors_10
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 23
+        width: 307
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa266c749a748343b492f4ac250694b
+      internalID: 1339426758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reception No Doors_11
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 116
+        width: 87
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd209639435838844a126e603fd9ad26
+      internalID: 1206414298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reception No Doors_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 23
+        width: 86
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e791edd51315d34449e3c85c9383ca48
+      internalID: -92811830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reception No Doors_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 219
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86bd2bc8ca58a0a44b255eda18b1b9cc
+      internalID: 1150499361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reception No Doors_14
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 220
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347a252a3fd4d164bbc0dfac16c40611
+      internalID: -2065001902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reception No Doors_15
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 23
+        width: 87
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef22062c7688fdc4897078db4e1f7cdb
+      internalID: 783075061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +455,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Reception No Doors_0: -2138162276
+      Reception No Doors_1: 878099421
+      Reception No Doors_10: 1339426758
+      Reception No Doors_11: 1206414298
+      Reception No Doors_12: -92811830
+      Reception No Doors_13: 1150499361
+      Reception No Doors_14: -2065001902
+      Reception No Doors_15: 783075061
+      Reception No Doors_2: 1563043320
+      Reception No Doors_3: -1635245460
+      Reception No Doors_4: -235986741
+      Reception No Doors_5: 2107472182
+      Reception No Doors_6: -1727534300
+      Reception No Doors_7: -383340305
+      Reception No Doors_8: 1699521889
+      Reception No Doors_9: -24340728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
