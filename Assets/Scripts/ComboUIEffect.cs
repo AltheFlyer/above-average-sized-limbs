@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-//using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.VFX;
 
 public class ComboUIEffect : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class ComboUIEffect : MonoBehaviour
     private float[] activeJitterParams;
     private Vector3 originalPosition;
     private int[] comboThreshold = new int[2];
+    public VisualEffect comboVFX;
 
     void Start()
     {
@@ -25,12 +27,14 @@ public class ComboUIEffect : MonoBehaviour
     }
     void Update()
     {
+        ShowComboEffect();
         if (isTextShaking)
         {
             ApplyJitter(activeJitterParams[0], activeJitterParams[1]);
         }
-        ShowComboEffect();
+
     }
+
 
     public void ShowComboEffect()
     {
@@ -41,6 +45,7 @@ public class ComboUIEffect : MonoBehaviour
             comboTextColor = Color.white;
             isTextShaking = false;
             comboText.transform.localPosition = originalPosition;
+            comboVFX.enabled = false;
         }
         else if (comboCount.Value <= comboThreshold[1] && comboCount.Value > comboThreshold[0])
         {
@@ -48,6 +53,7 @@ public class ComboUIEffect : MonoBehaviour
             isTextShaking = true;
             activeJitterParams[0] = baseJitterParams[0];
             activeJitterParams[1] = baseJitterParams[1];
+            comboVFX.enabled = true;
         }
         else
         {
@@ -55,6 +61,7 @@ public class ComboUIEffect : MonoBehaviour
             isTextShaking = true;
             activeJitterParams[0] = baseJitterParams[0] * 5;
             activeJitterParams[1] = baseJitterParams[1] * 5;
+            comboVFX.enabled = true;
         }
 
         comboText.color = comboTextColor;
