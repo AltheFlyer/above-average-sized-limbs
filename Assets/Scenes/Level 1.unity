@@ -627,6 +627,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 72
       objectReference: {fileID: 0}
+    - target: {fileID: 3085191709551256490, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
+      propertyPath: comboVFX
+      value: 
+      objectReference: {fileID: 1644046407}
     - target: {fileID: 4906429170968632744, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2482,7 +2486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2533871098872412205, guid: 4424c4ed3b6035741897e8514a15f750, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Value
-      value: 5.13
+      value: 5.71
       objectReference: {fileID: 0}
     - target: {fileID: 4857017427380202216, guid: 4424c4ed3b6035741897e8514a15f750, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2531,6 +2535,18 @@ PrefabInstance:
     - target: {fileID: 7633209770129565585, guid: 4424c4ed3b6035741897e8514a15f750, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633209770129565585, guid: 4424c4ed3b6035741897e8514a15f750, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633209770129565585, guid: 4424c4ed3b6035741897e8514a15f750, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633209770129565585, guid: 4424c4ed3b6035741897e8514a15f750, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1841217055
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
