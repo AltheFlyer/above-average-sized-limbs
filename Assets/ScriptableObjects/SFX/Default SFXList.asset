@@ -83,3 +83,28 @@ MonoBehaviour:
     volume: 0.2
     audioMixerGroup: {fileID: -1926846628764479051, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
     source: {fileID: 0}
+  - name: break1
+    clip: {fileID: 8300000, guid: 361c8de88cca349449a2cb6b68acfd26, type: 3}
+    volume: 0.2
+    audioMixerGroup: {fileID: 5879685974783371366, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: break2
+    clip: {fileID: 8300000, guid: 7e4d87f7db196438cb3ce99de58035ff, type: 3}
+    volume: 0.11
+    audioMixerGroup: {fileID: 5879685974783371366, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: break3
+    clip: {fileID: 8300000, guid: 4a6e23511fccc4d49bf99a4733fb4934, type: 3}
+    volume: 0.11
+    audioMixerGroup: {fileID: 5879685974783371366, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: break4
+    clip: {fileID: 8300000, guid: 3802345c0d6e9493394c76fb5acc9d83, type: 3}
+    volume: 0.11
+    audioMixerGroup: {fileID: 5879685974783371366, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: break5
+    clip: {fileID: 8300000, guid: 1fbb976c9f8ed44e5a065a8b2bcb5af7, type: 3}
+    volume: 0.11
+    audioMixerGroup: {fileID: 5879685974783371366, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
