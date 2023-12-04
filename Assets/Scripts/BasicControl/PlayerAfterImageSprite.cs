@@ -35,6 +35,8 @@ public class PlayerAfterImageSprite : MonoBehaviour
     {
         alpha *= alphaMultiplier;
         color = new Color(1f, 1f, 1f, alpha);
+        // color = Color.HSVToRGB(Random.Range(0f, 1f), 1, 1);
+        // color.a = alpha;
         spriteRenderer.color = color;
 
         if (Time.time >= (timeActivated + activeTime))
@@ -42,4 +44,5 @@ public class PlayerAfterImageSprite : MonoBehaviour
             PlayerAfterImagePool.Instance.AddToPool(gameObject);
         }
     }
+
 }

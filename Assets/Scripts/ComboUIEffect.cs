@@ -39,7 +39,6 @@ public class ComboUIEffect : MonoBehaviour
 
     }
 
-
     public void ShowComboEffect()
     {
         Color comboTextColor;
