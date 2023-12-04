@@ -32,7 +32,8 @@ public class EnemyIntern : Enemy
     protected override void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        GlobalEventHandle.instance.enemySpawn.Raise(new EnemySpawnData(gameObject));
+        if (GlobalEventHandle.instance != null)
+            GlobalEventHandle.instance.enemySpawn.Raise(new EnemySpawnData(gameObject));
 
         base.Start();
 
@@ -101,7 +102,8 @@ public class EnemyIntern : Enemy
         base.OnDead();
 
         attackCollider.enabled = false;
-        GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
+        if (GlobalEventHandle.instance != null)
+            GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
 
         StopAllCoroutines();
         StartCoroutine(OnDeadIE());

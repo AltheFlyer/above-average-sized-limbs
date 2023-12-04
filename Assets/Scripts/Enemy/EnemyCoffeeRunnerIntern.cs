@@ -24,6 +24,7 @@ public class EnemyCoffeeRunnerIntern : Enemy
 
     Rigidbody2D rb;
     Collider2D col;
+    Animator animator;
 
     protected override void Awake()
     {
@@ -31,6 +32,7 @@ public class EnemyCoffeeRunnerIntern : Enemy
 
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        animator = GetComponent<Animator>();
     }
 
     protected override void Start()
@@ -83,6 +85,8 @@ public class EnemyCoffeeRunnerIntern : Enemy
 
         float angle = 0;
 
+        animator.SetTrigger("startRolling");
+
         while (_prepareTime > 0)
         {
             // aim at player
@@ -103,11 +107,14 @@ public class EnemyCoffeeRunnerIntern : Enemy
 
     IEnumerator StateAttackIE(float angle)
     {
+        animator.SetTrigger("rolling");
+
         rb.velocity = AngPosUtil.GetAngularPos(angle, attackSpeed);
 
         yield return new WaitForSeconds(0.3f);
 
         yield return WaitTilHitWall();
+        animator.SetTrigger("stopRolling");
 
         StartCoroutine(StateStunnedIE());
     }
@@ -133,6 +140,7 @@ public class EnemyCoffeeRunnerIntern : Enemy
             }
             yield return null;
         }
+        animator.SetTrigger("startRolling");
     }
 
     public override void OnDead()
