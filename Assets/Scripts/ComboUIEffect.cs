@@ -57,6 +57,7 @@ public class ComboUIEffect : MonoBehaviour
             activeJitterParams[0] = baseJitterParams[0];
             activeJitterParams[1] = baseJitterParams[1];
             comboVFX.enabled = true;
+            comboVFX.SetFloat("SpawnRate", 220f);
         }
         else
         {
@@ -65,6 +66,7 @@ public class ComboUIEffect : MonoBehaviour
             activeJitterParams[0] = baseJitterParams[0] * 5;
             activeJitterParams[1] = baseJitterParams[1] * 5;
             comboVFX.enabled = true;
+            comboVFX.SetFloat("SpawnRate", 600f);
         }
 
         comboText.color = comboTextColor;
