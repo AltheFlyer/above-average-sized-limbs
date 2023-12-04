@@ -51,10 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de83a78f8fe52344989614000f32ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerVars: {fileID: 11400000, guid: 4ca5011e3843d054ba59080a6de1b31f, type: 2}
   comboCount: {fileID: 11400000, guid: 0e17d49bb91d1284b9f932a3be10a9de, type: 2}
   comboText: {fileID: 1216193343120869446}
-  comboThreshold1: {fileID: 11400000, guid: 6b49b652023c46e40a668f712a138e3d, type: 2}
-  comboThreshold2: {fileID: 11400000, guid: 8611782559c9c6444a39f08845fb2301, type: 2}
+  comboThreshold1: 0
+  comboThreshold2: 0
   baseJitterParams:
   - 4
   - 20

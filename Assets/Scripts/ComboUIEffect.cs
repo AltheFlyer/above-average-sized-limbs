@@ -7,10 +7,11 @@ using UnityEngine.VFX;
 
 public class ComboUIEffect : MonoBehaviour
 {
+    public PlayerVariables playerVars;
     public IntVariable comboCount;
     public TextMeshProUGUI comboText;
-    public IntVariable comboThreshold1;
-    public IntVariable comboThreshold2;
+    private int comboThreshold1;
+    private int comboThreshold2;
     public float[] baseJitterParams;
     private float[] activeJitterParams;
     private Vector3 originalPosition;
@@ -24,8 +25,8 @@ public class ComboUIEffect : MonoBehaviour
         comboText.gameObject.SetActive(true);
         originalPosition = comboText.transform.localPosition;
         activeJitterParams = new float[2];
-        comboThreshold1.Value = 3;
-        comboThreshold2.Value = 6;
+        comboThreshold1 = playerVars.comboThreshold1;
+        comboThreshold2 = playerVars.comboThreshold2;
 
         comboVFX = GameObject.Find("Combo VFX").GetComponent<VisualEffect>();
     }
@@ -43,14 +44,14 @@ public class ComboUIEffect : MonoBehaviour
     {
         Color comboTextColor;
 
-        if (comboCount.Value < comboThreshold1.Value)
+        if (comboCount.Value < comboThreshold1)
         {
             comboTextColor = Color.white;
             isTextShaking = false;
             comboText.transform.localPosition = originalPosition;
             comboVFX.enabled = false;
         }
-        else if (comboCount.Value <= comboThreshold2.Value && comboCount.Value >= comboThreshold1.Value)
+        else if (comboCount.Value <= comboThreshold2 && comboCount.Value >= comboThreshold1)
         {
             comboTextColor = Color.yellow;
             isTextShaking = true;
