@@ -16,6 +16,8 @@ public class PlayerAttack : MonoBehaviour
     private float comboTimeLimit;
     public IntVariable comboCount;
     public FloatVariable comboTimer;
+    public IntVariable comboThreshold1;
+    public IntVariable comboThreshold2;
 
     private float attackDamage = 1;
     private float currentAttackDamage;
@@ -66,12 +68,12 @@ public class PlayerAttack : MonoBehaviour
 
     void ComboDamageCheck()
     {
-        if (comboCount.Value >= 10 && !damageIncreaseByCombo)
+        if (comboCount.Value >= comboThreshold1.Value && !damageIncreaseByCombo)
         {
             currentAttackDamage += 1;
             damageIncreaseByCombo = true;
         }
-        else if (comboCount.Value < 10)
+        else if (comboCount.Value < comboThreshold1.Value)
         {
             currentAttackDamage = attackDamage;
             damageIncreaseByCombo = false;
@@ -94,7 +96,7 @@ public class PlayerAttack : MonoBehaviour
             // Knockback
             if (col.GetComponent<KnockbackImmunity>() == null)
             {
-                float knockbackForce = comboCount.Value > 3 ?
+                float knockbackForce = comboCount.Value > comboThreshold1.Value ?
                 Mathf.Min(20 * attackDamage * data.attackSizeMultiplier, 25.0f) :
                 Mathf.Min(5 * attackDamage * data.attackSizeMultiplier, 10.0f);
 
