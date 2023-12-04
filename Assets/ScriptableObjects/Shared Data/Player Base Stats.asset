@@ -22,3 +22,5 @@ MonoBehaviour:
   attackDamage: 1
   attackCooldown: 1
   comboTimeLimit: 1
+  comboThreshold1: 3
+  comboThreshold2: 6

@@ -30,6 +30,8 @@ public class PlayerVariables : ScriptableObject
 
     //Combo
     public float comboTimeLimit;
+    public int comboThreshold1;
+    public int comboThreshold2;
 
 
     public void InitInternalStats()
@@ -54,6 +56,8 @@ public class PlayerVariables : ScriptableObject
         other.attackDamage = attackDamage;
         other.attackCooldown = attackCooldown;
         other.comboTimeLimit = comboTimeLimit;
+        other.comboThreshold1 = comboThreshold1;
+        other.comboThreshold2 = comboThreshold2;
     }
 
     /// <summary>

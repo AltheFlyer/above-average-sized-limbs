@@ -16,8 +16,8 @@ public class PlayerAttack : MonoBehaviour
     private float comboTimeLimit;
     public IntVariable comboCount;
     public FloatVariable comboTimer;
-    public IntVariable comboThreshold1;
-    public IntVariable comboThreshold2;
+    private int comboThreshold1;
+    private int comboThreshold2;
 
     private float attackDamage = 1;
     private float currentAttackDamage;
@@ -48,6 +48,8 @@ public class PlayerAttack : MonoBehaviour
         hitBox = GetComponent<Collider2D>();
 
         comboTimeLimit = playerVars.comboTimeLimit;
+        comboThreshold1 = playerVars.comboThreshold1;
+        comboThreshold2 = playerVars.comboThreshold2;
 
         transform.localScale *= data.attackSizeMultiplier;
         ResetComboTimer();
@@ -68,12 +70,12 @@ public class PlayerAttack : MonoBehaviour
 
     void ComboDamageCheck()
     {
-        if (comboCount.Value >= comboThreshold1.Value && !damageIncreaseByCombo)
+        if (comboCount.Value >= comboThreshold1 && !damageIncreaseByCombo)
         {
             currentAttackDamage += 1;
             damageIncreaseByCombo = true;
         }
-        else if (comboCount.Value < comboThreshold1.Value)
+        else if (comboCount.Value < comboThreshold1)
         {
             currentAttackDamage = attackDamage;
             damageIncreaseByCombo = false;
@@ -96,7 +98,7 @@ public class PlayerAttack : MonoBehaviour
             // Knockback
             if (col.GetComponent<KnockbackImmunity>() == null)
             {
-                float knockbackForce = comboCount.Value > comboThreshold1.Value ?
+                float knockbackForce = comboCount.Value > comboThreshold1 ?
                 Mathf.Min(20 * attackDamage * data.attackSizeMultiplier, 25.0f) :
                 Mathf.Min(5 * attackDamage * data.attackSizeMultiplier, 10.0f);
 
