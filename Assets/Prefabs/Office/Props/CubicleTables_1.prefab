@@ -12,7 +12,11 @@ GameObject:
   - component: {fileID: 3798626652438017459}
   - component: {fileID: 6448457482404435158}
   - component: {fileID: 1056916695621986214}
-  m_Layer: 0
+  - component: {fileID: 4729495713481076333}
+  - component: {fileID: 1183274870166529111}
+  - component: {fileID: 8557151220370400705}
+  - component: {fileID: 3886235436059917055}
+  m_Layer: 14
   m_Name: CubicleTables_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3155642892950379300}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.02, y: 1.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -176,3 +180,84 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.09375, y: 0.32994604}
   m_EdgeRadius: 0
+--- !u!114 &4729495713481076333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3155642892950379300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03eb452f8b42e4e99a8e3f78d9aad6bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 4
+  hp: 4
+  onDamagedInvincibleTime: 0.06
+  onDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  damageable: {fileID: 4729495713481076333}
+--- !u!50 &1183274870166529111
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3155642892950379300}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 99999
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &8557151220370400705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3155642892950379300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75953d6b31f574644be1238b08e89b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allowRuntimeFragmentation: 1
+  extraPoints: 2
+  subshatterSteps: 0
+  fragmentLayer: NoCollision
+  sortingLayerName: Top Effects
+  orderInLayer: 5
+  shatterType: 1
+  fragments: []
+--- !u!114 &3886235436059917055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3155642892950379300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ea8cb03c88d429794f1e7e2836fc5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickerMaterial: {fileID: 2100000, guid: c569ec8418a524adba131ebd90e0c747, type: 2}
+  flickerTime: 0.2
+  spriteRenderer: {fileID: 3798626652438017459}
