@@ -1980,7 +1980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75844ec50f070ea40a993cb531bd40c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: Level 2
+  nextSceneName: CEOBossDeath
 --- !u!4 &3511523715218539396 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4751728544826245794, guid: 606244cf8ac84404aa0a08a8a6011c28, type: 3}
@@ -1994,10 +1994,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4903593199292437518}
     m_Modifications:
+    - target: {fileID: 1786164582940930, guid: 16b49f26a97c46d4bab9506e3647f6c5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1844404787, guid: 7e7524035d4155a44ada9d14a0a071fe, type: 3}
+    - target: {fileID: 1574718008242400482, guid: 16b49f26a97c46d4bab9506e3647f6c5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1663498747, guid: 7e7524035d4155a44ada9d14a0a071fe, type: 3}
+    - target: {fileID: 2170273709145667997, guid: 16b49f26a97c46d4bab9506e3647f6c5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1220576903, guid: 4326ab546f4cdeb4aa754d56fec310a3, type: 3}
+    - target: {fileID: 2389902866638113323, guid: 16b49f26a97c46d4bab9506e3647f6c5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1472016334, guid: 7e7524035d4155a44ada9d14a0a071fe, type: 3}
+    - target: {fileID: 3442499983947694219, guid: 16b49f26a97c46d4bab9506e3647f6c5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -717331644, guid: 4326ab546f4cdeb4aa754d56fec310a3, type: 3}
+    - target: {fileID: 4216562994029968971, guid: 16b49f26a97c46d4bab9506e3647f6c5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -99300545, guid: 4326ab546f4cdeb4aa754d56fec310a3, type: 3}
     - target: {fileID: 4225523657569612741, guid: 16b49f26a97c46d4bab9506e3647f6c5, type: 3}
       propertyPath: m_Name
       value: Background (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4473819111505708989, guid: 16b49f26a97c46d4bab9506e3647f6c5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -136889646, guid: 7e7524035d4155a44ada9d14a0a071fe, type: 3}
+    - target: {fileID: 4875897920840245274, guid: 16b49f26a97c46d4bab9506e3647f6c5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 480745690, guid: 4326ab546f4cdeb4aa754d56fec310a3, type: 3}
     - target: {fileID: 5743619856371264613, guid: 16b49f26a97c46d4bab9506e3647f6c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.02
@@ -2038,6 +2070,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6004339788976808634, guid: 16b49f26a97c46d4bab9506e3647f6c5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 338628857, guid: 7e7524035d4155a44ada9d14a0a071fe, type: 3}
+    - target: {fileID: 6089433416905253392, guid: 16b49f26a97c46d4bab9506e3647f6c5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -378328481, guid: 7e7524035d4155a44ada9d14a0a071fe, type: 3}
+    - target: {fileID: 6117620721406068961, guid: 16b49f26a97c46d4bab9506e3647f6c5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -985652186, guid: 7e7524035d4155a44ada9d14a0a071fe, type: 3}
+    - target: {fileID: 7582145796265002626, guid: 16b49f26a97c46d4bab9506e3647f6c5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 709163225, guid: 4326ab546f4cdeb4aa754d56fec310a3, type: 3}
+    - target: {fileID: 8516324131081531168, guid: 16b49f26a97c46d4bab9506e3647f6c5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 886236724, guid: 7e7524035d4155a44ada9d14a0a071fe, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

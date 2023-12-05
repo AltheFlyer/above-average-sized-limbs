@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// Component that manages entities and things in a given room.
 /// The controller manages the logic for room entry/exit events.
@@ -71,6 +72,11 @@ public class RoomController : MonoBehaviour
             {
                 ladder.SetActive(true);
                 roomAnimator?.SetTrigger("roomCleared");
+            }
+            else if (isBossRoom && ladder == null)
+            {
+                // No ladder in room means final boss
+                SceneManager.LoadSceneAsync("End", LoadSceneMode.Single);
             }
         }
     }
