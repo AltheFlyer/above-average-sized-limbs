@@ -63,6 +63,7 @@ public class BossCEO : Enemy
     protected override void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        if (GlobalEventHandle.instance != null) GlobalEventHandle.instance.enemySpawn.Raise(new EnemySpawnData(gameObject));
 
         base.Start();
 

@@ -82,7 +82,7 @@ public class OfficeExplorationController : MonoBehaviour
 
                 room.SetLoadedRoom(loadedRoom);
                 room.location = new Vector2Int(x, y);
-                loadedRoom.GetComponent<RoomController>()?.Init(room);
+                loadedRoom.GetComponent<RoomController>().Init(room);
 
                 // Move rooms to where they should be in game world space
                 loadedRoom.transform.Translate(new Vector3(x * 13 - 5 * 13, y * 7 - 5 * 7, 0));
@@ -108,7 +108,6 @@ public class OfficeExplorationController : MonoBehaviour
     // Should be invoked by the onRoomChange event, which should be triggered whenever a door is entered.
     public void ChangeRoom(Vector2Int newPos, Vector2Int direction)
     {
-        Debug.Log($"Moving to room at {newPos}");
         // Deactivate current room
         currentRoom.Deactivate();
 

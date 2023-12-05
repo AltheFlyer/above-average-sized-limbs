@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// Component that manages entities and things in a given room.
 /// The controller manages the logic for room entry/exit events.
@@ -60,7 +61,6 @@ public class RoomController : MonoBehaviour
 
     private void UnlockDoorsWhenRoomCleared()
     {
-        Debug.Log($"Enemy count: {enemyCount}");
         if (enemyCount == 0)
         {
             SFXManager.TryPlaySFX("unlock1", gameObject);
@@ -71,7 +71,12 @@ public class RoomController : MonoBehaviour
             if (isBossRoom && ladder != null)
             {
                 ladder.SetActive(true);
-                roomAnimator.SetTrigger("roomCleared");
+                roomAnimator?.SetTrigger("roomCleared");
+            }
+            else if (isBossRoom && ladder == null)
+            {
+                // No ladder in room means final boss
+                SceneManager.LoadSceneAsync("End", LoadSceneMode.Single);
             }
         }
     }
@@ -85,6 +90,5 @@ public class RoomController : MonoBehaviour
     public void OnEnemySpawn(EnemySpawnData data)
     {
         enemyCount++;
-        Debug.Log($"Enemy spawned");
     }
 }
