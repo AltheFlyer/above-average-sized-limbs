@@ -138,3 +138,8 @@ MonoBehaviour:
     volume: 0.1
     audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
     source: {fileID: 0}
+  - name: growl1
+    clip: {fileID: 8300000, guid: 9237c31bc27c64b818f365cffda096fe, type: 3}
+    volume: 0.1
+    audioMixerGroup: {fileID: -1926846628764479051, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}

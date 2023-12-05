@@ -108,13 +108,14 @@ public class Room
     public void Activate()
     {
         roomObject.SetActive(true);
+        Debug.Log("New room activated");
         Debug.Log(roomObject.GetComponent<RoomController>());
-        roomObject.GetComponent<RoomController>()?.LoadRoom();
+        roomObject.GetComponent<RoomController>().LoadRoom();
     }
 
     public void Deactivate()
     {
-        roomObject.GetComponent<RoomController>()?.UnloadRoom();
+        roomObject.GetComponent<RoomController>().UnloadRoom();
         roomObject.SetActive(false);
     }
 
