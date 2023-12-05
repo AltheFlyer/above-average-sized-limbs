@@ -41,6 +41,10 @@ public class BossCEO : Enemy
     public float teleportPosTime = 2f;
     public float teleportOffsetDist = 2f;
 
+    [Space]
+    public ScaleOpacityCurve spriteExplodeSOC;
+    public EffectRelayer spriteExplodeEffect;
+
     GameObject player;
 
     Rigidbody2D rb;
@@ -313,6 +317,16 @@ public class BossCEO : Enemy
         yield return new WaitForSeconds(1f);
 
         MusicManager.PlayBackgroundMusic();
+
+        // dead animation
+        spriteExplodeSOC.enabled = true;
+
+        yield return new WaitForSeconds(.95f);
+        spriteExplodeEffect.Activate();
+        yield return new WaitForSeconds(.05f);
+        spriteExplodeEffect.Activate();
+        yield return new WaitForSeconds(.05f);
+        spriteExplodeEffect.Activate();
 
         Destroy(gameObject);
     }
