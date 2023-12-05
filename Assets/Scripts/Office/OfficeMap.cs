@@ -123,4 +123,9 @@ public class Room
         obj.transform.parent = roomObject.transform;
         Debug.Log($"parent: {roomObject}");
     }
+
+    public GameObject GetRoomGameObject()
+    {
+        return roomObject;
+    }
 }
