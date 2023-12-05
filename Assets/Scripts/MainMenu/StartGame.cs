@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    int LEVEL_1_SCENE_BUILD_INDEX = 1;
+    int LEVEL_1_SCENE_BUILD_INDEX = 2;
     public void StartGame()
     {
         SceneManager.LoadScene(LEVEL_1_SCENE_BUILD_INDEX);
