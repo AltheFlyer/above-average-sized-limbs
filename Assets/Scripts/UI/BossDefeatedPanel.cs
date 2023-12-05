@@ -37,6 +37,9 @@ public class BossDefeatedPanel : MonoBehaviour
 
     IEnumerator ActivateIE()
     {
+        SFXManager.TryPlaySFX("growl1", Camera.main.gameObject
+        );
+
         // enable all
         main.enabled = true;
         foreach (var sub in subs)
