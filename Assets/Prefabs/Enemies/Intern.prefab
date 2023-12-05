@@ -110,7 +110,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &101904344960699739
 MonoBehaviour:
@@ -166,8 +166,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  antiClustering: 1
-  antiClusteringRadius: 0.75
   speed: 2
   exclaimationEffectPos: {fileID: 2042286097975406320}
   exclaimationEffect: {fileID: 6630275391772572677, guid: 2de6c50d9028c4a7585e2a7fab2cf743, type: 3}
