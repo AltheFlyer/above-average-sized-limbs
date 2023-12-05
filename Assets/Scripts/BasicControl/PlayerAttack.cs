@@ -64,11 +64,11 @@ public class PlayerAttack : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        //ComboDamageCheck();
+        //ComboStatCheck();
 
     }
 
-    void ComboDamageCheck()
+    void ComboStatCheck()
     {
         if (comboCount.Value >= comboThreshold1 && !damageIncreaseByCombo)
         {
@@ -98,9 +98,19 @@ public class PlayerAttack : MonoBehaviour
             // Knockback
             if (col.GetComponent<KnockbackImmunity>() == null)
             {
-                float knockbackForce = comboCount.Value > comboThreshold1 ?
-                Mathf.Min(20 * attackDamage * data.attackSizeMultiplier, 25.0f) :
-                Mathf.Min(5 * attackDamage * data.attackSizeMultiplier, 10.0f);
+                float knockbackForce;
+                if (comboCount.Value <= comboThreshold1)
+                {
+                    knockbackForce = Mathf.Min(5 * attackDamage * data.attackSizeMultiplier, 10.0f);
+                }
+                else if (comboCount.Value > comboThreshold1 && comboCount.Value <= comboThreshold2)
+                {
+                    knockbackForce = Mathf.Min(15 * attackDamage * data.attackSizeMultiplier, 20.0f);
+                }
+                else
+                {
+                    knockbackForce = Mathf.Min(25 * attackDamage * data.attackSizeMultiplier, 30.0f);
+                }
 
                 col.attachedRigidbody.AddForce((col.transform.position - transform.parent.position).normalized * knockbackForce, ForceMode2D.Impulse);
 

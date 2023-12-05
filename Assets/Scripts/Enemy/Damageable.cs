@@ -32,6 +32,8 @@ public class Damageable : MonoBehaviour
     protected virtual void Update()
     {
         invincibleTime -= Time.deltaTime;
+
+        if (hp < 0) ApplyHP(0);
     }
 
     public virtual bool IsInvincible()
@@ -71,6 +73,8 @@ public class Damageable : MonoBehaviour
     {
         hp += change;
         hp = Mathf.Min(hp, maxHP);
+
+        if (hp < 0) hp = 0;
 
         if (hp <= 0) OnDead();
     }
