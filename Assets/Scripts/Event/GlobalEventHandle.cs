@@ -23,6 +23,7 @@ public class GlobalEventHandle : MonoBehaviour
 
     public EnemySpawnEvent enemySpawn;
     public EnemyDeathEvent enemyDeath;
+    public BossHPUIUpdateEvent bossHPUIUpdate;
 
     // Events that this object specifically invokes
     [Header("Derived Events")]
