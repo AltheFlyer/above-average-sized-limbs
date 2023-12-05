@@ -12,6 +12,9 @@ public class Door : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
+    public GameObject[] activeIfOpen;
+    public GameObject[] activeIfClosed;
+
 
     // Internal state
 
@@ -51,9 +54,14 @@ public class Door : MonoBehaviour
         // Enable/disable children
         if (transform.childCount > 0)
         {
-            foreach (Transform t in transform)
+            foreach (GameObject go in activeIfOpen)
             {
-                t.gameObject.SetActive(lockState || !isDoorOpenable);
+                // Today, I will use de Morgan's Law. (Clueless)
+                go.gameObject.SetActive(!lockState && isDoorOpenable);
+            }
+            foreach (GameObject go in activeIfClosed)
+            {
+                go.gameObject.SetActive(lockState || !isDoorOpenable);
             }
         }
         else
