@@ -169,7 +169,7 @@ MonoBehaviour:
         m_CallState: 2
   wallMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 17408
   attackSpeed: 7
   prepareTime: 3
   attackDelay: 0.3

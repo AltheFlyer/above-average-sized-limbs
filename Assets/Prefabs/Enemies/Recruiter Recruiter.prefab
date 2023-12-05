@@ -15124,7 +15124,7 @@ MonoBehaviour:
   - {fileID: 7589884533764535759}
   - {fileID: 8508926844596919371}
   hiredEffectPrefab: {fileID: 5427402122937063527, guid: 98189b9f4c8fd45529abbedb97dcc907, type: 3}
-  summonPrefab: {fileID: 8303432624014630202, guid: d59c6e29ebff61344bce3201451bff27, type: 3}
+  summonPrefab: {fileID: 8303432624014630202, guid: 45e1f86b8f3122f4f80ee32123e549ee, type: 3}
   facePalmEffectPos: {fileID: 2743235804690694690}
   facePalmEffectPrefab: {fileID: 6630275391772572677, guid: 054a44b4100f14131b456dc883354a2b, type: 3}
   attackCollider: {fileID: 4911374963780808692}
