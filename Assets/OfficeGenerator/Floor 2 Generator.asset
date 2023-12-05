@@ -15,5 +15,5 @@ MonoBehaviour:
   numRooms: 15
   startingRoom: {fileID: 11400000, guid: 9a2636afb92273342ba30d763899e672, type: 2}
   itemRoom: {fileID: 11400000, guid: b019b711fe1fd38478c9c00afb08c4b1, type: 2}
-  bossRoom: {fileID: 11400000, guid: d35be646cb132e14b8230469c281cf29, type: 2}
+  bossRoom: {fileID: 11400000, guid: 3a98f0cd83222d344a1b6765b75dcf2d, type: 2}
   normalRoomPool: {fileID: 11400000, guid: 06944427aa87cfb41a2a28356ac28008, type: 2}
