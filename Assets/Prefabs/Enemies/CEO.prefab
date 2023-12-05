@@ -319,6 +319,7 @@ GameObject:
   - component: {fileID: 966802570029044775}
   - component: {fileID: 1821967295472951868}
   - component: {fileID: 4319253402440505724}
+  - component: {fileID: 9007471733665799639}
   m_Layer: 8
   m_Name: CEO
   m_TagString: Untagged
@@ -570,6 +571,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9007471733665799639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8710073475802148205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc86aa23ed0b6d439872bc9b7002210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6882639007442798631
 PrefabInstance:
   m_ObjectHideFlags: 0

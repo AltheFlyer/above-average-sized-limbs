@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 5111022092199796838}
   - component: {fileID: 2115413312839057692}
   - component: {fileID: 3021962492658724340}
+  - component: {fileID: 8928306033498005479}
+  - component: {fileID: 8768566302674722335}
+  - component: {fileID: 7672642195620480739}
+  - component: {fileID: 1607005904654978155}
   m_Layer: 14
   m_Name: LeatherChair
   m_TagString: Untagged
@@ -130,3 +134,84 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.96875, y: 0.82740235}
   m_EdgeRadius: 0
+--- !u!114 &8928306033498005479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680206518516715266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03eb452f8b42e4e99a8e3f78d9aad6bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 4
+  hp: 4
+  onDamagedInvincibleTime: 0
+  onDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  damageable: {fileID: 8928306033498005479}
+--- !u!50 &8768566302674722335
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680206518516715266}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 99999
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!114 &7672642195620480739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680206518516715266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75953d6b31f574644be1238b08e89b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allowRuntimeFragmentation: 1
+  extraPoints: 2
+  subshatterSteps: 0
+  fragmentLayer: NoCollision
+  sortingLayerName: Top Effects
+  orderInLayer: 5
+  shatterType: 1
+  fragments: []
+--- !u!114 &1607005904654978155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680206518516715266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ea8cb03c88d429794f1e7e2836fc5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickerMaterial: {fileID: 2100000, guid: c569ec8418a524adba131ebd90e0c747, type: 2}
+  flickerTime: 0.2
+  spriteRenderer: {fileID: 2115413312839057692}
