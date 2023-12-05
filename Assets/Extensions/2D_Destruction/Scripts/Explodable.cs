@@ -43,7 +43,10 @@ public class Explodable : MonoBehaviour
         {
             foreach (GameObject frag in fragments)
             {
-                frag.transform.parent = null;
+                if (OfficeExplorationController.instance == null)
+                    frag.transform.parent = null;
+                else
+                    frag.transform.parent = OfficeExplorationController.instance.currentRoom.GetRoomGameObject().transform;
                 frag.SetActive(true);
             }
         }

@@ -50,5 +50,5 @@ MonoBehaviour:
   deltaAttacksPerSecond: 0.2
   deltaAttackDamage: 0.4
   deltaDashSpeed: 1
-  deltaHealth: 0
+  deltaHealth: 2
   deltaMaxHealth: 2
