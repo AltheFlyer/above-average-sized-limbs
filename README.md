@@ -22,8 +22,4 @@ Controls:
 
 ### Gameplay
 
-A link to your gameplay recording video
-
-### Other information
-
-You may put whatever important information you want here that describes your game or help players better
+https://drive.google.com/file/d/1SRRGe_uG7dtw_ljDwhoy7EE3w7owzNyu/view?usp=sharing
