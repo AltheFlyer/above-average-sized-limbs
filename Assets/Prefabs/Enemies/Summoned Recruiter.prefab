@@ -14954,7 +14954,7 @@ GameObject:
   - component: {fileID: 7505877185952014731}
   - component: {fileID: 3058396204841789420}
   m_Layer: 8
-  m_Name: HR Recruiter
+  m_Name: Summoned Recruiter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15117,12 +15117,10 @@ MonoBehaviour:
   summonTime: 2.4
   facepalmTime: 0.1
   summonStateParticle: {fileID: 3111270017945246253}
-  summonPos:
-  - {fileID: 667477399601926998}
-  - {fileID: 2504887570502908930}
-  summonParticle:
-  - {fileID: 7589884533764535759}
-  - {fileID: 8508926844596919371}
+  summonPos1: {fileID: 667477399601926998}
+  summonParticle1: {fileID: 7589884533764535759}
+  summonPos2: {fileID: 2504887570502908930}
+  summonParticle2: {fileID: 8508926844596919371}
   hiredEffectPrefab: {fileID: 5427402122937063527, guid: 98189b9f4c8fd45529abbedb97dcc907, type: 3}
   summonPrefab: {fileID: 387973373630052734, guid: e6b8af568fc429b4492bcb9c0355005f, type: 3}
   facePalmEffectPos: {fileID: 2743235804690694690}
@@ -15161,7 +15159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19dcab92f34e432419dc3f257e8cfb25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDropRate: 1
+  itemDropRate: 0
 --- !u!114 &3058396204841789420
 MonoBehaviour:
   m_ObjectHideFlags: 0
