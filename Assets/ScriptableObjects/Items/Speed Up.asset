@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08623676f90bc814c9998e9a73d4df98, type: 3}
   m_Name: Speed Up
   m_EditorClassIdentifier: 
-  itemName: Red Bull
-  description: Move speed up!
+  itemName: Red    Bull
+  description: Move    speed    up!
   sprite: {fileID: -2020849137, guid: 7290d970c424e43fc8240104cbb5cf17, type: 3}
   item: {fileID: 8257119664684958761, guid: a5dc6470783c23840b4152bc01e76afd, type: 3}
   additionalRendererOnPickup: {fileID: 448928482819467066, guid: 2acffdf9e6e53234b94224583a79e916, type: 3}
