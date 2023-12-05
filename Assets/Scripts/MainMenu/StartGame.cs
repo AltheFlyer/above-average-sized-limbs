@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    int LEVEL_1_SCENE_BUILD_INDEX = 1;
+    public string LEVEL_1_SCENE_BUILD_NAME = "Level 1";
     public void StartGame()
     {
-        SceneManager.LoadScene(LEVEL_1_SCENE_BUILD_INDEX);
+        SceneManager.LoadScene(LEVEL_1_SCENE_BUILD_NAME);
     }
 }

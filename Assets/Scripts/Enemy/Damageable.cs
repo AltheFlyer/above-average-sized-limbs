@@ -104,4 +104,9 @@ public class Damageable : MonoBehaviour
     {
         SFXManager.TryPlaySFX(name, this.gameObject);
     }
+
+    public virtual void GiveIframes(float time)
+    {
+        invincibleTime = Math.Max(invincibleTime + time, time);
+    }
 }
