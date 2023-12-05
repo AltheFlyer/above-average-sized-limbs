@@ -279,7 +279,7 @@ public class BossManager : Enemy
             // show attack path
             chargeAttackPath.gameObject.SetActive(true);
 
-            float _prepareTime = chargePrepareTime;
+            float _prepareTime = chargePrepareTime * Random.Range(0.8f, 1.2f);
 
             float angle = 0;
 

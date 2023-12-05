@@ -53,6 +53,7 @@ MonoBehaviour:
   playerStatChange: {fileID: 11400000, guid: 9c01567a6bdcb1e488d5fd3a68f98445, type: 2}
   enemySpawn: {fileID: 11400000, guid: e9aed30a1cd913d4083a389cd3599bd4, type: 2}
   enemyDeath: {fileID: 11400000, guid: 420273f18746cab4297858704f747cde, type: 2}
+  bossHPUIUpdate: {fileID: 11400000, guid: 68240f349c0bb474683fcdbfd5ac0b76, type: 2}
   playerTookDamage: {fileID: 11400000, guid: d74df3498c0246549b5a2549c9a75612, type: 2}
   playerDeath: {fileID: 11400000, guid: 2b0bb1b580c1dd140b0745cf2657dd09, type: 2}
 --- !u!114 &8592141961400827455

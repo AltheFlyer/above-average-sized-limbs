@@ -85,6 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6379523617005047697}
   - component: {fileID: 1735385209106115239}
+  - component: {fileID: 1995897053993229328}
   m_Layer: 5
   m_Name: BossHealth
   m_TagString: Untagged
@@ -129,6 +130,34 @@ MonoBehaviour:
   CEOHealthBar: {fileID: 5571067906696672816}
   managerSlider: {fileID: 3568818183754900741}
   CEOSlider: {fileID: 7607141824132862926}
+--- !u!114 &1995897053993229328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510801217079569717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9216c30218540edaa4dc11084bb1be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 68240f349c0bb474683fcdbfd5ac0b76, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1735385209106115239}
+        m_TargetAssemblyTypeName: BossHealth, Assembly-CSharp
+        m_MethodName: SetBossHPUI
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3577237294760118920
 GameObject:
   m_ObjectHideFlags: 0
