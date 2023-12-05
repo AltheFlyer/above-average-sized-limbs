@@ -14837,7 +14837,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1578661494, guid: 52ef1eb91370eac4ca1cbc6dae85f172, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8724302, g: 0.14528298, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14954,7 +14954,7 @@ GameObject:
   - component: {fileID: 7505877185952014731}
   - component: {fileID: 3058396204841789420}
   m_Layer: 8
-  m_Name: HR Recruiter
+  m_Name: Recruiter Recruiter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15067,8 +15067,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f17ea0c7a32e401ab290480e09ba8d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 5
-  hp: 5
+  maxHP: 10
+  hp: 10
   onDamagedInvincibleTime: 0
   onDamage:
     m_PersistentCalls:
@@ -15124,7 +15124,7 @@ MonoBehaviour:
   - {fileID: 7589884533764535759}
   - {fileID: 8508926844596919371}
   hiredEffectPrefab: {fileID: 5427402122937063527, guid: 98189b9f4c8fd45529abbedb97dcc907, type: 3}
-  summonPrefab: {fileID: 387973373630052734, guid: e6b8af568fc429b4492bcb9c0355005f, type: 3}
+  summonPrefab: {fileID: 8303432624014630202, guid: 45e1f86b8f3122f4f80ee32123e549ee, type: 3}
   facePalmEffectPos: {fileID: 2743235804690694690}
   facePalmEffectPrefab: {fileID: 6630275391772572677, guid: 054a44b4100f14131b456dc883354a2b, type: 3}
   attackCollider: {fileID: 4911374963780808692}

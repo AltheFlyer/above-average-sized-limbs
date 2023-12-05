@@ -14954,7 +14954,7 @@ GameObject:
   - component: {fileID: 7505877185952014731}
   - component: {fileID: 3058396204841789420}
   m_Layer: 8
-  m_Name: HR Recruiter
+  m_Name: Summoned Recruiter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15161,7 +15161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19dcab92f34e432419dc3f257e8cfb25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDropRate: 1
+  itemDropRate: 0
 --- !u!114 &3058396204841789420
 MonoBehaviour:
   m_ObjectHideFlags: 0

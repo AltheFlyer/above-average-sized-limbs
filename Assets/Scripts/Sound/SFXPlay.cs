@@ -8,7 +8,12 @@ public class SFXPlay : MonoBehaviour
 
     public void Activate()
     {
-        string[] sfxNames = sfxName.Split(',');
+        PlayName(sfxName);
+    }
+
+    public void PlayName(string name)
+    {
+        string[] sfxNames = name.Split(',');
         foreach (var sfx in sfxNames)
         {
             sfx.Trim();
