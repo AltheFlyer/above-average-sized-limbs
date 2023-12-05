@@ -302,6 +302,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 72
       objectReference: {fileID: 0}
+    - target: {fileID: 1216193343120869446, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
+      propertyPath: m_text
+      value: 'Combo: 0'
+      objectReference: {fileID: 0}
     - target: {fileID: 3085191709551256490, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: comboVFX
       value: 
@@ -376,7 +380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8185580560600704901, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 325
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 8185580560600704901, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: m_AnchoredPosition.y
