@@ -64,23 +64,8 @@ public class PlayerAttack : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        //ComboStatCheck();
-
     }
 
-    void ComboStatCheck()
-    {
-        if (comboCount.Value >= comboThreshold1 && !damageIncreaseByCombo)
-        {
-            currentAttackDamage += 1;
-            damageIncreaseByCombo = true;
-        }
-        else if (comboCount.Value < comboThreshold1)
-        {
-            currentAttackDamage = attackDamage;
-            damageIncreaseByCombo = false;
-        }
-    }
 
     void OnTriggerEnter2D(Collider2D col)
     {
