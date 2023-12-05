@@ -108,3 +108,13 @@ MonoBehaviour:
     volume: 0.11
     audioMixerGroup: {fileID: 5879685974783371366, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
     source: {fileID: 0}
+  - name: playerDamaged1
+    clip: {fileID: 8300000, guid: 52693824a7e854d89979d76db3eadeb3, type: 3}
+    volume: 0.18
+    audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: playerDead1
+    clip: {fileID: 8300000, guid: bc4c92bbd59084df5904ae847898b1d8, type: 3}
+    volume: 0.09
+    audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
