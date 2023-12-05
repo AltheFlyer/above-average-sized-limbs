@@ -16512,7 +16512,7 @@ MonoBehaviour:
       m_Calls: []
   wallMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 17408
   startTime: 0.5
   followSpeed: 3
   followDuration: 3
@@ -16538,6 +16538,7 @@ MonoBehaviour:
   chargeStunTime: 3.5
   spriteExplodeSOC: {fileID: 3426089604948015718}
   spriteExplodeEffect: {fileID: 2970504789585489447}
+  attackCollider: {fileID: 6016210458908970979}
   stateHistory: 
 --- !u!95 &6342457978930515643
 Animator:
