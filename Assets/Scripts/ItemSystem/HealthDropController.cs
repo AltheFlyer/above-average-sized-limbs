@@ -12,6 +12,15 @@ public class HealthDropController : MonoBehaviour
     // Use in event listener
     public void SpawnItem(EnemyDeathData data)
     {
+        // Stop minions from dropping health
+        if (data.enemy.GetComponent<DropRate>() != null)
+        {
+            if (data.enemy.GetComponent<DropRate>().itemDropRate <= 0)
+            {
+                return;
+            }
+        }
+
         if (Random.Range(0.0f, 1.0f) > dropRate)
         {
             return;
