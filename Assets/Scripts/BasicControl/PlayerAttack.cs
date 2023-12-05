@@ -86,6 +86,12 @@ public class PlayerAttack : MonoBehaviour
     {
         if (IsMaskMatched(hitMask, col.gameObject) && !hitList.Contains(col))
         {
+            Damageable d = col.gameObject.GetComponent<Damageable>();
+            if (d == null)
+            {
+                return;
+            }
+            hitList.Add(col);
             //For whoever's gonna modify this, the comboCount, showComboEffect and ResetTimer
             //doesn't work when put below the GlobalEventHandle.
             comboCount.ApplyChange(1);
@@ -93,7 +99,8 @@ public class PlayerAttack : MonoBehaviour
 
             GlobalEventHandle.instance?.onHit.Raise(new HitData());
 
-            col.gameObject.GetComponent<Damageable>().TakeDamage(attackDamage);
+
+            d.TakeDamage(attackDamage);
 
             // Knockback
             if (col.GetComponent<KnockbackImmunity>() == null)
@@ -108,8 +115,6 @@ public class PlayerAttack : MonoBehaviour
                 //Mathf.Min(5 * attackDamage * data.attackSizeMultiplier, 10.0f), ForceMode2D.Impulse);
 
             }
-
-            hitList.Add(col);
         }
     }
 
