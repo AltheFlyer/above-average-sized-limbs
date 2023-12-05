@@ -664,11 +664,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8185580560600704901, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 356.5
+      value: 325
       objectReference: {fileID: 0}
     - target: {fileID: 8185580560600704901, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 190
+      value: 196
       objectReference: {fileID: 0}
     - target: {fileID: 8185580560600704901, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1414,9 +1414,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 476983193}
-  m_Father: {fileID: 1775072403}
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3189,3 +3188,4 @@ SceneRoots:
   - {fileID: 6411259905733086821}
   - {fileID: 1091841393}
   - {fileID: 1686243591}
+  - {fileID: 1451242189}
