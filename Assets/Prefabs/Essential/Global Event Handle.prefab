@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6811899477650224552}
   - component: {fileID: 1476780584562698827}
-  - component: {fileID: 8592141961400827455}
-  - component: {fileID: 5474784034026023444}
   - component: {fileID: 92651691609636489}
   m_Layer: 0
   m_Name: Global Event Handle
@@ -56,62 +54,6 @@ MonoBehaviour:
   bossHPUIUpdate: {fileID: 11400000, guid: 68240f349c0bb474683fcdbfd5ac0b76, type: 2}
   playerTookDamage: {fileID: 11400000, guid: d74df3498c0246549b5a2549c9a75612, type: 2}
   playerDeath: {fileID: 11400000, guid: 2b0bb1b580c1dd140b0745cf2657dd09, type: 2}
---- !u!114 &8592141961400827455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4065411533169166536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef9321416f1859c42a970e8bf42542cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 7229a6eac5f8fd54b94fb05ecfe11a07, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1476780584562698827}
-        m_TargetAssemblyTypeName: GlobalEventHandle, Assembly-CSharp
-        m_MethodName: LogPreAttack
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &5474784034026023444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4065411533169166536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c726ee6705795e149aa19b98980c87b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: e7fa39e0d98117949acbfd4ce969c7b8, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1476780584562698827}
-        m_TargetAssemblyTypeName: GlobalEventHandle, Assembly-CSharp
-        m_MethodName: LogOnHit
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &92651691609636489
 MonoBehaviour:
   m_ObjectHideFlags: 0
