@@ -16,10 +16,9 @@ public class EnemyHRRecruiter : Enemy
     public float facepalmTime = 0.5f;
     [Space]
     public ParticleSystem summonStateParticle;
-    public Transform summonPos1;
-    public ParticleSystem summonParticle1;
-    public Transform summonPos2;
-    public ParticleSystem summonParticle2;
+    public Transform[] summonPos;
+    public ParticleSystem[] summonParticle;
+
     public GameObject hiredEffectPrefab;
     public GameObject summonPrefab;
     [Space]
@@ -28,8 +27,7 @@ public class EnemyHRRecruiter : Enemy
 
     public Collider2D attackCollider;
 
-    GameObject summon1;
-    GameObject summon2;
+    List<GameObject> summons = new List<GameObject>();
 
     GameObject player;
 
@@ -56,8 +54,10 @@ public class EnemyHRRecruiter : Enemy
 
         // set default
         summonStateParticle.Stop();
-        summonParticle1.Stop();
-        summonParticle2.Stop();
+        foreach (ParticleSystem ps in summonParticle)
+        {
+            ps.Stop();
+        }
 
         StartCoroutine(StateStartIE());
     }
@@ -93,10 +93,13 @@ public class EnemyHRRecruiter : Enemy
         rb.velocity = Vector2.zero;
 
         // start summon
-        if (summonParticle1 != null)
-            summonParticle1.Play();
-        if (summonParticle2 != null)
-            summonParticle2.Play();
+        foreach (ParticleSystem ps in summonParticle)
+        {
+            if (ps != null)
+            {
+                ps.Play();
+            }
+        }
         summonStateParticle.Play();
 
         SFXManager.TryPlaySFX("summon1", gameObject);
@@ -112,15 +115,20 @@ public class EnemyHRRecruiter : Enemy
         }
 
         // summon
-        Instantiate(hiredEffectPrefab, summonPos1.position, Quaternion.identity, transform);
-        summon1 = Instantiate(summonPrefab, summonPos1.position, Quaternion.identity);
-        Instantiate(hiredEffectPrefab, summonPos2.position, Quaternion.identity, transform);
-        summon2 = Instantiate(summonPrefab, summonPos2.position, Quaternion.identity);
+        summons.Clear();
+        foreach (Transform t in summonPos)
+        {
+            Instantiate(hiredEffectPrefab, t.position, Quaternion.identity, transform);
+            summons.Add(Instantiate(summonPrefab, t.position, Quaternion.identity));
+        }
 
-        if (summonParticle1 != null)
-            summonParticle1.Stop();
-        if (summonParticle2 != null)
-            summonParticle2.Stop();
+        foreach (ParticleSystem ps in summonParticle)
+        {
+            if (ps != null)
+            {
+                ps.Stop();
+            }
+        }
         summonStateParticle.Stop();
 
         SFXManager.TryPlaySFX("summon1", gameObject);
@@ -135,7 +143,15 @@ public class EnemyHRRecruiter : Enemy
         // idle, wait for all minion to die
         while (true)
         {
-            if (summon1 == null && summon2 == null)
+            bool stillAlive = false;
+            foreach (GameObject go in summons)
+            {
+                if (go != null)
+                {
+                    stillAlive = true;
+                }
+            }
+            if (!stillAlive)
             {
                 break;
             }
