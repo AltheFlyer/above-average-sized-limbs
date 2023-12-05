@@ -153,6 +153,7 @@ public class BossCEO : Enemy
         // spawn hand grenade
         for (int i = 0; i < handGrenadeCount; i++)
         {
+            animator.SetTrigger("summonGreen");
             Vector2 spawnPos = Camera.main.transform.position + new Vector3(Random.Range(-handGrenadeSpawnCornerSpawnFromCamera.x, handGrenadeSpawnCornerSpawnFromCamera.x), Random.Range(-handGrenadeSpawnCornerSpawnFromCamera.y, handGrenadeSpawnCornerSpawnFromCamera.y), 0);
             Instantiate(handGrenadePrefab, spawnPos, Quaternion.identity);
 
@@ -173,6 +174,7 @@ public class BossCEO : Enemy
         yield return new WaitForSeconds(vpPreTime);
 
         // spawn vps
+        animator.SetTrigger("summonOrange");
         Vector2 spawnPos1 = Camera.main.transform.position + new Vector3(vpCornerSpawnFromCamera.x, vpCornerSpawnFromCamera.y, 0);
         Vector2 spawnPos2 = Camera.main.transform.position + new Vector3(vpCornerSpawnFromCamera.x, -vpCornerSpawnFromCamera.y, 0);
         Vector2 spawnPos3 = Camera.main.transform.position + new Vector3(-vpCornerSpawnFromCamera.x, vpCornerSpawnFromCamera.y, 0);
@@ -225,6 +227,7 @@ public class BossCEO : Enemy
         Vector2 spawnVelo4 = new Vector2(-duplicateSpawnVelocityCorner.x, -duplicateSpawnVelocityCorner.y);
 
         // show pre attack
+        animator.SetTrigger("summonPurple");
         Instantiate(duplicateAim, transform.position, Quaternion.Euler(0, 0, AngPosUtil.GetAngle(Vector2.zero, spawnVelo1)));
         Instantiate(duplicateAim, transform.position, Quaternion.Euler(0, 0, AngPosUtil.GetAngle(Vector2.zero, spawnVelo2)));
         Instantiate(duplicateAim, transform.position, Quaternion.Euler(0, 0, AngPosUtil.GetAngle(Vector2.zero, spawnVelo3)));
@@ -253,6 +256,7 @@ public class BossCEO : Enemy
         rb.velocity = Vector2.zero;
 
         // show pre attack
+        animator.SetTrigger("teleportIn");
         yield return new WaitForSeconds(teleportPreTime);
 
         Vector2 playerPos = player.transform.position;
@@ -269,6 +273,7 @@ public class BossCEO : Enemy
         yield return new WaitForSeconds(teleportAttackDelay);
 
         // attack
+        animator.SetTrigger("teleportOut");
         GameObject attack = Instantiate(teleportAttackPrefab, player.transform.position, Quaternion.identity);
 
         // wait post attack

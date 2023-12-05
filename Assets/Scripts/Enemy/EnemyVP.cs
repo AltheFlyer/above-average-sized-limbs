@@ -123,6 +123,7 @@ public class EnemyVP : Enemy
         rb.velocity = Vector2.zero;
 
         Vector2 dir = (player.transform.position - transform.position).normalized;
+        animator.SetTrigger("punch");
         animator.SetFloat("xDir", dir.x);
 
         // show pre attack
