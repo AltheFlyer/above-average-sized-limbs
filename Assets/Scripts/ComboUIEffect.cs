@@ -71,7 +71,7 @@ public class ComboUIEffect : MonoBehaviour
         }
 
         comboText.color = comboTextColor;
-        comboText.text = "Combo: " + comboCount.Value.ToString();
+        comboText.text = "Combo: " + comboCount.Value.ToString("D3");
     }
 
     void ApplyJitter(float jitterAmount, float jitterSpeed)

@@ -304,7 +304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1216193343120869446, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: m_text
-      value: 'Combo: 0'
+      value: 'Combo: 000'
       objectReference: {fileID: 0}
     - target: {fileID: 3085191709551256490, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: comboVFX
@@ -384,7 +384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8185580560600704901, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 196
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 8185580560600704901, guid: 7ef3500288c531245bdd8c5998ca6139, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2318,7 +2318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 999418088259424124, guid: c92103ad76ed8cc40b8dd140c31e501a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 170
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 999418088259424124, guid: c92103ad76ed8cc40b8dd140c31e501a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
