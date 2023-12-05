@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using YUtil;
 
+// (Peter Griffin Enemy)
 public class EnemyCoffeeRunnerIntern : Enemy
 {
     [Header("Enemy Coffee Runner Intern")]
@@ -19,6 +20,8 @@ public class EnemyCoffeeRunnerIntern : Enemy
     public GameObject exclaimationEffect;
     public GameObject deathEffect;
     public ScaleOpacityCurve spriteDeathFadeSOC;
+
+    public Collider2D attackCollider;
 
     GameObject player;
 
@@ -147,6 +150,7 @@ public class EnemyCoffeeRunnerIntern : Enemy
     {
         base.OnDead();
 
+        attackCollider.enabled = false;
         if (GlobalEventHandle.instance != null) GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
 
         StopAllCoroutines();

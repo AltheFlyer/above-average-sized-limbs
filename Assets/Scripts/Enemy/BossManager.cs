@@ -45,6 +45,8 @@ public class BossManager : Enemy
     public ScaleOpacityCurve spriteExplodeSOC;
     public EffectRelayer spriteExplodeEffect;
 
+    public Collider2D attackCollider;
+
 
     GameObject player;
 
@@ -334,6 +336,7 @@ public class BossManager : Enemy
     {
         base.OnDead();
 
+        attackCollider.enabled = false;
         if (GlobalEventHandle.instance != null) GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
         GlobalEventHandle.instance?.bossHPUIUpdate.Raise(new BossHPUIData(BossID.CEO, 0));
 
