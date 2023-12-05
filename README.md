@@ -6,10 +6,10 @@ Big Hands is a top-down 2D dungeon crawler roguelike game inspired by The Bindin
 - The genre: 2D Topdown Fighting, RPG, Roguelike
 - The premise: corporate rage: The protagonist is tired of working in their 9 to 5 corporate job and rages. He then decides to kill everyone while climbing the corporate ladder.
 
-![opening cutscene](Media/cutscene.png)
-![start room](Media/start_room.png)
-![boss room entrance](Media/boss_room.png)
-![action room](Media/action.png)
+![opening cutscene](Screenshots/cutscene.png)
+![start room](Screenshots/start_room.png)
+![boss room entrance](Screenshots/boss_room.png)
+![action room](Screenshots/action.png)
 
 ### How to play the game
 
