@@ -32,11 +32,11 @@ public class BloodyScreen : MonoBehaviour
 
         while (timer > 0)
         {
-            a -= rate * Time.fixedUnscaledDeltaTime;
+            a -= rate * Time.unscaledDeltaTime;
 
             image.color = new Color(image.color.r, image.color.g, image.color.b, a);
 
-            timer -= Time.deltaTime;
+            timer -= Time.unscaledDeltaTime;
             yield return null;
         }
 

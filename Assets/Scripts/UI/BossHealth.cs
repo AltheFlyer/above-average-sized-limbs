@@ -20,6 +20,19 @@ public class BossHealth : Singleton<BossHealth>
         CEOSlider.value = 0;
     }
 
+    public void SetBossHPUI(BossHPUIData data)
+    {
+        switch (data.bossID)
+        {
+            case BossID.Manager:
+                SetManagerHPUI(data.hpRatio);
+                break;
+            case BossID.CEO:
+                SetCEOHPUI(data.hpRatio);
+                break;
+        }
+    }
+
     public void SetManagerHPUI(float hpRatio)
     {
         if (hpRatio == 0)

@@ -16504,6 +16504,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  antiClustering: 0
+  antiClusteringRadius: 0.75
   deathEffectPrefab: {fileID: 5427402122937063527, guid: 093a7fae069fb4aa6a3c18d183a619c5, type: 3}
   onDeadEvent:
     m_PersistentCalls:
@@ -16764,7 +16766,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 30820966343171985}
+      - m_Target: {fileID: 160273180555565082}
         m_TargetAssemblyTypeName: SpriteEffectSpawner, Assembly-CSharp
         m_MethodName: Activate
         m_Mode: 1
@@ -16776,7 +16778,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 428042041099034792}
+      - m_Target: {fileID: 4178927011664642318}
         m_TargetAssemblyTypeName: SpriteEffectSpawner, Assembly-CSharp
         m_MethodName: Activate
         m_Mode: 1
@@ -16788,7 +16790,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1567205129914453033}
+      - m_Target: {fileID: 2187192216104303005}
         m_TargetAssemblyTypeName: SpriteEffectSpawner, Assembly-CSharp
         m_MethodName: Activate
         m_Mode: 1
@@ -16800,7 +16802,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4010651314509895759}
+      - m_Target: {fileID: 7731221061225279249}
         m_TargetAssemblyTypeName: SpriteEffectSpawner, Assembly-CSharp
         m_MethodName: Activate
         m_Mode: 1

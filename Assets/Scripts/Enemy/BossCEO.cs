@@ -41,6 +41,10 @@ public class BossCEO : Enemy
     public float teleportPosTime = 2f;
     public float teleportOffsetDist = 2f;
 
+    [Space]
+    public ScaleOpacityCurve spriteExplodeSOC;
+    public EffectRelayer spriteExplodeEffect;
+
     GameObject player;
 
     Rigidbody2D rb;
@@ -65,6 +69,12 @@ public class BossCEO : Enemy
         StartCoroutine(StateStartIE());
 
         MusicManager.PlayBossMusic();
+
+        GlobalEventHandle.instance?.bossHPUIUpdate.Raise(new BossHPUIData(BossID.CEO, 1));
+        onDamage.AddListener(() =>
+        {
+            GlobalEventHandle.instance?.bossHPUIUpdate.Raise(new BossHPUIData(BossID.CEO, hp / maxHP));
+        });
     }
 
     protected override void Update()
@@ -287,7 +297,8 @@ public class BossCEO : Enemy
         base.OnDead();
 
         attackCollider.enabled = false;
-        GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
+        GlobalEventHandle.instance?.enemyDeath.Raise(new EnemyDeathData(gameObject));
+        GlobalEventHandle.instance?.bossHPUIUpdate.Raise(new BossHPUIData(BossID.CEO, 0));
 
         StopAllCoroutines();
         StartCoroutine(OnDeadIE());
@@ -306,6 +317,16 @@ public class BossCEO : Enemy
         yield return new WaitForSeconds(1f);
 
         MusicManager.PlayBackgroundMusic();
+
+        // dead animation
+        spriteExplodeSOC.enabled = true;
+
+        yield return new WaitForSeconds(.95f);
+        spriteExplodeEffect.Activate();
+        yield return new WaitForSeconds(.05f);
+        spriteExplodeEffect.Activate();
+        yield return new WaitForSeconds(.05f);
+        spriteExplodeEffect.Activate();
 
         Destroy(gameObject);
     }

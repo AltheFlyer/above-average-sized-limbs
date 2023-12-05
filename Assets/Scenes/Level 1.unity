@@ -2617,6 +2617,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1476780584562698827, guid: 48a04331e4941f1448d5e74cb2f8eed3, type: 3}
+      propertyPath: bossHPUIUpdate
+      value: 
+      objectReference: {fileID: 11400000, guid: 68240f349c0bb474683fcdbfd5ac0b76, type: 2}
     - target: {fileID: 4065411533169166536, guid: 48a04331e4941f1448d5e74cb2f8eed3, type: 3}
       propertyPath: m_Name
       value: Global Event Handle
@@ -2746,10 +2750,6 @@ PrefabInstance:
     - target: {fileID: 1510801217079569717, guid: 0463bbbbf5c77c94b8f74971b39a8fb3, type: 3}
       propertyPath: m_Name
       value: BossHealth
-      objectReference: {fileID: 0}
-    - target: {fileID: 3568818183754900741, guid: 0463bbbbf5c77c94b8f74971b39a8fb3, type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6379523617005047697, guid: 0463bbbbf5c77c94b8f74971b39a8fb3, type: 3}
       propertyPath: m_Pivot.x
