@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6676522080210184902
+--- !u!1 &757704893966766515
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1956411142855448407}
-  - component: {fileID: 5720690364328668905}
-  - component: {fileID: 324120969934736940}
-  - component: {fileID: 4381874852122806281}
-  - component: {fileID: 5077734109365642386}
-  - component: {fileID: 4381739435053590620}
-  - component: {fileID: 531070792858083679}
+  - component: {fileID: 6621402776844549240}
+  - component: {fileID: 8170374048112570653}
+  - component: {fileID: 4909336745598343754}
+  - component: {fileID: 4235842476621345481}
+  - component: {fileID: 4625186739659376330}
+  - component: {fileID: 7091854173468206517}
+  - component: {fileID: 6293638849452485574}
   m_Layer: 14
-  m_Name: SideSofa
+  m_Name: longsofa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1956411142855448407
+--- !u!4 &6621402776844549240
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6676522080210184902}
+  m_GameObject: {fileID: 757704893966766515}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.58, y: 2.0455766, z: 0}
+  m_LocalPosition: {x: -2.71, y: -0.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5720690364328668905
+--- !u!212 &8170374048112570653
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6676522080210184902}
+  m_GameObject: {fileID: 757704893966766515}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,27 +75,27 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1841217055
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 818d1cea4e7be464988fee6d705612e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99a6e0ef34cb4ae49bb509545bbb4e91, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.78125, y: 1.34375}
+  m_Size: {x: 2.65625, y: 1.21875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!61 &324120969934736940
+  m_SpriteSortPoint: 1
+--- !u!61 &4909336745598343754
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6676522080210184902}
+  m_GameObject: {fileID: 757704893966766515}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -121,26 +121,26 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.026119411}
+  m_Offset: {x: 0.00000011920929, y: -0.045486957}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0416666, y: 1.7916666}
-    newSize: {x: 0.78125, y: 1.34375}
+    oldSize: {x: 2.65625, y: 1.21875}
+    newSize: {x: 2.65625, y: 1.21875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0416666, y: 1.7394277}
+  m_Size: {x: 2.519789, y: 0.9003412}
   m_EdgeRadius: 0
---- !u!114 &4381874852122806281
+--- !u!114 &4235842476621345481
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6676522080210184902}
+  m_GameObject: {fileID: 757704893966766515}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03eb452f8b42e4e99a8e3f78d9aad6bb, type: 3}
@@ -152,15 +152,15 @@ MonoBehaviour:
   onDamage:
     m_PersistentCalls:
       m_Calls: []
-  damageable: {fileID: 4381874852122806281}
---- !u!50 &5077734109365642386
+  damageable: {fileID: 4235842476621345481}
+--- !u!50 &4625186739659376330
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6676522080210184902}
+  m_GameObject: {fileID: 757704893966766515}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -180,13 +180,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &4381739435053590620
+--- !u!114 &7091854173468206517
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6676522080210184902}
+  m_GameObject: {fileID: 757704893966766515}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75953d6b31f574644be1238b08e89b8a, type: 3}
@@ -200,13 +200,13 @@ MonoBehaviour:
   orderInLayer: 5
   shatterType: 1
   fragments: []
---- !u!114 &531070792858083679
+--- !u!114 &6293638849452485574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6676522080210184902}
+  m_GameObject: {fileID: 757704893966766515}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9ea8cb03c88d429794f1e7e2836fc5b, type: 3}
@@ -214,4 +214,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flickerMaterial: {fileID: 2100000, guid: c569ec8418a524adba131ebd90e0c747, type: 2}
   flickerTime: 0.2
-  spriteRenderer: {fileID: 5720690364328668905}
+  spriteRenderer: {fileID: 8170374048112570653}
