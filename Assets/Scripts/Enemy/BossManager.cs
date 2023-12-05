@@ -45,6 +45,8 @@ public class BossManager : Enemy
     public ScaleOpacityCurve spriteExplodeSOC;
     public EffectRelayer spriteExplodeEffect;
 
+    public Collider2D attackCollider;
+
 
     GameObject player;
 
@@ -71,6 +73,12 @@ public class BossManager : Enemy
         StartCoroutine(StateStartIE());
 
         MusicManager.PlayBossMusic();
+
+        GlobalEventHandle.instance?.bossHPUIUpdate.Raise(new BossHPUIData(BossID.Manager, 1));
+        onDamage.AddListener(() =>
+        {
+            GlobalEventHandle.instance?.bossHPUIUpdate.Raise(new BossHPUIData(BossID.Manager, hp / maxHP));
+        });
     }
 
     protected override void Update()
@@ -273,7 +281,7 @@ public class BossManager : Enemy
             // show attack path
             chargeAttackPath.gameObject.SetActive(true);
 
-            float _prepareTime = chargePrepareTime;
+            float _prepareTime = chargePrepareTime * Random.Range(0.8f, 1.2f);
 
             float angle = 0;
 
@@ -328,7 +336,9 @@ public class BossManager : Enemy
     {
         base.OnDead();
 
+        attackCollider.enabled = false;
         if (GlobalEventHandle.instance != null) GlobalEventHandle.instance.enemyDeath.Raise(new EnemyDeathData(gameObject));
+        GlobalEventHandle.instance?.bossHPUIUpdate.Raise(new BossHPUIData(BossID.CEO, 0));
 
         StopAllCoroutines();
         StartCoroutine(OnDeadIE());
