@@ -118,3 +118,23 @@ MonoBehaviour:
     volume: 0.09
     audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
     source: {fileID: 0}
+  - name: step1
+    clip: {fileID: 8300000, guid: 56510ae4d33e149dd950f4d4145d3e5c, type: 3}
+    volume: 0.5
+    audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: step2
+    clip: {fileID: 8300000, guid: 89cacc8b1f8a24476a7bbd570a04ce8b, type: 3}
+    volume: 0.1
+    audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: step3
+    clip: {fileID: 8300000, guid: b7b6ce93aa2fa4e1dbea834b87e43ffe, type: 3}
+    volume: 0.1
+    audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
+  - name: step4
+    clip: {fileID: 8300000, guid: 7467ffc26936344aab21a476a0561477, type: 3}
+    volume: 0.1
+    audioMixerGroup: {fileID: 4897441186677723025, guid: 4d5ffbf4cd60f49ba89be99734b3d16d, type: 2}
+    source: {fileID: 0}
