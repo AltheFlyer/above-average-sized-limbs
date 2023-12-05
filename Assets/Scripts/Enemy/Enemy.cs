@@ -11,7 +11,7 @@ public class Enemy : Damageable
     public bool antiClustering = false;
     public float antiClusteringRadius = 0.75f;
     static List<Enemy> antiClusteringEnemies = new List<Enemy>();
-    readonly static float antiClusteringForce = 3;
+    readonly static float antiClusteringForce = 6;
 
     protected override void Awake()
     {
