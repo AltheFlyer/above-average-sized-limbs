@@ -57,6 +57,8 @@ public class Destructable : Damageable
                 rigidbody = gameObject.AddComponent<Rigidbody2D>();
                 rigidbody.mass = 99999;
                 rigidbody.gravityScale = 0;
+                rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+                rigidbody.freezeRotation = true;
             }
         }
 

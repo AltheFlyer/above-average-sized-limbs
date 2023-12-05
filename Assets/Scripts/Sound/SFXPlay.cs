@@ -11,13 +11,19 @@ public class SFXPlay : MonoBehaviour
         PlayName(sfxName);
     }
 
-    public void PlayName(string name)
+    public void Activate(GameObject source)
+    {
+        PlayName(sfxName, gameObject);
+    }
+
+    public void PlayName(string name, GameObject source = null)
     {
         string[] sfxNames = name.Split(',');
         foreach (var sfx in sfxNames)
         {
             sfx.Trim();
         }
-        SFXManager.TryPlaySFX(sfxNames, gameObject);
+        if (source == null) source = gameObject;
+        SFXManager.TryPlaySFX(sfxNames, source);
     }
 }

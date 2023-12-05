@@ -21,7 +21,7 @@ public class OfficeExplorationController : MonoBehaviour
     [SerializeField]
     private OfficeMap officeMap;
 
-    private Room currentRoom;
+    [HideInInspector] public Room currentRoom;
 
     public Door[] doors;
 
