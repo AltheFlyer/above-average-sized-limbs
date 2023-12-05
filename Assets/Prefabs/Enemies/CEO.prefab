@@ -1301,7 +1301,7 @@ MonoBehaviour:
   handGrenadePostTime: 1
   handGrenadeSpawnCornerSpawnFromCamera: {x: 8.3, y: 4.5}
   vpPrefab: {fileID: 8686049544494536927, guid: be4b6c23883af4830b4c1641e4f1a588, type: 3}
-  vpCornerSpawnFromCamera: {x: 3.06, y: 2.7}
+  vpCornerSpawnFromCamera: {x: 3.06, y: 1.25}
   vpPreTime: 3
   vpPostTime: 18
   duplicatePrefab: {fileID: 6228268207741050061, guid: 0ae75f8ca7c6348178acaecee405a5be, type: 3}

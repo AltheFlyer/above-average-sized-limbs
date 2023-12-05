@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08623676f90bc814c9998e9a73d4df98, type: 3}
+  m_Name: Heart
+  m_EditorClassIdentifier: 
+  itemName: Health    Up!
+  description: Heals   one   heart
+  sprite: {fileID: -1642059430, guid: 952ac0d9c43703548a7eef371c1f03fb, type: 3}
+  item: {fileID: -8123042043081421630, guid: 2274e4e8eef1bd24aa973fe6a2744f88, type: 3}
+  additionalRendererOnPickup: {fileID: 448928482819467066, guid: 592ba779bd4771144b43185a0ff35744, type: 3}
