@@ -158,6 +158,9 @@ public class OfficeExplorationController : MonoBehaviour
                 officeMap.GetRoom(newPos).AddToRoom(indicator);
             }
         }
+
+        // Iframes for leniency
+        FindAnyObjectByType<PlayerManager>().GetComponent<Damageable>()?.GiveIframes(1f);
     }
 
     public void SetAllDoorLocks(bool lockState)

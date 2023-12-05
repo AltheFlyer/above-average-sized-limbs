@@ -14951,9 +14951,10 @@ GameObject:
   - component: {fileID: 3773850380292069965}
   - component: {fileID: 8921008571491100323}
   - component: {fileID: 6460076503927417702}
+  - component: {fileID: 7505877185952014731}
   - component: {fileID: 3058396204841789420}
   m_Layer: 8
-  m_Name: HR Recruiter
+  m_Name: Guaranteed Drop Recruiter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15108,8 +15109,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  antiClustering: 0
-  antiClusteringRadius: 0.75
   exclaimationEffectPos: {fileID: 720334115373027841}
   exclaimationEffectPrefab: {fileID: 6630275391772572677, guid: 2de6c50d9028c4a7585e2a7fab2cf743, type: 3}
   deathEffectPrefab: {fileID: 5427402122937063527, guid: 093a7fae069fb4aa6a3c18d183a619c5, type: 3}
@@ -15150,6 +15149,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7505877185952014731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8303432624014630202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19dcab92f34e432419dc3f257e8cfb25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDropRate: 1
 --- !u!114 &3058396204841789420
 MonoBehaviour:
   m_ObjectHideFlags: 0

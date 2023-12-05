@@ -664,7 +664,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0062253475, y: 0.8314289}
+  m_Offset: {x: 0.0062253475, y: 0.6795665}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -675,7 +675,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7632985, y: 1.0027947}
+  m_Size: {x: 0.7632985, y: 0.69907}
   m_EdgeRadius: 0
 --- !u!50 &980252807514728758
 Rigidbody2D:
@@ -737,8 +737,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b46254fdd72441db876dcaba3d96a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 4
-  hp: 4
+  maxHP: 14
+  hp: 14
   onDamagedInvincibleTime: 0
   onDamage:
     m_PersistentCalls:
@@ -779,6 +779,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  antiClustering: 0
+  antiClusteringRadius: 0.75
   exclaimationEffectPos: {fileID: 3177772916493166472}
   exclaimationEffect: {fileID: 6630275391772572677, guid: 2de6c50d9028c4a7585e2a7fab2cf743, type: 3}
   deathEffect: {fileID: 5427402122937063527, guid: 093a7fae069fb4aa6a3c18d183a619c5, type: 3}
