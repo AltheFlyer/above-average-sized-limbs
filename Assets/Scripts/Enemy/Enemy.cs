@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : Damageable
 {
-    private Rigidbody2D rb;
+    private Rigidbody2D rb_;
 
     [Space]
     [Header("Enemy Anti Clustering (require rigidbody2D)")]
@@ -17,8 +17,8 @@ public class Enemy : Damageable
     {
         base.Awake();
 
-        rb = GetComponent<Rigidbody2D>();
-        if (rb == null)
+        rb_ = GetComponent<Rigidbody2D>();
+        if (rb_ == null)
             antiClustering = false;
         if (antiClustering)
         {
@@ -50,7 +50,7 @@ public class Enemy : Damageable
                 if (dist < antiClusteringRadius * 2)
                 {
                     Vector2 dir = (transform.position - enemy.transform.position).normalized;
-                    rb.AddForce(dir * (antiClusteringRadius * 2 - dist) * antiClusteringForce);
+                    rb_.AddForce(dir * (antiClusteringRadius * 2 - dist) * antiClusteringForce);
                 }
             }
         }
