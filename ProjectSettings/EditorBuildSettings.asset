@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End.unity
     guid: 3064fa79789fd1544bd29868e8174043
+  - enabled: 1
+    path: Assets/Scenes/RollingCredits.unity
+    guid: d83ef4bd81418ad4b94d5828447d8dde
   m_configObjects: {}
